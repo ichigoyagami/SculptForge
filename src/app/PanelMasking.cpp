@@ -1,0 +1,285 @@
+// SculptForge - open source digital sculpting
+// SPDX-License-Identifier: GPL-3.0-or-later
+//
+// Masking: Ctrl mask strokes, MaskLasso / MaskRect selections (the shape is
+// tracked and drawn by Selection.cpp), the Ctrl + background gestures and the
+// "Masking" section of the Tools panel. The operations themselves are the
+// mask_* commands (core/Masking.cpp).
+#include "app/App.h"
+#include "app/Palettes.h"
+#include "app/Pickers.h"
+#include "app/Ui.h"
+#include "app/I18n.h"
+
+#include <IconsLucide.h>
+
+#include <algorithm>
+#include <cmath>
+#include <string>
+
+namespace sf {
+
+namespace {
+
+constexpr float kMaskDragThresholdPx = 4.0f; // movement that turns a Ctrl+click into a drag
+
+bool ctrlDown(SDL_Keymod mod) { return (mod & (SDL_KMOD_CTRL | SDL_KMOD_GUI)) != 0; }
+
+bool anyMasked(const Mesh& mesh) {
+    return std::any_of(mesh.mask.begin(), mesh.mask.end(), [](float m) { return m > 0.0f; });
+}
+
+std::string symmetryAxes(const Symmetry& s) { return std::string(s.x ? "x" : "") + (s.y ? "y" : "") + (s.z ? "z" : ""); }
+
+} // namespace
+
+void App::refreshSymmetryPivot() {
+    if (!symmetry_.local) return;
+    if (doc_.sculptor.strokeActive() || solverBusy()) return; // (the centre holds still during a stroke)
+    const uint64_t key = doc_.undo.revision() * 0x9E3779B97F4A7C15ull ^ (uint64_t(doc_.activeSubtool) << 40) ^
+                         uint64_t(doc_.mesh.vertexCount()) ^ (uint64_t(doc_.subtools.size()) << 56);
+    if (key == symmetryPivotKey_) return;
+    symmetryPivotKey_ = key;
+    symmetry_.pivot = symmetryPivot(doc_.mesh);
+}
+
+Args App::withSymmetryArgs(Args args) {
+    refreshSymmetryPivot();
+    args["symmetry"] = symmetryAxes(symmetry_);
+    if (symmetry_.radialOn()) {
+        args["radial"] = double(symmetry_.radial);
+        args["radial_axis"] = std::string(1, char('x' + symmetry_.radialAxis));
+    }
+    if (symmetry_.local) args["local"] = true;
+    return args;
+}
+
+void App::beginMaskStroke(float x, float y) {
+    refreshSymmetryPivot();
+    // Masks are not layered, so the stroke always targets the base (its weight is never 0).
+    // Ctrl+Alt erases, and so does the pen's eraser end (set to Invert or Erase mask).
+    strokeInvert_ = replaySettings_ ? replaySettings_->dab.invert : (inputMods() & SDL_KMOD_ALT) != 0 ||
+                    (erasing() && (eraserAction() == PenAction::Invert || eraserAction() == PenAction::EraseMask));
+    if (!doc_.sculptor.beginStroke(doc_.mesh, strokeInvert_ ? "Unmask" : "Mask", -1)) return;
+    strokeMask_ = true;
+    strokePaint_ = false; // mask strokes never paint or sculpt
+    strokeSculpt_ = true;
+    paintSnapshot_.reset();
+    strokeBrush_ = BrushType::Standard;
+    haveLastDab_ = false;
+    straight_ = {};
+    firstDabPending_ = false;
+    if (!replayingStroke_) {
+        replayPath_.clear();
+        rememberStrokePoint(x, y);
+        pendingReplaySettings_ = captureReplaySettings(true);
+    }
+    drag_ = Drag::Stroke;
+    lastX_ = x;
+    lastY_ = y;
+    strokePath_.reset(x, y);
+    dabQueue_.clear();
+    lazyMouse_.reset(glm::vec2(x, y));
+    // ZBrush: a Ctrl+click on the model blurs the mask (Ctrl+Alt+click sharpens it); only a drag paints. The
+    // pen's eraser end set to Erase mask paints straight away.
+    maskClickPending_ = !replayingStroke_ && ctrlDown(inputMods()) && !blenderStyle(); // (Blender's Mask brush dabs on a click)
+    maskClickX_ = x;
+    maskClickY_ = y;
+    if (!maskClickPending_) firstDab(x, y);
+}
+
+void App::maskClickRelease() {
+    maskClickPending_ = false;
+    const bool sharpen = strokeInvert_;
+    endStroke(); // nothing was dabbed: no undo step
+    if (anyMasked(doc_.mesh)) runCommand(sharpen ? "mask_sharpen" : "mask_blur");
+}
+
+// ZBrush convention: Ctrl+drag on the background with MaskPen draws a mask rectangle (#48) that masks what it
+// covers, and clears the mask when it covers none of the model. With nothing masked the SculptForge input style
+// zooms instead, as it did before masking existed.
+void App::maskCanvasMove(float x, float y) {
+    if (maskCanvasMoved_) return;
+    if (std::hypot(x - maskCanvasX_, y - maskCanvasY_) < kMaskDragThresholdPx) return;
+    maskCanvasMoved_ = true;
+    if (uiPrefs_.inputStyle == 1 && !anyMasked(doc_.mesh)) {
+        drag_ = Drag::Zoom;
+        return;
+    }
+    // (MaskLasso and MaskRect draw their own shape from the press on: maskSelectMouseDown.)
+    beginSelection(maskCanvasX_, maskCanvasY_, SelectTarget::Mask, SelectShape::Rect);
+    selectionMove(x, y);
+}
+
+void App::maskCanvasRelease() {
+    if (!maskCanvasMoved_) runCommand("mask_invert"); // Ctrl+click on the background
+}
+
+// MaskLasso / MaskRect: Ctrl+drag draws the shape, starting on the model or the background.
+bool App::maskSelectMouseDown(float x, float y, SDL_Keymod mod) {
+    const bool ctrl = (mod & (SDL_KMOD_CTRL | SDL_KMOD_GUI)) != 0;
+    if (!ctrl || (mod & SDL_KMOD_SHIFT) || previewLod_ >= 0) return false;
+    doc_.syncBvh(); RayHit hit; bool onMesh=pick(x,y,hit);
+    if(gizmoActive() && onMesh){
+        selectOrigin_=hit;beginSelection(x,y,SelectTarget::TopologyMask,SelectShape::Pen);return true;
+    }
+    if(!onMesh && maskShape_==SelectShape::Pen && !(mod & SDL_KMOD_ALT) && (uiPrefs_.airStrokes || (uiPrefs_.inputStyle==1 && !anyMasked(doc_.mesh))))return false;
+    maskFromBackground_=!onMesh && maskShape_==SelectShape::Pen;
+    if(maskShape_==SelectShape::Pen && onMesh)return false;
+    beginSelection(x, y, SelectTarget::Mask, maskFromBackground_?SelectShape::Rect:maskShape_);
+    return true;
+}
+
+void App::maskSelectMouseUp() {
+    const bool alt = (inputMods() & SDL_KMOD_ALT) != 0;
+    if (!selectMoved_) {
+        // A click on the background inverts the mask, as with MaskPen; on the model it blurs the mask (Alt:
+        // sharpens it), as with MaskPen and as in ZBrush whichever mask brush is picked (#51).
+        doc_.syncBvh();
+        RayHit hit;
+        if (!pick(selectPath_.front().x, selectPath_.front().y, hit)) {
+            if (!alt) runCommand("mask_invert");
+        } else if (anyMasked(doc_.mesh) && !blenderStyle()) {
+            runCommand(alt ? "mask_sharpen" : "mask_blur");
+        }
+        return;
+    }
+    // Mask the inside, or unmask it with Alt (Mask Strength sets how much), mirrored by the symmetry like a mask
+    // stroke (#51). A shape that covers none of the model clears the mask instead (ZBrush).
+    runSelection("mask_rect", "mask_lasso",
+                 withSymmetryArgs({{"unmask", alt}, {"strength", double(maskStrength_)}, {"clear_outside", !alt}}));
+}
+
+App::HeldBrush App::heldBrush() const {
+    const SDL_Keymod mod = inputMods();
+    if (!ctrlDown(mod)) return HeldBrush::None;
+    return (mod & SDL_KMOD_SHIFT) ? HeldBrush::Select : HeldBrush::Mask;
+}
+
+std::vector<App::HeldBrushItem> App::heldBrushItems(HeldBrush held) {
+    if (held == HeldBrush::Mask)
+        return {{"mask.pen", "Mask Pen", "Dots", ICON_LC_PEN_TOOL, SelectShape::Pen},
+                {"mask.lasso", "Mask Lasso", "Lasso", ICON_LC_LASSO, SelectShape::Lasso},
+                {"mask.rect", "Mask Rectangle", "Rect", ICON_LC_SQUARE_DASHED, SelectShape::Rect}};
+    if (held == HeldBrush::Select)
+        return {{"select.rect", "SelectRect", "Rect", ICON_LC_SQUARE_DASHED, SelectShape::Rect},
+                {"select.lasso", "SelectLasso", "Lasso", ICON_LC_LASSO, SelectShape::Lasso},
+                {"knife.line", "KnifeLine", "Line", ICON_LC_PEN_TOOL, SelectShape::KnifeLine},
+                {"clip.line", "ClipLine", "Line", ICON_LC_PEN_TOOL, SelectShape::ClipLine},
+        {"knife.curve","KnifeCurve","Curve",ICON_LC_PEN_TOOL,SelectShape::KnifeCurve},
+        {"clip.curve","ClipCurve","Curve",ICON_LC_PEN_TOOL,SelectShape::ClipCurve},
+        {"clip.rect","ClipRect","Rect",ICON_LC_SQUARE_DASHED,SelectShape::ClipRect},
+        {"clip.circle","ClipCircle","Circle",ICON_LC_CIRCLE,SelectShape::ClipCircle},
+        {"slice.line","SliceLine","Line",ICON_LC_PEN_TOOL,SelectShape::SliceLine},
+        {"slice.curve","SliceCurve","Curve",ICON_LC_PEN_TOOL,SelectShape::SliceCurve},
+        {"slice.rect","SliceRect","Rect",ICON_LC_SQUARE_DASHED,SelectShape::SliceRect},
+        {"slice.circle","SliceCircle","Circle",ICON_LC_CIRCLE,SelectShape::SliceCircle}};
+    return {};
+}
+
+const App::HeldBrushItem* App::heldBrushCurrent(HeldBrush held) const {
+    static const std::vector<HeldBrushItem> mask = heldBrushItems(HeldBrush::Mask);
+    static const std::vector<HeldBrushItem> select = heldBrushItems(HeldBrush::Select);
+    const std::vector<HeldBrushItem>& items = held == HeldBrush::Mask ? mask : select;
+    if (held == HeldBrush::None) return nullptr;
+    const SelectShape shape = held == HeldBrush::Mask ? maskShape_ : hideShape_;
+    for (const HeldBrushItem& it : items)
+        if (it.shape == shape) return &it;
+    return nullptr;
+}
+
+bool App::drawHeldBrushGrid(HeldBrush held, bool strokes) {
+    const float tile = 64.0f * uiScale_;
+    const HeldBrushItem* current = heldBrushCurrent(held);
+    bool picked = false;
+    int column = 0;
+    const int columns=std::max(1,int(ImGui::GetContentRegionAvail().x/(tile+6)));
+    for (const HeldBrushItem& it : heldBrushItems(held)) {
+        if(column++%columns!=0)ImGui::SameLine(0,6);
+        const char* label = strokes ? it.stroke : it.brush;
+        const std::string id = std::string(label) + "##held." + it.action;
+        const Action* a = actions_.find(it.action);
+        if (AssetTile(id.c_str(), ImTextureID(0), it.icon, label, tile, current && current->shape == it.shape) && a &&
+            a->run) {
+            actions_.touch(a->id);
+            a->run();
+            status_ = std::string("Brush: ") + it.brush;
+            picked = true;
+        }
+        const std::string help = strokes ? std::string("Stroke of ") + it.brush + ". " + (a ? a->description : "")
+                                         : (a ? a->description : std::string());
+        ui::HelpText(label, nullptr, help.c_str(), held == HeldBrush::Mask ? "Tool > Masking" : "Tool > Visibility");
+    }
+    return picked;
+}
+
+void App::drawMaskingSection() {
+    ImGui::Checkbox(tr("Show mask"), &renderSettings_.showMask);
+    ImGui::SameLine();
+    ImGui::TextDisabled("%s", tr(maskShape_ == SelectShape::Pen ? "(Ctrl paints, Ctrl+Alt erases)"
+                                                             : "(Ctrl masks, Ctrl+Alt unmasks)"));
+    ui::Segmented(*this, {"mask.pen", "mask.lasso", "mask.rect"});
+    ImGui::SetNextItemWidth(-1);
+    ui::SliderInside("##maskstrength", &maskStrength_, 0.01f, 1.0f, "Mask Strength %.2f");
+
+    const ImGuiStyle& style = ImGui::GetStyle();
+    const float third = (ImGui::GetContentRegionAvail().x - 2 * style.ItemSpacing.x) / 3.0f;
+    const float half = (ImGui::GetContentRegionAvail().x - style.ItemSpacing.x) * 0.5f;
+    if (ImGui::Button(tr("Clear##mask"), ImVec2(third, 0))) runCommand("mask_clear");
+    if (ImGui::IsItemHovered()) ImGui::SetTooltip("%s", tr("Unmask everything (Mask Pen: Ctrl + drag background)"));
+    ImGui::SameLine();
+    if (ImGui::Button(tr("Invert##mask"), ImVec2(third, 0))) runCommand("mask_invert");
+    if (ImGui::IsItemHovered()) ImGui::SetTooltip("%s", tr("Ctrl + click background"));
+    ImGui::SameLine();
+    if (ImGui::Button(tr("All##mask"), ImVec2(third, 0))) runCommand("mask_all");
+
+    const Args passes = {{"iterations", double(maskIterations_)}};
+    if (ImGui::Button(tr("Blur##mask"), ImVec2(half, 0))) runCommand("mask_blur", passes);
+    ImGui::SameLine();
+    if (ImGui::Button(tr("Sharpen##mask"), ImVec2(half, 0))) runCommand("mask_sharpen", passes);
+    if (ImGui::Button(tr("Grow##mask"), ImVec2(half, 0))) runCommand("mask_grow", passes);
+    ImGui::SameLine();
+    if (ImGui::Button(tr("Shrink##mask"), ImVec2(half, 0))) runCommand("mask_shrink", passes);
+    ImGui::SetNextItemWidth(-1);
+    tray::SliderInt("##maskpasses", &maskIterations_, 1, 20, "Passes %d");
+
+    if (ImGui::Button(tr("By cavity"), ImVec2(half, 0)))
+        runCommand("mask_by_cavity", {{"strength", double(maskStrength_)}, {"threshold", double(cavityThreshold_)}});
+    if (ImGui::IsItemHovered()) ImGui::SetTooltip("%s", tr("Mask creases and folds (replaces the mask; uses the mask strength)"));
+    ImGui::SameLine();
+    ImGui::SetNextItemWidth(-1);
+    ui::SliderInside("##cavitythreshold", &cavityThreshold_, -0.2f, 0.5f, "Threshold %.2f");
+    if (ImGui::Button(tr("By face group"), ImVec2(half, 0)))
+        runCommand("mask_by_polygroup", {{"group", double(maskGroup_)}});
+    if (ImGui::IsItemHovered()) ImGui::SetTooltip("%s", tr("Mask one face group (replaces the mask)"));
+    ImGui::SameLine();
+    // The group id as a drag field the size of the button beside it (Ctrl+click or double-click types a number),
+    // rather than an input with tiny - and + buttons.
+    ImGui::SetNextItemWidth(-1);
+    if (ImGui::DragInt("##maskgroup", &maskGroup_, 0.1f, 0, 1 << 30, tr("Group %d"), ImGuiSliderFlags_AlwaysClamp))
+        maskGroup_ = std::max(0, maskGroup_);
+
+    // Mask from the mesh border (#61): open edges, optionally polygroup borders, a few rings wide.
+    if (ImGui::Button("By border##mask", ImVec2(half, 0)))
+        runCommand("mask_border", {{"rings", double(maskBorderRings_)},
+                                   {"polygroups", maskBorderGroups_},
+                                   {"soft", maskBorderSoft_},
+                                   {"strength", double(maskStrength_)}});
+    ui::HelpText("By border", nullptr,
+                 "Mask the open edges of the mesh and the edge rings inside them, so sculpting never moves the "
+                 "border (Blender: Mask from mesh boundary). Replaces the mask and uses the mask strength. A closed "
+                 "mesh has no open edges.",
+                 "Tool > Masking");
+    ImGui::SameLine();
+    ImGui::SetNextItemWidth(-1);
+    tray::SliderInt("##maskborderrings", &maskBorderRings_, 1, 20, "Rings %d");
+    ui::Checkbox("Face Group borders##maskborder", &maskBorderGroups_);
+    ui::HelpText("Face Group borders", nullptr,
+                 "By border also masks where face groups meet (ZBrush: Mask by polygroup border).", "Tool > Masking");
+    ImGui::SameLine();
+    ui::Checkbox("Soft##maskborder", &maskBorderSoft_);
+    ui::HelpText("Soft", nullptr, "By border fades the mask from the border towards the innermost ring.",
+                 "Tool > Masking");
+}
+
+} // namespace sf

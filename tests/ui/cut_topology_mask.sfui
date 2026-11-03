@@ -1,0 +1,66 @@
+# Added controls tested through real pointer and keyboard routes.
+run new_sphere subdivisions=4 quads=true
+camera 0 0
+key f
+hover_model 0.3 0.45
+expect_value cursor_markers >= 2
+shot symmetry-dots
+key x
+hover_model 0.3 0.45
+expect_value cursor_markers == 1
+# MaskPen started on the background becomes a rectangle.
+hold ctrl
+drag 0.25 0.35 0.42 0.75
+shot background-mask-rectangle
+release
+hold none
+expect_value masked > 100
+remember masked rectangle
+key ctrl+z
+expect_value masked == 0
+key ctrl+shift+z
+expect_value masked == $rectangle
+# Empty Ctrl rectangle clears, click inverts.
+hold ctrl
+drag_path -0.15 0.05 -0.05 0.15
+hold none
+expect_value masked == 0
+# Transform topology masking from a joint toward the moving end.
+key w
+hold ctrl
+drag_path 0.3 0.5 0.7 0.5 keep
+shot topology-mask-line
+release
+hold none
+expect_value masked > 100
+expect_value masked < 1538
+click "Transpose line"
+expect_value transpose_line == 1
+shot transpose-line
+key ctrl+z
+expect_value masked == 0
+key q
+# Clip changes positions but retains face count.
+click "Visibility"
+click "ClipLine##clip.line"
+remember triangles clip_faces
+snapshot
+hold ctrl+shift
+drag_path 0.2 0.6 0.8 0.6 keep
+shot clip-preview
+release
+hold none
+expect_value triangles == $clip_faces
+expect_value moved > 10
+key ctrl+z
+expect_value moved == 0
+# Knife removes geometry and caps it, with one undo.
+click "KnifeLine##knife.line"
+hold ctrl+shift
+drag_path 0.2 0.6 0.8 0.6 keep
+shot knife-preview
+release
+hold none
+expect_status "Knife cut: geometry removed"
+key ctrl+z
+expect_value triangles == $clip_faces

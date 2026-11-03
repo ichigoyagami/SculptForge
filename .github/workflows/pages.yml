@@ -1,0 +1,105 @@
+name: Website
+
+on:
+  push:
+    branches: [main]
+    paths: ['website/**', 'docs/supporters.txt', '.github/workflows/pages.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0 # the release tags
+      # The online guide is the latest release's guide, the one inside the app people can download, not main's:
+      # main already documents features that aren't released yet. Its sitemap goes with it. The rest of website/
+      # (home page, update feed) comes from main, where it only changes when a release goes out.
+      - name: Guide from the latest release
+        run: |
+          tag=$(git tag -l 'v[0-9]*' --sort=-v:refname | grep -v -- - | head -1)
+          # A tag can sit on the tested code commit while the guide's pages were rebuilt just after it: when the
+          # guide's sources haven't changed since the tag, main's built guide is that release's guide.
+          if git diff --quiet "$tag" HEAD -- docs/guide tools/guide; then
+            echo "Guide from main (its sources match $tag)"
+          else
+            echo "Guide from $tag"
+            rm -rf website/guide
+            git archive "$tag" website/guide website/sitemap.xml | tar -x
+          fi
+      # The credits page always matches docs/supporters.txt on main.
+      - name: Supporters page
+        run: python3 tools/guide/build_site.py --supporters
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: website
+      - id: deployment
+        uses: actions/deploy-pages@v5
+      # Tell Bing and the other IndexNow search engines about the pages straight away (key file in website/).
+      - name: IndexNow
+        continue-on-error: true
+        run: |
+          key=$(basename website/[0-9a-f]*.txt .txt)
+          urls=$(grep -o '<loc>[^<]*' website/sitemap.xml | sed 's/<loc>//' | python3 -c "import sys,json; print(json.dumps(sys.stdin.read().split()))")
+          sleep 60   # let Pages publish the new files first
+          curl -sS -o /dev/null -w 'IndexNow: HTTP %{http_code}\n' -X POST https://api.indexnow.org/indexnow \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            -d "{\"host\":\"sculptforge.app\",\"key\":\"$key\",\"keyLocation\":\"https://sculptforge.app/$key.txt\",\"urlList\":$urls}"
+
+  # A copy at https://islandmed.github.io/ for workplace networks that block domains less than about a month old.
+  # It points search engines at sculptforge.app (canonical links, robots.txt) and is skipped until the
+  # MIRROR_DEPLOY_KEY secret exists (tools/publish/setup-channels.sh sets it up).
+  mirror:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0 # the release tags
+      # The online guide is the latest release's guide, the one inside the app people can download, not main's:
+      # main already documents features that aren't released yet. Its sitemap goes with it. The rest of website/
+      # (home page, update feed) comes from main, where it only changes when a release goes out.
+      - name: Guide from the latest release
+        run: |
+          tag=$(git tag -l 'v[0-9]*' --sort=-v:refname | grep -v -- - | head -1)
+          # A tag can sit on the tested code commit while the guide's pages were rebuilt just after it: when the
+          # guide's sources haven't changed since the tag, main's built guide is that release's guide.
+          if git diff --quiet "$tag" HEAD -- docs/guide tools/guide; then
+            echo "Guide from main (its sources match $tag)"
+          else
+            echo "Guide from $tag"
+            rm -rf website/guide
+            git archive "$tag" website/guide website/sitemap.xml | tar -x
+          fi
+      - name: Supporters page
+        run: python3 tools/guide/build_site.py --supporters
+      - name: Push website/ to islandmed/islandmed.github.io
+        env:
+          KEY: ${{ secrets.MIRROR_DEPLOY_KEY }}
+        run: |
+          if [ -z "$KEY" ]; then echo "No MIRROR_DEPLOY_KEY secret: skipped"; exit 0; fi
+          mkdir -p ~/.ssh && printf '%s\n' "$KEY" > ~/.ssh/mirror && chmod 600 ~/.ssh/mirror
+          export GIT_SSH_COMMAND="ssh -i ~/.ssh/mirror -o StrictHostKeyChecking=accept-new"
+          git clone -q --depth 1 git@github.com:islandmed/islandmed.github.io.git mirror
+          rsync -a --delete --exclude .git website/ mirror/
+          cd mirror
+          rm -f sitemap.xml [0-9a-f]*.txt               # sculptforge.app's sitemap and IndexNow key
+          printf 'User-agent: *\nDisallow: /\n' > robots.txt   # the original is sculptforge.app
+          touch .nojekyll
+          git add -A
+          git -c user.name="SculptForge website" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -qm "Mirror of website/ at ${GITHUB_SHA::7}" || { echo "No changes"; exit 0; }
+          git push -q origin HEAD:main

@@ -1,0 +1,69 @@
+# Standard, Stronger, separate falloff and the Shift-release alternate.
+run new_sphere subdivisions=6 quads=true
+expect "##smooth_mode_shelf"
+expect_value smooth_mode == 0
+click "Clay Block##brush.claybuildup"
+stroke 0.32 0.5 0.68 0.5
+shot raised-stroke
+snapshot
+hold shift
+stroke 0.32 0.5 0.68 0.5
+hold none
+expect_value moved > 100
+expect_value moved_out < 0
+remember moved_sum standard_change
+shot standard-smooth
+key ctrl+z
+click "##smooth_mode_shelf"
+click "Stronger"
+expect_value smooth_mode == 1
+snapshot
+hold shift
+stroke 0.32 0.5 0.68 0.5
+hold none
+expect_value moved_sum > $standard_change*1.3
+expect_value quad_percent == 100
+shot stronger-smooth
+key ctrl+z
+hold shift
+drag_path 0.4 0.5 0.45 0.5 keep
+expect_value smooth_alternate == 0
+hold none
+mouse_move 0.55 0.5
+expect_value smooth_alternate == 1
+shot alternate-volume
+release
+hold shift
+drag_path 0.4 0.5 0.45 0.5 keep
+expect_value smooth_alternate == 0
+release
+hold none
+# The normal brush and Smooth keep separate intensity and focal-shift values.
+key o
+key 6
+key 0
+key enter
+expect_value focal_shift == 60
+hold shift
+key o
+key minus
+key 3
+key 0
+key enter
+key u
+key 8
+key 0
+key enter
+hold none
+expect_value smooth_focal_shift == -30
+expect_value focal_shift == 60
+expect_value smooth_intensity == 80
+expect_value z_intensity == 50
+run save_project path=smooth_modes.sfproj
+click "##smooth_mode_shelf"
+click "Volume"
+expect_value smooth_mode == 2
+run open path=smooth_modes.sfproj
+expect_value smooth_mode == 1
+expect_value smooth_focal_shift == -30
+expect_value smooth_intensity == 80

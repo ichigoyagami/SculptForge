@@ -1,0 +1,3 @@
+mapbox/earcut.hpp v2.2.4
+https://github.com/mapbox/earcut.hpp/tree/v2.2.4
+ISC license. Header unmodified. Used for planar Knife cap triangulation.

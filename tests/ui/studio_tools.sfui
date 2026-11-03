@@ -1,0 +1,63 @@
+# New tools in the existing UI, with optional reference shelf layout.
+run new_sphere subdivisions=3 quads=true
+key f
+expect "Sculpt tools##studio.tools"
+click "Sculpt tools##studio.tools"
+expect "Sculpt tools/StoreMT##studio.store_mt"
+click "Sculpt tools/StoreMT##studio.store_mt"
+expect_value studio_morph_target == 1
+run transform translate=0.2,0,0
+remember center_x shifted
+click "Sculpt tools/Switch MT##studio.switch_mt"
+expect_value center_x < $shifted
+key ctrl+z
+expect_value center_x == $shifted
+click "Sculpt tools/DelMT##studio.delete_mt"
+expect_value studio_morph_target == 0
+key ctrl+z
+expect_value studio_morph_target == 1
+shot morph-tools
+# Hide the tools window before driving the mesh.
+click "Sculpt tools##studio.tools"
+# New right-side perspective and floor controls.
+expect_value camera_ortho == 0
+click "Persp##studio.persp"
+expect_value camera_ortho == 1
+click "Persp##studio.persp"
+click "Floor##studio.floor"
+expect_value show_floor == 1
+shot floor-grid
+# Relative replay uses Shift+1 while the cursor is on the mesh.
+run new_sphere subdivisions=4 quads=true
+key f
+key b
+key s
+key t
+snapshot
+stroke 0.3 0.4 0.45 0.4
+expect_value moved > 10
+remember history_position original_history
+hover_model 0.55 0.6
+key shift+1
+expect_value history_position > $original_history
+shot relative-replay
+# Morph Target has its own Tool sub-palette too.
+click "Morph Target##tool.morph"
+expect "StoreMT##studio.store_mt"
+# The screenshot layout is optional and uses the same actions/state.
+run workspace_reference enabled=true
+expect_value reference_shelves == 1
+expect "ReplayLast##ref.stroke.replay_last"
+expect "ReplayLastRel##studio.replay_relative"
+expect "BackfaceMask##ref.draw.front_faces"
+expect "Close Holes##studio.close_holes"
+shot reference-workspace
+click "Floor##studio.floor"
+expect_value show_floor == 0
+run save_project path=studio_tools.sfproj
+click "Double##studio.double"
+expect_value double_sided == 0
+run open path=studio_tools.sfproj
+expect_value double_sided == 1
+click "Classic shelves##workspace.classic"
+expect_value reference_shelves == 0

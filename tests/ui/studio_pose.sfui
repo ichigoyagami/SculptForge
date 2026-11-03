@@ -1,0 +1,26 @@
+# Combined pose transfer keeps original SubTools and offers cancellation.
+run new_sphere subdivisions=2 quads=true
+run subtool_duplicate
+run transform translate=2,0,0
+expect_value subtools == 2
+click "Transform##palette.transform"
+expect "TPoseMesh##studio.tpose_mesh"
+click "TPoseMesh##studio.tpose_mesh"
+expect_value pose_parts == 2
+expect_value subtools == 3
+run transform translate=0,0.5,0
+click "TPose SubT##studio.tpose_subtools"
+expect_value pose_parts == 0
+expect_value subtools == 2
+expect_value center_y > 0.49
+shot pose-transferred
+key ctrl+z
+expect_value center_y < 0.01
+# Cancel discards the temporary mesh.
+key escape
+click "Transform##palette.transform"
+click "TPoseMesh##studio.tpose_mesh"
+expect_value subtools == 3
+click "Cancel Pose##studio.cancel_pose"
+expect_value pose_parts == 0
+expect_value subtools == 2

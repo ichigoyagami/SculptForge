@@ -1,0 +1,188 @@
+# Replay must preserve effective ClayBuildup + ZSub, not the newly selected brush.
+run new_sphere subdivisions=4 quads=true
+camera 0 0
+key f
+click "Clay Block##brush.claybuildup"
+key u
+key 2
+key 7
+key enter
+snapshot
+click "Sub##draw.zsub"
+drag_path 0.25 0.4 0.42 0.5
+expect_value moved_out < 0
+remember moved_sum clay_sub
+remember geometry_hash clay_shape
+key ctrl+z
+expect_value moved == 0
+click "Add##draw.zadd"
+click "Inflate##brush.inflate"
+key u
+key 9
+key 0
+key enter
+key s
+key 2
+key 0
+key enter
+# Change symmetry as well. Repeat must use the recorded X symmetry.
+key x
+key 1
+expect_status Replayed last stroke
+expect_value geometry_hash == $clay_shape
+expect_value moved_sum > $clay_sub*0.999
+expect_value moved_sum < $clay_sub*1.001
+expect_value z_intensity == 90
+expect_value draw_size == 20
+expect_value brush_type == 4
+shot repeated-clay-zsub
+# The next normal stroke still uses the newly selected brush/settings.
+key ctrl+z
+snapshot
+stroke 0.25 0.4 0.42 0.5
+expect_value moved_out > 0
+# Shift smoothing is recorded as Smooth, even when Clay remains selected.
+run new_sphere subdivisions=4 quads=true
+click "Clay Block##brush.claybuildup"
+click "Add##draw.zadd"
+key s
+key 6
+key 0
+key enter
+stroke 0.3 0.45 0.65 0.45
+snapshot
+hold shift
+stroke 0.3 0.45 0.65 0.45
+hold none
+remember geometry_hash smooth_shape
+remember moved_sum smooth_change
+key ctrl+z
+click "Sharp Crease##brush.damstandard"
+key 1
+expect_value geometry_hash == $smooth_shape
+expect_value moved_sum > $smooth_change*0.999
+expect_value moved_sum < $smooth_change*1.001
+# MaskPen must also become the last action, and retain its erase/add mode.
+run new_sphere subdivisions=4 quads=true
+key x
+key s
+key 6
+key 0
+key enter
+snapshot
+hold ctrl
+stroke 0.23 0.4 0.38 0.5
+hold none
+expect_value masked > 5
+expect_value moved == 0
+expect_value mask_symmetry_x_error < 0.00001
+remember mask_hash painted_mask
+key ctrl+z
+expect_value masked == 0
+click "Clay##brush.clay"
+key 1
+expect_value mask_hash == $painted_mask
+expect_value moved == 0
+shot repeated-mask
+hold ctrl+alt
+stroke 0.23 0.4 0.38 0.5
+hold none
+remember mask_hash erased_mask
+key ctrl+z
+key 1
+expect_value mask_hash == $erased_mask
+# A later background rectangle replaces the recorded pen stroke.
+run mask_clear
+hold ctrl
+drag_path -0.1 0.25 0.35 0.7
+hold none
+expect_value masked > 10
+expect_value mask_symmetry_x_error < 0.00001
+remember mask_hash rectangle_mask
+key ctrl+z
+key 1
+expect_status Replayed last action: mask_rect
+expect_value mask_hash == $rectangle_mask
+expect_value moved == 0
+# All axes feed both pen and shape masks; switched off remains one-sided.
+click "Masking"
+click "MaskLasso##mask.lasso"
+run mask_clear
+hold ctrl
+drag_path 0.15 0.2 0.4 0.2 0.4 0.45 0.15 0.45
+hold none
+expect_value masked > 5
+expect_value mask_symmetry_x_error < 0.00001
+remember mask_hash lasso_mask
+key ctrl+z
+key 1
+expect_value mask_hash == $lasso_mask
+
+# Y/Z and combined axes reach the shape selection and MaskPen routes too.
+click "Y##transform.symmetry_y"
+click "Z##transform.symmetry_z"
+run mask_clear
+hold ctrl
+drag_path 0.15 0.2 0.4 0.2 0.4 0.45 0.15 0.45
+hold none
+expect_value mask_symmetry_x_error < 0.00001
+expect_value mask_symmetry_y_error < 0.00001
+expect_value mask_symmetry_z_error < 0.00001
+click "MaskPen##mask.pen"
+run mask_clear
+hold ctrl
+stroke 0.2 0.25 0.3 0.35
+hold none
+expect_value masked > 5
+expect_value mask_symmetry_x_error < 0.00001
+expect_value mask_symmetry_y_error < 0.00001
+expect_value mask_symmetry_z_error < 0.00001
+shot xyz-symmetric-mask
+key x
+click "Y##transform.symmetry_y"
+click "Z##transform.symmetry_z"
+run mask_clear
+hold ctrl
+stroke 0.2 0.25 0.3 0.35
+hold none
+expect_value mask_symmetry_x_error > 0.5
+
+# Alt inversion is recorded independently of the Zadd/Zsub toggle.
+run new_sphere subdivisions=4 quads=true
+click "Clay Block##brush.claybuildup"
+click "Add##draw.zadd"
+hold alt
+stroke 0.3 0.6 0.45 0.65
+hold none
+remember geometry_hash alt_shape
+key ctrl+z
+click "Inflate##brush.inflate"
+key 1
+expect_value geometry_hash == $alt_shape
+# Shift release changes Smooth to Volume during the stroke; replay retains it.
+hold shift
+drag_path 0.3 0.6 0.4 0.6 keep
+hold none
+mouse_move 0.6 0.6
+release
+remember geometry_hash alternate_shape
+key ctrl+z
+key 1
+expect_value geometry_hash == $alternate_shape
+# A new document must not inherit a replay from another mesh.
+run new_sphere subdivisions=3 quads=true
+expect_value replay_points == 0
+snapshot
+key 1
+expect_value moved == 0
+expect_value history_steps == 0
+
+# A background shape can hit only the reflected side of an off-center mesh.
+run transform translate=0.8,0,0
+key f
+key x
+hold ctrl
+drag_path -0.45 0.25 -0.1 0.7
+hold none
+expect_value masked > 5
+shot reflected-background-mask

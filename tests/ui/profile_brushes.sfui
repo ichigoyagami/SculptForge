@@ -1,0 +1,131 @@
+run new_sphere subdivisions=3 quads=true
+camera 0 0
+key f
+key x
+click "Visibility"
+expect "Delete hidden"
+click "SliceLine##slice.line"
+remember triangles original_faces
+remember vertices original_vertices
+snapshot
+hold ctrl+shift
+drag_path -0.1 0.4 1.1 0.4 keep
+shot slice-line-preview
+release
+hold none
+expect_status Slice: both sides retained
+expect_value triangles > $original_faces
+expect_value moved == -1
+expect_value groups >= 2
+remember geometry_hash sliced
+remember triangles sliced_faces
+shot sliced-polygroups
+key ctrl+z
+expect_value triangles == $original_faces
+expect_value vertices == $original_vertices
+key 1
+expect_status Replayed last action: slice_plane
+expect_value geometry_hash == $sliced
+expect_value triangles == $sliced_faces
+key ctrl+z
+click "ClipLine##clip.line"
+snapshot
+hold ctrl+shift
+drag_path -0.1 0.6 1.1 0.6
+hold none
+expect_value triangles == $original_faces
+expect_value moved > 5
+key ctrl+z
+expect_value moved == 0
+click "KnifeLine##knife.line"
+hold ctrl+shift
+drag_path -0.1 0.6 1.1 0.6
+hold none
+expect_status Knife cut: geometry removed
+expect_value groups >= 2
+shot knife-cap
+key ctrl+z
+click "ClipRect##clip.rect"
+snapshot
+hold ctrl+shift
+drag_path 0.25 0.25 0.75 0.75
+hold none
+expect_value triangles == $original_faces
+expect_value vertices == $original_vertices
+expect_value moved > 10
+shot clip-rectangle
+key ctrl+z
+expect_value moved == 0
+key x
+click "ClipCircle##clip.circle"
+hold ctrl+shift
+drag_path 0.15 0.25 0.8 0.75
+hold none
+expect_value triangles == $original_faces
+expect_value vertices == $original_vertices
+expect_value moved > 10
+shot clip-circle
+key ctrl+z
+key x
+hold ctrl+shift
+click "##tile.brush"
+expect "SliceCircle##held.slice.circle"
+click "SliceCircle##held.slice.circle"
+hold none
+hold ctrl+shift
+drag_path 0.25 0.25 0.75 0.75
+hold none
+expect_value groups >= 2
+expect_value triangles > $original_faces
+shot slice-circle
+key ctrl+z
+click "SliceCurve##slice.curve"
+hold ctrl+shift
+drag_path -0.1 0.6 0.5 0.3 keep
+key "Left Alt"
+expect_value profile_knots == 2
+expect_value profile_corner == 0
+key "Left Alt"
+expect_value profile_corner == 1
+mouse_move 1.1 0.6
+shot curve-corner-preview
+release
+hold none
+expect_status Slice: topology added
+expect_value triangles > $original_faces
+expect_value groups >= 2
+shot curve-sliced
+key ctrl+z
+hold ctrl+shift
+drag_path -0.1 0.5 0.4 0.5 keep
+remember profile_start_x original_start
+key_down Space
+mouse_move 0.6 0.6
+key_up Space
+expect_value profile_start_x > $original_start
+expect_value quickmenu_open == 0
+key escape
+release
+hold none
+remember history_position before_cancel
+hold ctrl+shift
+drag_path -0.1 0.5 0.5 0.5 keep
+key escape
+release
+hold none
+expect_value history_position == $before_cancel
+click "Select Rectangle##select.rect"
+hold ctrl+shift
+drag_path -0.1 -0.1 1.1 0.55
+hold none
+expect_value hidden > 0
+remember triangles before_delete
+click "Geometry"
+expect "Delete Hidden##geometry.delete_hidden"
+click "Delete Hidden##geometry.delete_hidden"
+expect_value triangles < $before_delete
+expect_value hidden == 0
+shot delete-hidden-geometry
+key ctrl+z
+expect_value triangles == $before_delete
+expect_value hidden > 0
