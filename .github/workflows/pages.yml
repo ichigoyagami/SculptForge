@@ -3,7 +3,7 @@ name: Website
 on:
   push:
     branches: [main]
-    paths: ['website/**', 'docs/supporters.txt', '.github/workflows/pages.yml']
+    paths: ['website/**', 'docs/guide/**', 'tools/guide/**', 'docs/supporters.txt', '.github/workflows/pages.yml']
   workflow_dispatch:
 
 permissions:
@@ -25,32 +25,78 @@ jobs:
       - uses: actions/checkout@v7
         with:
           fetch-depth: 0 # the release tags
-      # The online guide is the latest release's guide, the one inside the app people can download, not main's:
-      # main already documents features that aren't released yet. Its sitemap goes with it. The rest of website/
-      # (home page, update feed) comes from main, where it only changes when a release goes out.
-      - name: Guide from the latest release
+      # New repositories may not have a stable release tag yet. Always prepare
+      # a real guide, rather than passing an empty ref to git diff/archive.
+      - name: Prepare user guide
+        shell: bash
         run: |
-          tag=$(git tag -l 'v[0-9]*' --sort=-v:refname | grep -v -- - | head -1)
-          # A tag can sit on the tested code commit while the guide's pages were rebuilt just after it: when the
-          # guide's sources haven't changed since the tag, main's built guide is that release's guide.
-          if git diff --quiet "$tag" HEAD -- docs/guide tools/guide; then
-            echo "Guide from main (its sources match $tag)"
-          else
-            echo "Guide from $tag"
+          tag=$(git tag -l 'v[0-9]*' --sort=-v:refname |
+            awk 'index($0, "-") == 0 && !found { print; found = 1 }')
+          if [ -z "$tag" ]; then
+            echo "No stable release tag: building guide from the current commit"
+            python3 tools/guide/build_site.py --check
+          elif git diff --quiet "$tag" HEAD -- docs/guide tools/guide; then
+            echo "Guide sources match $tag: rebuilding from the current commit"
+            python3 tools/guide/build_site.py --check
+          elif git cat-file -e "$tag:website/guide/index.html" 2>/dev/null &&
+               git cat-file -e "$tag:website/sitemap.xml" 2>/dev/null; then
+            echo "Using the prebuilt guide from $tag"
             rm -rf website/guide
             git archive "$tag" website/guide website/sitemap.xml | tar -x
+          else
+            echo "::notice::Release $tag has no prebuilt guide; building the current guide"
+            python3 tools/guide/build_site.py --check
           fi
       # The credits page always matches docs/supporters.txt on main.
       - name: Supporters page
         run: python3 tools/guide/build_site.py --supporters
+      - name: Use the fork's default Pages domain
+        if: github.repository != 'islandmed/SculptForge'
+        run: rm -f website/CNAME
+      - name: Check Pages configuration
+        id: pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          errors=$(mktemp)
+          configured=false
+          if build_type=$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq '.build_type' 2>"$errors"); then
+            if [ "$build_type" = workflow ]; then
+              configured=true
+            fi
+          elif grep -q 'HTTP 404' "$errors"; then
+            echo "::notice::GitHub Pages has not been configured for this repository"
+          else
+            cat "$errors" >&2
+            rm -f "$errors"
+            exit 1
+          fi
+          rm -f "$errors"
+          echo "configured=$configured" >> "$GITHUB_OUTPUT"
+          if [ "$configured" != true ]; then
+            echo "::notice::Website built; publishing is skipped until Settings > Pages > Source is GitHub Actions"
+            {
+              echo "### Website built; publishing is not configured"
+              echo
+              echo "The guide and website files were built. Publishing will be skipped."
+              echo
+              echo "To publish, open $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/settings/pages"
+              echo "and select **GitHub Actions** under **Build and deployment > Source**."
+              echo "Then run the Website workflow again."
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
       - uses: actions/configure-pages@v6
+        if: steps.pages.outputs.configured == 'true'
       - uses: actions/upload-pages-artifact@v5
         with:
           path: website
       - id: deployment
+        if: steps.pages.outputs.configured == 'true'
         uses: actions/deploy-pages@v5
       # Tell Bing and the other IndexNow search engines about the pages straight away (key file in website/).
       - name: IndexNow
+        if: github.repository == 'islandmed/SculptForge' && steps.deployment.outcome == 'success'
         continue-on-error: true
         run: |
           key=$(basename website/[0-9a-f]*.txt .txt)
@@ -64,25 +110,33 @@ jobs:
   # It points search engines at sculptforge.app (canonical links, robots.txt) and is skipped until the
   # MIRROR_DEPLOY_KEY secret exists (tools/publish/setup-channels.sh sets it up).
   mirror:
+    if: github.repository == 'islandmed/SculptForge'
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v7
         with:
           fetch-depth: 0 # the release tags
-      # The online guide is the latest release's guide, the one inside the app people can download, not main's:
-      # main already documents features that aren't released yet. Its sitemap goes with it. The rest of website/
-      # (home page, update feed) comes from main, where it only changes when a release goes out.
-      - name: Guide from the latest release
+      # New repositories may not have a stable release tag yet. Always prepare
+      # a real guide, rather than passing an empty ref to git diff/archive.
+      - name: Prepare user guide
+        shell: bash
         run: |
-          tag=$(git tag -l 'v[0-9]*' --sort=-v:refname | grep -v -- - | head -1)
-          # A tag can sit on the tested code commit while the guide's pages were rebuilt just after it: when the
-          # guide's sources haven't changed since the tag, main's built guide is that release's guide.
-          if git diff --quiet "$tag" HEAD -- docs/guide tools/guide; then
-            echo "Guide from main (its sources match $tag)"
-          else
-            echo "Guide from $tag"
+          tag=$(git tag -l 'v[0-9]*' --sort=-v:refname |
+            awk 'index($0, "-") == 0 && !found { print; found = 1 }')
+          if [ -z "$tag" ]; then
+            echo "No stable release tag: building guide from the current commit"
+            python3 tools/guide/build_site.py --check
+          elif git diff --quiet "$tag" HEAD -- docs/guide tools/guide; then
+            echo "Guide sources match $tag: rebuilding from the current commit"
+            python3 tools/guide/build_site.py --check
+          elif git cat-file -e "$tag:website/guide/index.html" 2>/dev/null &&
+               git cat-file -e "$tag:website/sitemap.xml" 2>/dev/null; then
+            echo "Using the prebuilt guide from $tag"
             rm -rf website/guide
             git archive "$tag" website/guide website/sitemap.xml | tar -x
+          else
+            echo "::notice::Release $tag has no prebuilt guide; building the current guide"
+            python3 tools/guide/build_site.py --check
           fi
       - name: Supporters page
         run: python3 tools/guide/build_site.py --supporters
