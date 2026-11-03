@@ -1,0 +1,29 @@
+[ RUN] smooth_keep_volume_keeps_volume
+  sphere volume change: plain 99.95%, keep volume 0.35%
+[ OK ] smooth_keep_volume_keeps_volume (245 ms)
+[ RUN] gizmo_deform_identity_and_repeat_preview
+[ OK ] gizmo_deform_identity_and_repeat_preview (0 ms)
+[ RUN] gizmo_deform_mask_hidden_layers_attributes
+[ OK ] gizmo_deform_mask_hidden_layers_attributes (0 ms)
+[ RUN] gizmo_deform_axes_anchor_cage_and_curve
+[ OK ] gizmo_deform_axes_anchor_cage_and_curve (0 ms)
+[ RUN] gizmo_deform_undo_and_slice
+[ OK ] gizmo_deform_undo_and_slice (7 ms)
+[ RUN] gizmo_deform_slice_on_existing_edges_keeps_groups
+[ OK ] gizmo_deform_slice_on_existing_edges_keeps_groups (0 ms)
+[ RUN] inbox0106_smooth_keeps_quad_remesh_regular_sphere
+  sphere: corner angle deviation 3.95 -> 3.42 deg (99th percentile 15.25 -> 15.20)
+[ OK ] inbox0106_smooth_keeps_quad_remesh_regular_sphere (1283 ms)
+[ RUN] inbox0106_smooth_keeps_quad_remesh_regular_lion
+  lion: corner angle deviation 8.15 -> 9.27 deg (99th percentile 37.61 -> 39.96)
+[ OK ] inbox0106_smooth_keeps_quad_remesh_regular_lion (9044 ms)
+[ RUN] inbox0106_keep_masked_tidies_awkward_masks
+  stripes: the mask's edge was tidied to fit the new surface (68 triangles at tight corners or small spots remeshed)
+  close spots: the mask's edge was tidied to fit the new surface (12 triangles in narrow gaps kept)
+[ OK ] inbox0106_keep_masked_tidies_awkward_masks (6017 ms)
+[ RUN] live_api_round_trip
+[ OK ] live_api_round_trip (1 ms)
+[ RUN] looks_stored_layout_without_shelves
+[ OK ] looks_stored_layout_without_shelves (0 ms)
+
+11 tests, 3258 checks, 0 failures

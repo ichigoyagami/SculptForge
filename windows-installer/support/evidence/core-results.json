@@ -1,0 +1,82 @@
+{
+  "results": [
+    {
+      "shard": 0,
+      "exit_code": 0,
+      "counts": [
+        104,
+        61988,
+        0
+      ]
+    },
+    {
+      "shard": 1,
+      "exit_code": 0,
+      "counts": [
+        104,
+        27087,
+        0
+      ]
+    },
+    {
+      "shard": 2,
+      "exit_code": 0,
+      "counts": [
+        104,
+        16148,
+        0
+      ]
+    },
+    {
+      "shard": 3,
+      "exit_code": 0,
+      "counts": [
+        104,
+        10784,
+        0
+      ]
+    },
+    {
+      "shard": 4,
+      "exit_code": 0,
+      "counts": [
+        104,
+        42330,
+        0
+      ]
+    },
+    {
+      "shard": 5,
+      "exit_code": 0,
+      "counts": [
+        103,
+        16725,
+        0
+      ]
+    },
+    {
+      "shard": 6,
+      "exit_code": 1,
+      "counts": [
+        102,
+        56503,
+        1
+      ]
+    },
+    {
+      "shard": 7,
+      "exit_code": 0,
+      "counts": [
+        103,
+        15908,
+        0
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "name": "linux_sdl_has_wayland_and_x11_drivers",
+      "reason": "Validation host uses offscreen SDL, delivery is Windows."
+    }
+  ]
+}

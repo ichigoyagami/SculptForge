@@ -1,0 +1,243 @@
+[ RUN] attributes_survive_decimation
+[ OK ] attributes_survive_decimation (32 ms)
+[ RUN] axis_gizmo_ends_follow_the_view
+[ OK ] axis_gizmo_ends_follow_the_view (0 ms)
+[ RUN] bake_command
+  Baked normal, displacement, ao at 256x256 from 5120 triangles in 0.1 s; rays 0.1790 in front, 0.1189 behind; displacement -0.0998 to 0.1497, PNG mid-grey = 0, white = +0.1497, black = -0.1497
+Wrote:
+  /workspace/scratch/5ad01a9b8127/validation0108/tmp-core-7/sf_bake_cmd/Low_normal.png
+  /workspace/scratch/5ad01a9b8127/validation0108/tmp-core-7/sf_bake_cmd/Low_displacement.png
+  /workspace/scratch/5ad01a9b8127/validation0108/tmp-core-7/sf_bake_cmd/Low_displacement.exr
+  /workspace/scratch/5ad01a9b8127/validation0108/tmp-core-7/sf_bake_cmd/Low_ao.png
+[ OK ] bake_command (656 ms)
+[ RUN] numpad_chords_round_trip
+[ OK ] numpad_chords_round_trip (0 ms)
+[ RUN] gallery_hash_check
+[ OK ] gallery_hash_check (0 ms)
+[ RUN] brush_codes_round_trip
+[ OK ] brush_codes_round_trip (0 ms)
+[ RUN] brush_library_projects_keep_library_origins
+[ OK ] brush_library_projects_keep_library_origins (2 ms)
+[ RUN] trim_cuts_flat_and_never_raises
+[ OK ] trim_cuts_flat_and_never_raises (3 ms)
+[ RUN] custom_brush_full_alpha_at_focal_minus_100
+[ OK ] custom_brush_full_alpha_at_focal_minus_100 (45 ms)
+[ RUN] camera_orientation_round_trips_through_angles
+[ OK ] camera_orientation_round_trips_through_angles (0 ms)
+[ RUN] comfy_seed_contract
+[ OK ] comfy_seed_contract (0 ms)
+[ RUN] comfy_system_stats
+[ OK ] comfy_system_stats (0 ms)
+[ RUN] along_normal_line_ray
+[ OK ] along_normal_line_ray (2 ms)
+[ RUN] zspheres_set_root
+[ OK ] zspheres_set_root (3 ms)
+[ RUN] loop_subdivision
+[ OK ] loop_subdivision (0 ms)
+[ RUN] script_format_round_trip
+[ OK ] script_format_round_trip (0 ms)
+[ RUN] image_relief
+[ OK ] image_relief (0 ms)
+[ RUN] ply_mesh_and_point_cloud
+[ OK ] ply_mesh_and_point_cloud (0 ms)
+[ RUN] fbx_roundtrip_layers_and_lods
+[ OK ] fbx_roundtrip_layers_and_lods (29 ms)
+[ RUN] dyntopo_adds_detail_under_the_brush_only
+[ OK ] dyntopo_adds_detail_under_the_brush_only (99 ms)
+[ RUN] dyntopo_is_deterministic_with_any_thread_count
+[ OK ] dyntopo_is_deterministic_with_any_thread_count (267 ms)
+[ RUN] environment_tone_maps_are_monotonic_and_bounded
+[ OK ] environment_tone_maps_are_monotonic_and_bounded (0 ms)
+[ RUN] mirror_flip
+[ OK ] mirror_flip (2 ms)
+[ RUN] face_subtools_eyes_and_teeth
+  teeth on jawOpen: lower 34.9 mm, upper 0.0 mm
+[ OK ] face_subtools_eyes_and_teeth (1139 ms)
+[ RUN] fill_layer_effect_chain_and_channels
+  roughness 0.333 metallic 0.702 (0.7 of the way)
+  noise variation 65.95, blurred 1.62
+[ OK ] fill_layer_effect_chain_and_channels (15157 ms)
+[ RUN] ghost_kinds_cover_the_displacement_brushes
+[ OK ] ghost_kinds_cover_the_displacement_brushes (0 ms)
+[ RUN] gizmo_deform_slice_on_existing_edges_keeps_groups
+[ OK ] gizmo_deform_slice_on_existing_edges_keeps_groups (1 ms)
+[ RUN] stl_is_millimetres_z_up
+[ OK ] stl_is_millimetres_z_up (2 ms)
+[ RUN] hw_classify_gpu
+[ OK ] hw_classify_gpu (0 ms)
+[ RUN] governor_converges_from_above
+[ OK ] governor_converges_from_above (0 ms)
+[ RUN] i18n_english_returns_the_argument
+[ OK ] i18n_english_returns_the_argument (0 ms)
+[ RUN] inbox0106_smooth_keeps_quad_remesh_regular_lion
+  lion: corner angle deviation 8.15 -> 9.27 deg (99th percentile 37.61 -> 39.96)
+[ OK ] inbox0106_smooth_keeps_quad_remesh_regular_lion (28874 ms)
+[ RUN] v02_goz_keeps_mask_paint_and_groups
+[ OK ] v02_goz_keeps_mask_paint_and_groups (30 ms)
+[ RUN] kelvinlet_kernels_are_normalized_and_localized
+[ OK ] kelvinlet_kernels_are_normalized_and_localized (0 ms)
+[ RUN] capture_vdm_from_view_round_trips_a_stamp
+  capture_vdm round trip: relative RMS error 0.088, 11881 points, 139 CG iterations
+[ OK ] capture_vdm_from_view_round_trips_a_stamp (1912 ms)
+[ RUN] project_thumbnail_round_trip
+[ OK ] project_thumbnail_round_trip (3 ms)
+[ RUN] looks_schemes_complete_and_readable
+[ OK ] looks_schemes_complete_and_readable (0 ms)
+[ RUN] ply_header_claiming_billions_of_rows_is_rejected
+[ OK ] ply_header_claiming_billions_of_rows_is_rejected (0 ms)
+[ RUN] gltf_huge_accessor_count_is_rejected_without_allocating
+[ OK ] gltf_huge_accessor_count_is_rejected_without_allocating (0 ms)
+[ RUN] malformed_glb_containers_are_rejected
+[ OK ] malformed_glb_containers_are_rejected (0 ms)
+[ RUN] map_export_unreal_bridge_builds_a_material
+[ OK ] map_export_unreal_bridge_builds_a_material (7 ms)
+[ RUN] mask_by_polygroup
+[ OK ] mask_by_polygroup (1 ms)
+[ RUN] mask_border_polygroup_borders
+[ OK ] mask_border_polygroup_borders (2 ms)
+[ RUN] mesh_maps_live_update_is_faster_than_a_full_bake
+  2K maps of 81920 triangles: full bake 49.55 s, live update of 60 tiles 2.100 s
+[ OK ] mesh_maps_live_update_is_faster_than_a_full_bake (51717 ms)
+[ RUN] format5_projects_open_as_generated_levels
+  sphere: 5120 triangles, 0 quads, top level 1.2e-07 from 0.5's
+  plane: 4608 triangles, 2304 quads, top level 6e-08 from 0.5's
+[ OK ] format5_projects_open_as_generated_levels (25 ms)
+[ RUN] micro_move_brush_moves_along_normals
+[ OK ] micro_move_brush_moves_along_normals (187 ms)
+[ RUN] micro_memory_and_dab_time
+  micro dab at 4.9M micro triangles: 4.89 ms, 1.63 bytes/micro triangle
+[ OK ] micro_memory_and_dab_time (152 ms)
+[ RUN] multires_detail_survives_round_trips_bit_for_bit
+  (subdiv_higher: Already at the highest level (SDiv 4/4))
+[ OK ] multires_detail_survives_round_trips_bit_for_bit (12 ms)
+[ RUN] multires_project_round_trip_keeps_every_level
+[ OK ] multires_project_round_trip_keeps_every_level (24 ms)
+[ RUN] layers_levels_reconstruct_with_layers
+[ OK ] layers_levels_reconstruct_with_layers (8 ms)
+[ RUN] multires_merge_and_split_say_levels_are_removed
+[ OK ] multires_merge_and_split_say_levels_are_removed (6 ms)
+[ RUN] pack_rejects_zip_bombs
+[ OK ] pack_rejects_zip_bombs (17 ms)
+[ RUN] macro_validation
+[ OK ] macro_validation (1 ms)
+[ RUN] paint_layers_project_round_trip
+[ OK ] paint_layers_project_round_trip (12 ms)
+[ RUN] upload_runs_cover_changed_vertices
+[ OK ] upload_runs_cover_changed_vertices (125 ms)
+[ RUN] first_paint_undo_is_cheap_and_exact
+[ OK ] first_paint_undo_is_cheap_and_exact (11 ms)
+[ RUN] http_parser_survives_fuzzing
+[ OK ] http_parser_survives_fuzzing (14 ms)
+[ RUN] face_link_over_webrtc
+[ OK ] face_link_over_webrtc (0 ms)
+[ RUN] knife_and_clip_undo_masks_and_symmetry
+[ OK ] knife_and_clip_undo_masks_and_symmetry (3 ms)
+[ RUN] polygroup_commands_registered
+[ OK ] polygroup_commands_registered (1 ms)
+[ RUN] delete_hidden_compacts_attributes
+[ OK ] delete_hidden_compacts_attributes (1 ms)
+[ RUN] polypaint_fill_skips_hidden
+[ OK ] polypaint_fill_skips_hidden (0 ms)
+[ RUN] polypaint_restore_stroke_marks_colors_dirty
+[ OK ] polypaint_restore_stroke_marks_colors_dirty (0 ms)
+[ RUN] project_commands_and_open
+[ OK ] project_commands_and_open (3 ms)
+[ RUN] project_texture_without_material_channels_writes_format_6
+[ OK ] project_texture_without_material_channels_writes_format_6 (157 ms)
+[ RUN] qremesh2_benchmark
+[ OK ] qremesh2_benchmark (0 ms)
+[ RUN] qremesh_guide_sweep
+[ OK ] qremesh_guide_sweep (0 ms)
+[ RUN] quads_project_round_trip
+[ OK ] quads_project_round_trip (2 ms)
+[ RUN] radial_menu_file_rejects_other_json
+[ OK ] radial_menu_file_rejects_other_json (0 ms)
+[ RUN] radial_commands
+[ OK ] radial_commands (30 ms)
+[ RUN] cluster_layout_same_serially
+[ OK ] cluster_layout_same_serially (48 ms)
+[ RUN] qremesh_keep_groups_follows_borders
+  cube, Keep Groups: 1536 faces, 100.0% quads, 0 boundary / 0 non-manifold edges, 0 non-manifold vertices
+  cube with Keep Groups: Hausdorff 0.000% of the size
+[ OK ] qremesh_keep_groups_follows_borders (2919 ms)
+[ RUN] project_all_brings_detail_back
+  Project All: 32610 vertices projected (shape and vertex paint) from 1 Part in 0.08 s
+  divided retopo vs sculpt: mean 0.00213 max 0.01946 before ProjectAll, mean 0.00008 max 0.00665 after
+[ OK ] project_all_brings_detail_back (4677 ms)
+[ RUN] qremesh_command_reports_symmetry
+  Quad Remesh: 710 quads from 5120 triangles (100% quads) in 0.6 s; mirrored across X = 3 (the model's middle). Quality: 8 poles (8 x3, 0 x5, 0 other), corners 4.4 deg off square, distance to the sculpt 0.086% mean / 0.19% max of its size
+  Quad Remesh: 781 quads from 5120 triangles (100% quads) in 0.9 s; Symmetry off: the model isn't mirror-symmetric across X. Quality: 8 poles (8 x3, 0 x5, 0 other), corners 4.6 deg off square, distance to the sculpt 0.074% mean / 0.16% max of its size
+[ OK ] qremesh_command_reports_symmetry (1510 ms)
+[ RUN] sculpt_smooth_removes_broad_bumps_at_default_intensity_across_densities
+  grid=64 standard peak=0.8304 stronger peak=0.5535
+  grid=128 standard peak=0.8290 stronger peak=0.5518
+  grid=256 standard peak=0.8578 stronger peak=0.6052
+[ OK ] sculpt_smooth_removes_broad_bumps_at_default_intensity_across_densities (308 ms)
+[ RUN] sculptable_inside_splats_dont_win
+[ OK ] sculptable_inside_splats_dont_win (4327 ms)
+[ RUN] sculptable_texture_and_levels
+  Made sculptable: 12480 polygons, 3 levels from 84000 splats in 5.7 s (surface 0.5 s)
+  handle samples 85, orange 84
+[ OK ] sculptable_texture_and_levels (5981 ms)
+[ RUN] selection_sets_morph_across_levels
+[ OK ] selection_sets_morph_across_levels (1 ms)
+[ RUN] shell_scales_with_the_ui
+[ OK ] shell_scales_with_the_ui (0 ms)
+[ RUN] space_camera_buttons
+[ OK ] space_camera_buttons (0 ms)
+[ RUN] spacemouse_settings_json
+[ OK ] spacemouse_settings_json (0 ms)
+[ RUN] splat_capture_brush_log_and_checkpoints
+[ OK ] splat_capture_brush_log_and_checkpoints (0 ms)
+[ RUN] splat_train_settings_round_trip
+[ OK ] splat_train_settings_round_trip (0 ms)
+[ RUN] dab_queue_keeps_order_and_thins_from_the_old_end
+[ OK ] dab_queue_keeps_order_and_thins_from_the_old_end (0 ms)
+[ RUN] studio_negative_adjust_last_reverses_displacement
+[ OK ] studio_negative_adjust_last_reverses_displacement (0 ms)
+[ RUN] subtool_usd_export_import
+[ OK ] subtool_usd_export_import (11 ms)
+[ RUN] subtool_document_basics
+[ OK ] subtool_document_basics (50 ms)
+[ RUN] support_reminder_timing
+[ OK ] support_reminder_timing (0 ms)
+[ RUN] pressure_curve_soft_and_firm
+[ OK ] pressure_curve_soft_and_firm (0 ms)
+[ RUN] texture_dab_paints_the_brush_area_and_respects_the_mask
+[ OK ] texture_dab_paints_the_brush_area_and_respects_the_mask (11 ms)
+[ RUN] texture_dab_is_interactive_at_4k_on_a_million_triangles
+  texture dab at 4K / 1310720 tris: begin 32.4 ms, 4.92 ms per dab (34359 texels)
+[ OK ] texture_dab_is_interactive_at_4k_on_a_million_triangles (1592 ms)
+[ RUN] height_makes_a_normal_and_the_solo_view_shows_channels
+[ OK ] height_makes_a_normal_and_the_solo_view_shows_channels (21 ms)
+[ RUN] texture_io_uv_round_trip_every_format
+[ OK ] texture_io_uv_round_trip_every_format (30 ms)
+[ RUN] texture_transfer_auto_uv_keeps_the_paint
+  auto uv transfer: vs before mean 0.0013 p99 0.0033 max 0.0038; vs pattern 0.0016 -> 0.0019 (p99 0.0038 -> 0.0043)
+[ OK ] texture_transfer_auto_uv_keeps_the_paint (8352 ms)
+[ RUN] texture_transfer_carries_material_channels
+  auto uv channels: roughness mean 0.0007 -> 0.0008, height 0.0000 -> 0.0000, metal wrong 0.000
+  remesh channels: roughness mean 0.0008 p99 0.0024, height mean 0.0000, metal wrong 0.000
+  merged channels: painted part roughness mean 0.0008, plain part 0.0010
+[ OK ] texture_transfer_carries_material_channels (24761 ms)
+[ RUN] transform_translate_is_exact
+[ OK ] transform_translate_is_exact (5 ms)
+[ RUN] transform_sculpt_layers_move_with_the_surface
+[ OK ] transform_sculpt_layers_move_with_the_surface (2 ms)
+[ RUN] transform_perf_million_triangles
+  1310720 tris, whole SubTool: begin 47.7 ms, 19.7 ms per drag frame (655362 verts), finish 44.1 ms, undo 83.6 ms
+  1310720 tris, masked + falloff 0.1: begin 83.8 ms, 14.8 ms per drag frame (228823 verts), finish 182.3 ms, undo 66.7 ms
+[ OK ] transform_perf_million_triangles (1685 ms)
+[ RUN] uv_topology_islands_and_seams
+[ OK ] uv_topology_islands_and_seams (0 ms)
+[ RUN] uv_pack_rectangles
+[ OK ] uv_pack_rectangles (0 ms)
+[ RUN] uv_painted_texture_follows_the_new_layout
+  texture after a UV rotate: worst colour change 0.0000
+[ OK ] uv_painted_texture_follows_the_new_layout (431 ms)
+[ RUN] vdm_capture_then_stamp_reproduces_the_shape
+[ OK ] vdm_capture_then_stamp_reproduces_the_shape (117 ms)
+[ RUN] zspheres_symmetric_edits
+[ OK ] zspheres_symmetric_edits (0 ms)
+
+103 tests, 15908 checks, 0 failures

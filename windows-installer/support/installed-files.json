@@ -1,0 +1,1526 @@
+[
+  {
+    "path": "bin\\sculptforge-cli.exe",
+    "sha256": "7A6D0D2C0383B8D0FC2C2C09E0E2A16AAB5D0AACFAAA633B0220E2BDC0A7A7E7"
+  },
+  {
+    "path": "bin\\sculptforge.exe",
+    "sha256": "89241A0EA2B92BE6E6B60AFFC3AAD38FF6407951007F42694F93A0AF775D90A3"
+  },
+  {
+    "path": "doc\\CHANGELOG.md",
+    "sha256": "B7A9D2DDBF59D79AFEDB0A483DE0DB49E5A2D7FAD982F19F3612A0616BAC804F"
+  },
+  {
+    "path": "doc\\LICENSE",
+    "sha256": "3972DC9744F6499F0F9B2DBF76696F2AE7AD8AF9B23DDE66D6AF86C9DFB36986"
+  },
+  {
+    "path": "doc\\README.md",
+    "sha256": "F6B81840968D9362821FEBFDBF9817ECA8975B6D9EA1BA3C838C91F22D042A62"
+  },
+  {
+    "path": "doc\\THIRD_PARTY_NOTICES.md",
+    "sha256": "4488E40E8206D700EAB583F2D2F137A62DEC7C96E71C087AF4DFB38BFA436300"
+  },
+  {
+    "path": "doc\\docs\\ai-services.md",
+    "sha256": "9ED4BFB241F1CA4678420DE1DB2DF14AA3880FA8E25A067123F09FAC66E3AD6C"
+  },
+  {
+    "path": "doc\\docs\\comfyui.md",
+    "sha256": "2EDB460DE9E30FE46B764BEF07FCF3A2BB23A7DC807220758A52D67FC48E2C32"
+  },
+  {
+    "path": "doc\\docs\\generators.md",
+    "sha256": "A2AAFB1C32E4935AAA0281FA1DA6E5E247884D5BE0E214DE2473A724CF7F2414"
+  },
+  {
+    "path": "doc\\docs\\sculpt-refinement.md",
+    "sha256": "2F1382B53244DD167FBC250DAB6DFA87095959ADDB43EA7D6412944818F2DAA2"
+  },
+  {
+    "path": "doc\\docs\\unreal.md",
+    "sha256": "9D4409DFE15310BE014170906469E5B3F9912CE50070A99DDBC95B74AB3FA1A4"
+  },
+  {
+    "path": "share\\sculptforge\\assets\\branding\\sculptforge-1024.png",
+    "sha256": "8525FD6F9E5ED705855CF667DEE6EB44AA19CE1A4D94BF08C5D65E4986E4ADFF"
+  },
+  {
+    "path": "share\\sculptforge\\assets\\branding\\sculptforge-256.png",
+    "sha256": "8C04E58CF13185475CE4A3FF98751F77E54B17F91104D0F12D5A9101A639A4F1"
+  },
+  {
+    "path": "share\\sculptforge\\assets\\branding\\sculptforge-512.png",
+    "sha256": "A4C97E0F32267BD71D782350421A86CAB1E87FBF9E56E135EDAF8D27074C74CB"
+  },
+  {
+    "path": "share\\sculptforge\\assets\\branding\\sculptforge-icon.svg",
+    "sha256": "A4B6DBFCB917DCC28FA098EE572EA80DE858D627F8349048D7748BC0507A18FD"
+  },
+  {
+    "path": "share\\sculptforge\\assets\\branding\\sculptforge.ico",
+    "sha256": "D60C6E3E81F386BCB83BAC7A22F005FA20A72A2CDAF87A4F8EAB144D7E173495"
+  },
+  {
+    "path": "share\\sculptforge\\assets\\branding\\support-card.jpg",
+    "sha256": "5C87CEC51981F9D0B59D33D51538954ED3D85C98E4D0AD52AB30D478CB74DA9C"
+  },
+  {
+    "path": "share\\sculptforge\\assets\\demo\\CREDITS.md",
+    "sha256": "46B9C830B739036465F811C33D7D8E038A38A3E2E34385CACCE56977DE503013"
+  },
+  {
+    "path": "share\\sculptforge\\assets\\demo\\lion-head.glb",
+    "sha256": "EC2EBED65F6D361FD041BC56F76D747E4F4C7000A9D8160F3FF50C36322704FF"
+  },
+  {
+    "path": "share\\sculptforge\\assets\\demo\\owl-knight-sketch.png",
+    "sha256": "461AA459A5DDA2418D6B8B0F76137B6D768F4D791CE5A6FFD010653909103CDF"
+  },
+  {
+    "path": "share\\sculptforge\\assets\\demo\\teddy-sketch.png",
+    "sha256": "E52E3122EBF3AC5AEB9E4EC5F482AD7BF81E92398BAFDBA0A1378EF15EA50F73"
+  },
+  {
+    "path": "share\\sculptforge\\assets\\face\\README.md",
+    "sha256": "518C4C51D9CF6CD88310A2620F8A07799629E78A0ECE01210170585C02F3BF57"
+  },
+  {
+    "path": "share\\sculptforge\\assets\\face\\ict-arkit.sfface",
+    "sha256": "DC2377636D8E5D867B6C589B7DF30116ABF1109196B3FD14E42648E8D2DB5924"
+  },
+  {
+    "path": "share\\sculptforge\\assets\\fonts\\Inter-Regular.ttf",
+    "sha256": "40D692FCE188E4471E2B3CBA937BE967878F631AD3EBBBDCD587687C7EBE0C82"
+  },
+  {
+    "path": "share\\sculptforge\\assets\\fonts\\Inter-SemiBold.ttf",
+    "sha256": "78A843FADE9D4612A5567302FB595B56976EB5FCEBF4FEA5A5912D638BAFCDE3"
+  },
+  {
+    "path": "share\\sculptforge\\assets\\fonts\\JetBrainsMono-OFL.txt",
+    "sha256": "30F0C136E3C88E422D0791ACD97238870F9054A9729BC34CF2FF0D4ED8CAC4AD"
+  },
+  {
+    "path": "share\\sculptforge\\assets\\fonts\\JetBrainsMono-Regular.ttf",
+    "sha256": "A0BF60EF0F83C5ED4D7A75D45838548B1F6873372DFAC88F71804491898D138F"
+  },
+  {
+    "path": "share\\sculptforge\\assets\\fonts\\JetBrainsMono-SemiBold.ttf",
+    "sha256": "1B3BFA1ED5665A4CE3F9FEB68D2D4E40E70BF8B4B7D9A3EDD418F321B4E166A0"
+  },
+  {
+    "path": "share\\sculptforge\\assets\\fonts\\OFL.txt",
+    "sha256": "262481E844521B326F5ECD053E59B98C8B2DA78C8EE1BDBB6E8174305E54935A"
+  },
+  {
+    "path": "share\\sculptforge\\assets\\fonts\\lucide.ttf",
+    "sha256": "124ECC64B91A158FC519EEFDAAEAD89A2D9E2C39B6F9C8429C5584C93A0BE451"
+  },
+  {
+    "path": "share\\sculptforge\\assets\\hdri\\brown_photostudio_02.hdr",
+    "sha256": "727DBEED0A6AE691319BED467B74C63574D18FF2C75E3A2A15E9C74FDBEABC3B"
+  },
+  {
+    "path": "share\\sculptforge\\assets\\hdri\\kloofendal_48d_partly_cloudy_puresky.hdr",
+    "sha256": "0BC51420C2F36B07A3C6DDC373F056A2906E45C4AC21E75CFA0445830FF8D691"
+  },
+  {
+    "path": "share\\sculptforge\\assets\\hdri\\studio_small_09.hdr",
+    "sha256": "6B5A7F5847696D5C86113D9CA5FE77ACD2AC97B922D411C917372544572D86D4"
+  },
+  {
+    "path": "share\\sculptforge\\assets\\materials\\dirt_and_dust.sfmaterial",
+    "sha256": "5FF6B9D5793742522A6D6F95B5E1D186FF14DF4F8FD05CD2ED83BBF9222B7E72"
+  },
+  {
+    "path": "share\\sculptforge\\assets\\materials\\painted_edges.sfmaterial",
+    "sha256": "18BC9751F968010C75D394924903652D3D5BDFDB1D600436258F3FDD8467F1DC"
+  },
+  {
+    "path": "share\\sculptforge\\assets\\materials\\rusted_iron.sfmaterial",
+    "sha256": "7A01C6A3C075E6615D4C666018165A834ACF75678B57A6BC1B7150D5470EC63A"
+  },
+  {
+    "path": "share\\sculptforge\\assets\\materials\\worn_metal.sfmaterial",
+    "sha256": "1E7D4327F94E70FF553B551F9692483D12D56C70BD5863335E2A536F9530261C"
+  },
+  {
+    "path": "share\\sculptforge\\assets\\phone\\capture.html",
+    "sha256": "426A750FDFC1BB759286277D0317FFD6E5EC1BA1644EA7C81C9B2256283132D2"
+  },
+  {
+    "path": "share\\sculptforge\\comfyui\\workflows\\README.md",
+    "sha256": "38EC107E4053051C1B8C9AC36917C38CD36CC142FDBAAC32A4B1E03D8672978C"
+  },
+  {
+    "path": "share\\sculptforge\\comfyui\\workflows\\hunyuan3d-image-to-3d.json",
+    "sha256": "E83D0BC45CACA1C07679D08E60BE8668282BDA91AFBB6EED828B221200812943"
+  },
+  {
+    "path": "share\\sculptforge\\comfyui\\workflows\\sculptforge-inflate.json",
+    "sha256": "557D7C3BB7CEADAC3268D42AE2805CA236B44C0ED814CB08F29A5E6D2F10DB93"
+  },
+  {
+    "path": "share\\sculptforge\\comfyui\\workflows\\text-to-3d.json",
+    "sha256": "8434711ADAF9C1B1B4B6C4F125BAD578012E976E052A9A28AD5B43EE3C90981D"
+  },
+  {
+    "path": "source\\REBUILD-INSTALLER.txt",
+    "sha256": "0F78A87189DE5930176BD16DEF987B7FDAA5AA51BDE8816E28CF46E1FD4608BB"
+  },
+  {
+    "path": "source\\SculptForge-main.zip",
+    "sha256": "B2F02862F9F988E4B09D300FB1AB2A9FB9FE651123239A42A066CB37C08C9E14"
+  },
+  {
+    "path": "source\\installer.nsi",
+    "sha256": "4F11ADDEE8D75E8823892CCFDF440D0C274E60F0C8B6B2D66090A2A49FE944C2"
+  },
+  {
+    "path": "source\\uninstall-files.nsh",
+    "sha256": "3C5301B9E35C416408FD0E4757D8CBEC1069A4C31837985615318370F76D975F"
+  },
+  {
+    "path": "support\\ADDED-SCULPT-TOOLS.md",
+    "sha256": "BDF9E4DFFB13199FCC55DB141F6B3A21FC87EECB188FDC7B32EDA43F14FC77FE"
+  },
+  {
+    "path": "support\\CUSTOM-MERGE.md",
+    "sha256": "E2B020266F7E82E2D3A0FCDBBEBF6B31D9E8B2D78BF70D24E171C1E55880B071"
+  },
+  {
+    "path": "support\\CUT-CLIP-SLICE.md",
+    "sha256": "DBC0FCCBEDDAC71F440DEEDB26A51E3409EE97E1B2E91C85F44E96058D31F2E9"
+  },
+  {
+    "path": "support\\GIZMO-DEFORMERS.md",
+    "sha256": "2105C68FF7BE8B9C469C3A82E9FA9C650532F5EEDB6F3179F3BFF4018B7165EE"
+  },
+  {
+    "path": "support\\READ-ME-FIRST.txt",
+    "sha256": "B384F997B57CB9694520CD0BC58ACBCD61052E58D7539A4C643F428369B313AC"
+  },
+  {
+    "path": "support\\TEST-REPORT.txt",
+    "sha256": "CD4FCE74B6620984045E62940A9FC0F5536B44EF880C548797E916FDC4BD8916"
+  },
+  {
+    "path": "support\\THIRD_PARTY_NOTICES.md",
+    "sha256": "7C68E8D7416BE4E0A40833CB155A7E3062BBA0936BC741D9C3CC9A07DCAFF17B"
+  },
+  {
+    "path": "support\\Test-Installation.cmd",
+    "sha256": "D5021BA0D69EA63DC3DBB3A4341C5375ABCED6E04E7E6EED1516C120F4852064"
+  },
+  {
+    "path": "support\\Test-Installation.ps1",
+    "sha256": "0CFB6FA8E32FBEFE01A76B7AF49DBF343DF0CC8BB18F66C047481CFCA9DA9A0C"
+  },
+  {
+    "path": "support\\evidence\\core-results.json",
+    "sha256": "446982CD33C2595AA439D7EB1D9AFDAADC36AABFC9CA32BA346BEF61C9073A90"
+  },
+  {
+    "path": "support\\evidence\\core-shard0.log",
+    "sha256": "447D15B5F0599F7349A952D76AC17C3B6E85639E162C46BB64055CE0F0774C2C"
+  },
+  {
+    "path": "support\\evidence\\core-shard1.log",
+    "sha256": "88FDDBF017C3047C0739DFA4E8BE8F6CDB2D41E44EA142B994F1B2999AAD8729"
+  },
+  {
+    "path": "support\\evidence\\core-shard2.log",
+    "sha256": "1797B88A7CCF8708FDF814D699FA8290638CF77A49731302A50280419F42E162"
+  },
+  {
+    "path": "support\\evidence\\core-shard3.log",
+    "sha256": "44E3C8DF4F9115FFCF59D2E9D65831C01C0A22A538963B2E594F348FAB2C8564"
+  },
+  {
+    "path": "support\\evidence\\core-shard4.log",
+    "sha256": "A4CCB74A2E55632B1ADFBFA24602B4F4A08F02216FC0A47EB6C6BC70A665AD09"
+  },
+  {
+    "path": "support\\evidence\\core-shard5.log",
+    "sha256": "B4615600072BD1287085C3C7218CBF66E05D23ECB128AB275DBD2752857CF250"
+  },
+  {
+    "path": "support\\evidence\\core-shard6.log",
+    "sha256": "74F8CD0F9D6343F83CBAAF020DDF31ADDD71DBDD7CFD0B716F3DE63FBB15697B"
+  },
+  {
+    "path": "support\\evidence\\core-shard7.log",
+    "sha256": "53AA9BDE4E5755DA0EED612B89A3069519FF2C1202981D1748D299A567CDD522"
+  },
+  {
+    "path": "support\\evidence\\final-checks.log",
+    "sha256": "589F8FF2A5487FC9494FE34F8EE1444C3F1A1904470952912D0D809B2DFBD6B0"
+  },
+  {
+    "path": "support\\evidence\\final-shortcuts.log",
+    "sha256": "DAA965B84CD47ED5D5FE21A655B2B1A32B1D516F4BAE626B341850AD2A89D31D"
+  },
+  {
+    "path": "support\\evidence\\focused.log",
+    "sha256": "FBE63D8FD4F7A34AFA05995716F493F12037322428EDF19D66F0AB8B16BB4DA2"
+  },
+  {
+    "path": "support\\evidence\\gallery-update.log",
+    "sha256": "21A0BF00BD0AC0C3AE9BFC064FD61792432FEB36CB98692CED4CED785C626720"
+  },
+  {
+    "path": "support\\evidence\\gear-menu.png",
+    "sha256": "2927E5B884BA22D168BEB0E965A3250C1AA19516C9FD957DEC6F44A217055E7C"
+  },
+  {
+    "path": "support\\evidence\\guide-check.log",
+    "sha256": "1864D6D4A9F5063E40605F1152437937A5E1313555CFB4CBBA13FD75072DD73A"
+  },
+  {
+    "path": "support\\evidence\\integration.log",
+    "sha256": "524D1575DF642A322390BE4DAAD8F9FD805AC67A112E008807F5D00795F4D277"
+  },
+  {
+    "path": "support\\evidence\\operators.png",
+    "sha256": "D01EB4CE804AFFCFC3356D115C4DD53D0EF53DBE17796FDA8A9896F080D8F62A"
+  },
+  {
+    "path": "support\\evidence\\texture-timing-isolated.log",
+    "sha256": "B345870D0FDD20278BF958D14586D29044898B46AB5F94D8DBB19562DD2828BA"
+  },
+  {
+    "path": "support\\evidence\\twist-preview.png",
+    "sha256": "0036236E037AD7F7EF6E7B4FD4C396827C55B9A49BDC73322016B1815FEE5CDC"
+  },
+  {
+    "path": "support\\evidence\\validation-summary.json",
+    "sha256": "70DB361D19B6588C3AEC6A52728B2B01B50CB41A2D2750F4CE86D0587C500485"
+  },
+  {
+    "path": "support\\evidence\\windows-cli-pe-imports.log",
+    "sha256": "330CDB3B66397F5FE901256D324472096E5F94256AC5F5140F0808B6513190FC"
+  },
+  {
+    "path": "support\\evidence\\windows-pe-imports.log",
+    "sha256": "85BA6ACADAF58DF7D449B0116CE38B714BFDC83A92C30828E739EC212F75124D"
+  },
+  {
+    "path": "support\\guide\\added-sculpt-tools.md",
+    "sha256": "BDF9E4DFFB13199FCC55DB141F6B3A21FC87EECB188FDC7B32EDA43F14FC77FE"
+  },
+  {
+    "path": "support\\guide\\baking.md",
+    "sha256": "D9AA3DDDC1939F783682227630677265F8D460AC5DE9508F44ED4B0185FBF488"
+  },
+  {
+    "path": "support\\guide\\blender.md",
+    "sha256": "4EECA5ED06AA237F47711C9E543E3C2CF7E04298C525D6F603AF41584D609B8E"
+  },
+  {
+    "path": "support\\guide\\brush-lab.md",
+    "sha256": "C666289B3E3E98AFB7033014775E3F71EE8DB83C4C505532C8EC57AF6AD80199"
+  },
+  {
+    "path": "support\\guide\\coming-from-zbrush.md",
+    "sha256": "CA1947908047C4D19E58FBB9F75BD30926B49CA308EAA6EC0DC4032FA6C56DDE"
+  },
+  {
+    "path": "support\\guide\\cut-clip-slice.md",
+    "sha256": "DBC0FCCBEDDAC71F440DEEDB26A51E3409EE97E1B2E91C85F44E96058D31F2E9"
+  },
+  {
+    "path": "support\\guide\\cuts-and-topology-masking.md",
+    "sha256": "A4A205E80CD5F6AA3C2E3B0EA7B986661D00AB1FFA69430E693523127B7F48AF"
+  },
+  {
+    "path": "support\\guide\\dynamic-topology.md",
+    "sha256": "1F305D400DE6B2C60314F96AA5B1EB3554BC19961E0B6C84B5D50259F86B9FCD"
+  },
+  {
+    "path": "support\\guide\\export-presets.md",
+    "sha256": "2EACCC5BD03DA0F1ED42875C764AD3F171CD59B5E934C0B9DC623BA580831ED8"
+  },
+  {
+    "path": "support\\guide\\exporting.md",
+    "sha256": "1483A4F08DC9E52ABA9178E6A3AC5AC62C14FF703DB40493F568A6DE3CADF37A"
+  },
+  {
+    "path": "support\\guide\\face-groups.md",
+    "sha256": "1B80DB5FA808B605B07421E073D8381060F9590B6A48230FE0599837782E0FEE"
+  },
+  {
+    "path": "support\\guide\\facial-shapes.md",
+    "sha256": "A11675FA656D8EF8765B9D11A27162888FB3D64F1688420DAC849448A7F10764"
+  },
+  {
+    "path": "support\\guide\\fill-layers.md",
+    "sha256": "202ACC06F9310614D2B14D0822A226D909E6FD0B778C302D808633AD5CFE3E75"
+  },
+  {
+    "path": "support\\guide\\forge-spheres.md",
+    "sha256": "09B48136D9706C586199B27A2B53DBB9D8C76D5E2AC1E19609620906D99B7FF6"
+  },
+  {
+    "path": "support\\guide\\generate-3d.md",
+    "sha256": "AED0C48A8E160EBF3B273D6A3625AF8B8E6925910C631AF37551765FFF949D84"
+  },
+  {
+    "path": "support\\guide\\geometry.md",
+    "sha256": "40DE56BC156D6D0C76E9F7E0C81989C8B2743FFBE9FD7FE841B5F935952F9768"
+  },
+  {
+    "path": "support\\guide\\gizmo-deformers.md",
+    "sha256": "2105C68FF7BE8B9C469C3A82E9FA9C650532F5EEDB6F3179F3BFF4018B7165EE"
+  },
+  {
+    "path": "support\\guide\\gizmo.md",
+    "sha256": "D400C70AD9A3E4568C14C10D37716CE646D3FA87D9AD6ACF98007E167656C33A"
+  },
+  {
+    "path": "support\\guide\\glossary.md",
+    "sha256": "FDB01056F6A2E9D2B597C0E56B156F2F40B47AC33C102D346DCDD21D62459537"
+  },
+  {
+    "path": "support\\guide\\images\\alpha-picker.jpg",
+    "sha256": "006353D58787CA9540B3E5AA0810C962B3A9F875117D3E516CC47858C16C4629"
+  },
+  {
+    "path": "support\\guide\\images\\bake-mesh-maps.jpg",
+    "sha256": "F2C958BFDCDAE677D1052CDF668DDF50C825E1E56D9F619336D76EF05688B967"
+  },
+  {
+    "path": "support\\guide\\images\\bake.jpg",
+    "sha256": "C9995769179270745DCEB458EFEF04998265B8909CBA5C91C250C935FB95DC13"
+  },
+  {
+    "path": "support\\guide\\images\\blender-menu.jpg",
+    "sha256": "914F35E9BF1C6EDD18D1A425A812CF4E1B5CF959A697F8462EA5E8AD6E921401"
+  },
+  {
+    "path": "support\\guide\\images\\bottom-shelf.jpg",
+    "sha256": "CB92A91C0EBFB4EB808C95B9AA91AC7AE866A377932A7037C23157819D850B74"
+  },
+  {
+    "path": "support\\guide\\images\\brush-lab.jpg",
+    "sha256": "48A29091AA3BE1ED93C1373C358481D796CA59AAB3E604364779C2616D4E4A2B"
+  },
+  {
+    "path": "support\\guide\\images\\brush-library.jpg",
+    "sha256": "EF78BA055A4977D1ECC4CC21C2C58B51DC961BDF9BD0CB10E54C647385BBE699"
+  },
+  {
+    "path": "support\\guide\\images\\brush-picker.jpg",
+    "sha256": "A41F914D22A272E3A064967023C3EF451850197205EA7DA86D9D2EA531930C57"
+  },
+  {
+    "path": "support\\guide\\images\\capture-from-view.jpg",
+    "sha256": "5573B370C28C374DB485AD1E0F3C703C5621D91F9FE95FA7F8BD9CE326ED8C36"
+  },
+  {
+    "path": "support\\guide\\images\\command-palette.jpg",
+    "sha256": "EB96C675BB3B1DE8E52DACA6A6DEFB9D56F9EF4CC5149B63F66C56645B0B56C9"
+  },
+  {
+    "path": "support\\guide\\images\\community-brushes.jpg",
+    "sha256": "20EE0E557D097761987B4CECE2962EACB0E300E5CFBC6DCDD9C413E3066FBE6A"
+  },
+  {
+    "path": "support\\guide\\images\\console.jpg",
+    "sha256": "459BBF5FD3C5CC8A437F55AA9195839212E5A345B10A1CCC6F2863FEAB699DD5"
+  },
+  {
+    "path": "support\\guide\\images\\ctrl-help.jpg",
+    "sha256": "B144E5D3B8BC14B98266580E0B8D7D1BA69073B63110736C2689EDA66D9DD57E"
+  },
+  {
+    "path": "support\\guide\\images\\custom-matcaps.jpg",
+    "sha256": "503931F7AD4B20F0AED9B65EDDD92A71EDB6ED2551B75321E366D3F6EEEC6E0A"
+  },
+  {
+    "path": "support\\guide\\images\\draw-palette.jpg",
+    "sha256": "F3283D9C31A8BD7E9944143E449810CBE88FDCBF4CECC162AD1B4E6B6061B8AF"
+  },
+  {
+    "path": "support\\guide\\images\\dynamic-topology.jpg",
+    "sha256": "E9F203A4CAE01EDDC83D3A8681FA0C322B7C330EF6A64D239D749CF889235F1B"
+  },
+  {
+    "path": "support\\guide\\images\\export.jpg",
+    "sha256": "79C491DF0E197F4DA7449CEA7C03B75318F6C8EFD0AEC046F0F2710E9A2C3CDF"
+  },
+  {
+    "path": "support\\guide\\images\\extract.jpg",
+    "sha256": "7DF5003581180C6C31B9973845E37BA4729BE198D0D1282A0CFD53568481BCB1"
+  },
+  {
+    "path": "support\\guide\\images\\face-landmarks.jpg",
+    "sha256": "CFC9DB085344F91ABB81AF635C652B728BFBD77D24BA7D77EBD428277E2ACF80"
+  },
+  {
+    "path": "support\\guide\\images\\face-shapes-bust.jpg",
+    "sha256": "537AFC75C0AB7BA9A183FEE60331FA05B54055F582C7A4A487C52794C0AA8252"
+  },
+  {
+    "path": "support\\guide\\images\\face-shapes-head.jpg",
+    "sha256": "4AC7B59BDDD55F2508565789E3338403D38400B029D1F69E7ADBEB9F6171C271"
+  },
+  {
+    "path": "support\\guide\\images\\facial-shapes-panel.jpg",
+    "sha256": "12E3D00048D5FA6002B2E73AFD616E88C2F7BA7B4CDF830A5AF5B71F6C5BEC5B"
+  },
+  {
+    "path": "support\\guide\\images\\fill-layer-panel.jpg",
+    "sha256": "313DAC4B62DE27544220151FB21D6F6432902220BCB416CBF74E7653BE3A30D2"
+  },
+  {
+    "path": "support\\guide\\images\\fill-painted-edges.jpg",
+    "sha256": "62286900159B2DDC95DCA4B91DAF9151F1E1A35C159F36BC9A3E5591F11E63EC"
+  },
+  {
+    "path": "support\\guide\\images\\generate-3d.jpg",
+    "sha256": "B9069ABBC4B37FD0538436A6E933F30871EF0ADE93FB29155E3A2F899C95D0B3"
+  },
+  {
+    "path": "support\\guide\\images\\gizmo-modes.jpg",
+    "sha256": "E2FFADF129B00751FAEF04C6B33722D4D15AA202471612C7EBFE3A213F9B263B"
+  },
+  {
+    "path": "support\\guide\\images\\gizmo-pose.jpg",
+    "sha256": "A91A258F69C6CF42B547C9114D2361D322F231D86BF8CA2FB757C0082CEE2D8B"
+  },
+  {
+    "path": "support\\guide\\images\\interface-overview.jpg",
+    "sha256": "CADCF3416489E0BD099B1D56F8DD3B19A9D106FA021A1C64AD0861F1AAE783B4"
+  },
+  {
+    "path": "support\\guide\\images\\kelvinlet-brushes.jpg",
+    "sha256": "BBACE822E4DFF176EF05A8F6B5FCD4696AE02FEB34E2A91EE25A2E79C863BDB2"
+  },
+  {
+    "path": "support\\guide\\images\\layers.jpg",
+    "sha256": "642C4EA34DB7738FE32D557469F8614EFBBF57307D31C0703287BE38772D46FB"
+  },
+  {
+    "path": "support\\guide\\images\\lightbox.jpg",
+    "sha256": "3FCEF4A6E2BF7EF04E3D83143158850C0485ECD469414FD3416E052EBBB18B17"
+  },
+  {
+    "path": "support\\guide\\images\\make-sculptable-panel.jpg",
+    "sha256": "5CB82804AFE4B82414E5876B5C1EA05E1336AAF6F2720DAEB2D8B07CB1AB5902"
+  },
+  {
+    "path": "support\\guide\\images\\make-sculptable.jpg",
+    "sha256": "FE37A843A001D3CF7E6B348A25126F60CBE0840BF267F1CC4575097CE4105C20"
+  },
+  {
+    "path": "support\\guide\\images\\masking.jpg",
+    "sha256": "A1B1791FBFA0A27AB8420CEDA3A2292B0FDC555046B660603D1FB877AE3C7675"
+  },
+  {
+    "path": "support\\guide\\images\\material-picker.jpg",
+    "sha256": "F7FACB8FFFFBAEE7BF8FB489407EFD6D0A6CF12EB7FE699D5675748F59D7D584"
+  },
+  {
+    "path": "support\\guide\\images\\micro-300m.jpg",
+    "sha256": "08CA0567933C4E9290ACD62AFE7E095668644345C260E2C4108FFB6A3DDDFDDE"
+  },
+  {
+    "path": "support\\guide\\images\\mirror-weld.jpg",
+    "sha256": "AD095BC1E6DD1ADBCF7F1C4C9D2270C4D25261B98F5358C25B1FACD1E4BB4157"
+  },
+  {
+    "path": "support\\guide\\images\\paint-layers.jpg",
+    "sha256": "6193C74EF324D9D9EDBC490910F408D6F685B32544A06230FF3E974D544E441F"
+  },
+  {
+    "path": "support\\guide\\images\\palette-dropdown.jpg",
+    "sha256": "1455CB5BDF507EDBF010CE6D4FBDA755117EB734CF893652F07ADE372865F7CF"
+  },
+  {
+    "path": "support\\guide\\images\\palette-tray.jpg",
+    "sha256": "7F67062BFB6497F57AB0F2F98709D1B33FD5D8C93FBF08D01A7172E5C916D8E6"
+  },
+  {
+    "path": "support\\guide\\images\\pbr-brush-material.jpg",
+    "sha256": "D0B1BFDB5A51E78F6D133419264EE7977806F150DE1B9B77F4DB27445CC567D5"
+  },
+  {
+    "path": "support\\guide\\images\\pbr-environment.jpg",
+    "sha256": "49B402AC6D28AC742BB9378B7807673F6258AC06CBAE2A63B2FDA54F3AF05091"
+  },
+  {
+    "path": "support\\guide\\images\\pbr-solo-roughness.jpg",
+    "sha256": "90E588CA998E5CC58CE9723FE7CDEAB3AAA6201A02294F0A07C081615760AAA4"
+  },
+  {
+    "path": "support\\guide\\images\\pbr-viewport.jpg",
+    "sha256": "76B4BAB75B01EABCE7C069ED7C22673532EDFDB75973D5CACDF63AC1B7A4474D"
+  },
+  {
+    "path": "support\\guide\\images\\performance-panel.jpg",
+    "sha256": "DDBBACD4F565ECF8ABB2AF7290FD82EE6B78C50CCC757EE8B7494FB77D0944A6"
+  },
+  {
+    "path": "support\\guide\\images\\polygroups.jpg",
+    "sha256": "3C34C5900F6DB69BCD17D2211CEDDD704D72F50ACA6C8804CB6C68356ACE4B8C"
+  },
+  {
+    "path": "support\\guide\\images\\polypaint.jpg",
+    "sha256": "B1FB5FF16F5E85BFBE08E696E9C7C7F6418930B6DB66DBA8A0A2CD2EDD3E17F2"
+  },
+  {
+    "path": "support\\guide\\images\\preferences.jpg",
+    "sha256": "1460AB29CDAE3F2E2B36153B28E19621FE220DBD7518907D8223917C398E87CC"
+  },
+  {
+    "path": "support\\guide\\images\\project-all.jpg",
+    "sha256": "E6873206529DFAB2088A75168407F849F4C1F5E876051D1C66C93A0AAC99BB67"
+  },
+  {
+    "path": "support\\guide\\images\\qremesh-guides.jpg",
+    "sha256": "916E91A4C1433E056E482735FA5D52AFAFBFF410006132801BFA97B0560FC9FC"
+  },
+  {
+    "path": "support\\guide\\images\\qremesh.jpg",
+    "sha256": "60E3C9503EA12F02B2468A4B6E29A074715CEE9CF1C6D6459B28FF97791DC608"
+  },
+  {
+    "path": "support\\guide\\images\\qremesh2-compare.jpg",
+    "sha256": "927AF944E7FD5CC71DFC10D1716F02AE651ED74E551A63A5564C74BF9E3CB205"
+  },
+  {
+    "path": "support\\guide\\images\\remesh.jpg",
+    "sha256": "13A0A67797875FFE3B9A6443ED6A563B4A0EC9311D601621736D47D4A8942F04"
+  },
+  {
+    "path": "support\\guide\\images\\right-shelf.jpg",
+    "sha256": "428F08EA2B8493E8E8F54CE41EA0F28F636EFB9981CEE9CE6980BA1D0A152FA5"
+  },
+  {
+    "path": "support\\guide\\images\\sculpt-lion.jpg",
+    "sha256": "93BA35B6DD78AAEF0A02C2C940F428686C6C0475F361537315D69929D6B0D031"
+  },
+  {
+    "path": "support\\guide\\images\\shading.jpg",
+    "sha256": "278E0C3D4AB5D04346774FC0D470F1958B3CE91311724E8CFB828941A3FA3D70"
+  },
+  {
+    "path": "support\\guide\\images\\splats.jpg",
+    "sha256": "BD1B7A85A988C23FBF0A351A09C4E5A16F3CE9B551F17ECC4E3082C379D72A0C"
+  },
+  {
+    "path": "support\\guide\\images\\stroke-picker.jpg",
+    "sha256": "2C053946513F6592BC44D69B9CAA0B711EA9C3310A31B0E1C0BED23C60B3E1B9"
+  },
+  {
+    "path": "support\\guide\\images\\subdivision-levels.jpg",
+    "sha256": "6D26E6D9B4725977A4571AD61DBA46C4A63A891F7E4A5EE09D0B0E566D7C0E88"
+  },
+  {
+    "path": "support\\guide\\images\\subtools.jpg",
+    "sha256": "E7FAC4817FC4917573FD42AE8247492F95508EA0A641A814659718238E5DEFFD"
+  },
+  {
+    "path": "support\\guide\\images\\texture-painting.jpg",
+    "sha256": "287C79999DA06E5C5BDA265251D1FF0E3C22A226698C1532A8CD92C84F61A117"
+  },
+  {
+    "path": "support\\guide\\images\\timeline-strip.jpg",
+    "sha256": "E058177719A190D1CC5C27721FED440EE3674B20D195F570FF1714AAD194258C"
+  },
+  {
+    "path": "support\\guide\\images\\user-guide.jpg",
+    "sha256": "E5BB170BEFEC5C8968C872F6F0D11F87292F3E48559D96F3B338F551D99B4E86"
+  },
+  {
+    "path": "support\\guide\\images\\uv-editor-seams.jpg",
+    "sha256": "A84B08FD5BFB4503680266471ED97AFD5FDBAA97E33B8DF25342E15E280992ED"
+  },
+  {
+    "path": "support\\guide\\images\\uv-editor-stretch.jpg",
+    "sha256": "3525D9442A8BF9D2FD7150B84ECF1A08DEC13CEE88D8A7DEDA6E3FBF9949EBBB"
+  },
+  {
+    "path": "support\\guide\\images\\uv-editor-trim.jpg",
+    "sha256": "D0D5E3DE9B88ECBD7E17E781A54BBAF642A7C5EB189F89AAAFBFBEB86DF97FBB"
+  },
+  {
+    "path": "support\\guide\\images\\uv-editor-udim.jpg",
+    "sha256": "90F7549C80FBB2918B6117A04D57B69AC2C2967908E3E209A6DFDFEBFF9E0AE9"
+  },
+  {
+    "path": "support\\guide\\images\\uv-editor.jpg",
+    "sha256": "D794DEA598B77F8CBE7E14C4DB2C0654191732955F4A82D6E9B6E3518637A17A"
+  },
+  {
+    "path": "support\\guide\\images\\vdm-brushes.jpg",
+    "sha256": "4C8BBF33250FDE38824A4FC5BEAA9C4C4A9F9C8B99DDB1206A29ACA558CDA270"
+  },
+  {
+    "path": "support\\guide\\index.md",
+    "sha256": "3F9A35EE964E41A434AD4597FA35CA3D6A899B2133253BAD3091F312205690AE"
+  },
+  {
+    "path": "support\\guide\\installing.md",
+    "sha256": "70A0A97C8BAC5FC5FD039EB5501611531915BCF25250D83FC245B7151C825AB6"
+  },
+  {
+    "path": "support\\guide\\interface.md",
+    "sha256": "C393349BBDC68C911715EE46B49AFC32F7B15D90FA0D00B788E0B070EA7569BB"
+  },
+  {
+    "path": "support\\guide\\layers.md",
+    "sha256": "E7F6D9ABAB07A3D058586CBA8A5964F3014432F51161E95493EDD69E71D3DC60"
+  },
+  {
+    "path": "support\\guide\\masking.md",
+    "sha256": "4777FD8913796C9E2D8B00A1129AEC5B7E213C4D6E5B415870BCCDDF8309D138"
+  },
+  {
+    "path": "support\\guide\\maya.md",
+    "sha256": "8C7415A02BE1BF476AD4D67A3F25CCDE81D233D19B88880CF16CEBCF1EB44842"
+  },
+  {
+    "path": "support\\guide\\micro-levels.md",
+    "sha256": "093B917676343B4C5CEB6BD1EDE74B771F72EC210A3CFB04A4F2327438E03D86"
+  },
+  {
+    "path": "support\\guide\\navigation.md",
+    "sha256": "9AFDFC9EE2DE8A3E9AC93EC183B8317DEF07AF548302E3A4485C4EC1BF656BBF"
+  },
+  {
+    "path": "support\\guide\\packs-and-macros.md",
+    "sha256": "8F66A782389D230FEE15FE9A1CC396364BA1F47E5D4786B969B53E84142FB428"
+  },
+  {
+    "path": "support\\guide\\parts.md",
+    "sha256": "332F3AA8AF041DE173CFA9A58706A2E3CD0D35F555B290D801AEA23FBC07E184"
+  },
+  {
+    "path": "support\\guide\\pbr-painting.md",
+    "sha256": "A90151DB13FEA93351C88589825CBF45A0B895F0113F70C6A66BAD6FC9591C91"
+  },
+  {
+    "path": "support\\guide\\performance.md",
+    "sha256": "38AE2BCDE26F8365CFFF387091A9B1D555EA02F6A58A8502F0345F3BAB0D7992"
+  },
+  {
+    "path": "support\\guide\\phone-capture.md",
+    "sha256": "2B760FC736C8C01DA3DED008A8EF7B883EE2317800B58CB91C913B2FCC388849"
+  },
+  {
+    "path": "support\\guide\\polygroups.md",
+    "sha256": "C2129A2462C65786437494899D1D49113DFD23BEEA513AF6E16AC815BC38ABC9"
+  },
+  {
+    "path": "support\\guide\\polypaint.md",
+    "sha256": "226C56930861AEA78E960092D602CDB84ECF3B24CF839BB7BC88F91A3D3BF798"
+  },
+  {
+    "path": "support\\guide\\projects.md",
+    "sha256": "FF6281A88BF0E805CC95CB437BBF3B9E34A6ADFFF7B7EED7563AB2735CC06D9E"
+  },
+  {
+    "path": "support\\guide\\retopology.md",
+    "sha256": "1605A1688E53259733E8DE5339A1B170CB6ABFFA7C48D7A8F9ECBB1A8E22253E"
+  },
+  {
+    "path": "support\\guide\\scan-to-sculptable.md",
+    "sha256": "E0A79C084349E5A82080D88F1B1D5F6ABA0683B4927E14ECF1C4160A190EAC30"
+  },
+  {
+    "path": "support\\guide\\scan-to-splat.md",
+    "sha256": "32170C06DE64819870D37A5EBB213D372B02964F5ADCA83517B70C1365DB14F4"
+  },
+  {
+    "path": "support\\guide\\scripting.md",
+    "sha256": "0BDEF8A1A1065D2CC32F0E2A33838093003F349D9D38D01BA797880C64B5E2AF"
+  },
+  {
+    "path": "support\\guide\\sculpting.md",
+    "sha256": "791718ADF5832D089BD4F4BA30E05F71CF95654A87D140480404B3B7FC5BD5AA"
+  },
+  {
+    "path": "support\\guide\\selection-sets.md",
+    "sha256": "B615684417B5832F922755790C7684ACE192B2F02DAC4C448BE3E7BD6F7A2A4E"
+  },
+  {
+    "path": "support\\guide\\shortcuts.md",
+    "sha256": "AAEC95758CBB6579B3C3704ACF7CB80F382EA867040FA52D3AFF30FA1BA8EE54"
+  },
+  {
+    "path": "support\\guide\\splats.md",
+    "sha256": "F99E3845411D34DDE2A5A695D57C64625A6F9D3F3F4C3502FEEB4A9924AA681C"
+  },
+  {
+    "path": "support\\guide\\studios.md",
+    "sha256": "5ED2885CC9380B2AE8D5446F9209B397BB449F67E74C0441F826C5B943D4D631"
+  },
+  {
+    "path": "support\\guide\\subdivision-levels.md",
+    "sha256": "E72AF42869F008FFEF3C20EE70E61529D21687E986617C35B3E579B17D6EDEBA"
+  },
+  {
+    "path": "support\\guide\\subtools.md",
+    "sha256": "868BD51EE9DFBAB37CBC24704265827BB57E4F5A6C7C8FDA87ED942BA556C876"
+  },
+  {
+    "path": "support\\guide\\texture-painting.md",
+    "sha256": "32D9B6012B6DFE179EF97BA9ECBD5275CEA5168B066E3B55CF7551D40DE531E7"
+  },
+  {
+    "path": "support\\guide\\timeline.md",
+    "sha256": "F66261D03AC0FE5A78A5E138438167CA4F6510DCBDFADEB91D873C069CEC2EB8"
+  },
+  {
+    "path": "support\\guide\\troubleshooting.md",
+    "sha256": "5BEF812514139E928F11B30BC4A318B5E3D9931C3537AD8B62E8AF231845C9D0"
+  },
+  {
+    "path": "support\\guide\\uv-editor.md",
+    "sha256": "869434B93AC3012CFBEBF8EA10828015E9AA3EA815C9A518DC5287620BA43209"
+  },
+  {
+    "path": "support\\guide\\vertex-paint.md",
+    "sha256": "98DE23470D4CB6C300C97B889726B27D2C2454785CE167DC0A4E451402314FD7"
+  },
+  {
+    "path": "support\\guide\\welcome.md",
+    "sha256": "A2EB9F9A7FD5C46DA1C808BBFEAABCB768069BA9F69062F0665F9FBA9062000F"
+  },
+  {
+    "path": "support\\guide\\whats-new.md",
+    "sha256": "32E0A7D71A80A7B381C92DF47E4D2127681B7C2BF2A12BF99B6450A4B2F73C2B"
+  },
+  {
+    "path": "support\\guide\\zspheres.md",
+    "sha256": "CE4899A2A9C203FF31323F60A8590386C38517CBF1F265AB61A470A114409A7A"
+  },
+  {
+    "path": "support\\licenses\\COPYING",
+    "sha256": "99A69660981156C21336FDB5661F89341B013C94E4BF9E1C7467B4745718397F"
+  },
+  {
+    "path": "support\\licenses\\COPYING.MinGW-w64-runtime.txt",
+    "sha256": "1DB8DA07B436C68833C0673FFEE3D9FCB2526047F3820B81661865DFEDC79A1F"
+  },
+  {
+    "path": "support\\licenses\\COPYING.MinGW-w64.txt",
+    "sha256": "F38E6194BD3BFA1B654F118E5ACEFE0AEAD437BBE669EEE43957CCC65A7127F1"
+  },
+  {
+    "path": "support\\licenses\\COPYING.winpthreads.txt",
+    "sha256": "63263614CDD29F2F93CBA85E992F041B31F9FC7B4033692F31269489A8A1B177"
+  },
+  {
+    "path": "support\\licenses\\COPYING.winstorecompat.txt",
+    "sha256": "FA7368D1F93D890C173177475D8EC7AFF265A7D08F1F364D66F74D138978CE36"
+  },
+  {
+    "path": "support\\licenses\\LLVM-Runtime.txt",
+    "sha256": "8D85C1057D742E597985C7D4E6320B015A9139385CFF4CBAE06FFC0EBE89AFEE"
+  },
+  {
+    "path": "support\\licenses\\earcut\\LICENSE",
+    "sha256": "828F2AED51B6526881A236758EC9B08CD69928FBFC70346D9D44A0B3A3444FE1"
+  },
+  {
+    "path": "support\\licenses\\earcut\\SOURCE.txt",
+    "sha256": "EDC1C3FC1BAD7E499B909E7DFBF0269DC1C4CA696E6FE151B5100FBCD6DC1446"
+  },
+  {
+    "path": "support\\licenses\\earcut\\earcut.hpp",
+    "sha256": "3B838BC3F643D34CED850B6D53B19E2D9ABDF6C2C067425B02868D131379B3CC"
+  },
+  {
+    "path": "support\\tests\\data\\CREDITS.md",
+    "sha256": "8A550CFFEDF81B5EB610ED7DA52FDDF969D7C2EB5EF456E476215C2AB5D7CA36"
+  },
+  {
+    "path": "support\\tests\\data\\blender_keymap_export.py",
+    "sha256": "13912D2FBFD5CEC1DB88F87E0FB6781D5E428B29A1C9E22EDBA404C7F63E7F84"
+  },
+  {
+    "path": "support\\tests\\data\\levels_layers_v4.sfproj",
+    "sha256": "28420E94AE16C0CE0CF63DD8F4C8B6DC17000CD5D5406EAC5B718085284817AE"
+  },
+  {
+    "path": "support\\tests\\data\\levels_layers_v4_top.sfproj",
+    "sha256": "E934F3C3B8629096E0229C9429EA27F64D266968EAF2D3DFDA92DDA454A2D8C1"
+  },
+  {
+    "path": "support\\tests\\data\\levels_v5_plane.sfproj",
+    "sha256": "019872CADE89457BB49F7F4CA0B80C72E7EB30906DF4FD0998368CD674097B0A"
+  },
+  {
+    "path": "support\\tests\\data\\levels_v5_plane_top.sfproj",
+    "sha256": "AC36803D962044C0891C336E4615505E5953AA55EA5C5590F9361D4A6BFF4609"
+  },
+  {
+    "path": "support\\tests\\data\\levels_v5_sphere.sfproj",
+    "sha256": "F455B455F76ED76F479F09AF4D18340414F0C36F3CAF77F6B6783E39DF029475"
+  },
+  {
+    "path": "support\\tests\\data\\levels_v5_sphere_top.sfproj",
+    "sha256": "28EB2C674CE275E7009EDF446E66A614956A9E7DAE95E65A0BA0EB2B8D416158"
+  },
+  {
+    "path": "support\\tests\\data\\marble-bust.glb",
+    "sha256": "DAF1A93C106387A7D68594CC6AB657F86224BDC65E23404369000CD1A7F4C299"
+  },
+  {
+    "path": "support\\tests\\data\\splat_capture\\IMG_0000.png",
+    "sha256": "4F9321A7E87722AAD3CB9703EF2BAFEA27C10BACAF6315C0670A229B0146E1FF"
+  },
+  {
+    "path": "support\\tests\\data\\splat_capture\\IMG_0001.png",
+    "sha256": "736DA3C0B0AA1EC585FCB3A7A0F9C3AF14860D2F924D46AFF410659638046CB3"
+  },
+  {
+    "path": "support\\tests\\data\\splat_capture\\IMG_0002.png",
+    "sha256": "0C58F9E86309175CC00D3480301D164648F17C519FD8782327C394944ABD44FF"
+  },
+  {
+    "path": "support\\tests\\data\\splat_capture\\IMG_0003.png",
+    "sha256": "0940C8D45CFDE5CB4B871EBC3126BFB21DE0CE5C26A40ECE7CC8979883031913"
+  },
+  {
+    "path": "support\\tests\\data\\splat_capture\\IMG_0004.png",
+    "sha256": "08270AAA48205D41CBCB10F312BE6754C23620B43F78F3698FDB4447DCD003F8"
+  },
+  {
+    "path": "support\\tests\\data\\splat_capture\\IMG_0005.png",
+    "sha256": "738284458F361D555262A5C6138673D82C8CB273D42829E7DEAA5159682ADD2A"
+  },
+  {
+    "path": "support\\tests\\data\\splat_capture\\IMG_0006.png",
+    "sha256": "7183D7191B0E1E54C7490B90AEA74CEF4BD0545E6A8F9D566C5F2D2A21765249"
+  },
+  {
+    "path": "support\\tests\\data\\splat_capture\\IMG_0007.png",
+    "sha256": "1A51DF6B38262731A5C29BABBCC2FD3D80AE0B2191350DDC66E304CA1DB62DA1"
+  },
+  {
+    "path": "support\\tests\\data\\splat_capture\\IMG_0008.png",
+    "sha256": "642329E7F9890C8D2E3F808E3553C61201962BC4BDE7728132B0E95F4E7A6F9B"
+  },
+  {
+    "path": "support\\tests\\data\\splat_capture\\IMG_0009.png",
+    "sha256": "AE4AB9C1B76DE0AEF5486D71AFC1C03E74B7EAA3D113CE2FC5CF0EB119F4CBAE"
+  },
+  {
+    "path": "support\\tests\\data\\splat_capture\\IMG_0010.png",
+    "sha256": "FC182135CBD4C8952401A3F2C97D363553D3EB7BB32A6D083EDC2A25F7DF18CF"
+  },
+  {
+    "path": "support\\tests\\data\\splat_capture\\IMG_0011.png",
+    "sha256": "5C8C876892A1298356B040A28D33A4B59ECC4C508E6864B01DCB59ECB4B2220E"
+  },
+  {
+    "path": "support\\tests\\data\\splat_capture\\IMG_0012.png",
+    "sha256": "8B4D55210ABF18EB3A7CE84B2DB2C73A623C01FBA0A70C6DE1549CF8621731AB"
+  },
+  {
+    "path": "support\\tests\\data\\splat_capture\\IMG_0013.png",
+    "sha256": "3723FA4787E6C0B211CF322D896DE5835CA405A0B162546EB7D0A6959010B7A0"
+  },
+  {
+    "path": "support\\tests\\data\\splat_capture\\IMG_0014.png",
+    "sha256": "B4E3EE9E8F90DFFB72A6849071DD3F5C2A977A9D899D8D396952F93022734D82"
+  },
+  {
+    "path": "support\\tests\\data\\splat_capture\\IMG_0015.png",
+    "sha256": "BEC581900C83DB516250AF34A4B5ED45E0070892517B5937D433753DFFE8E4E5"
+  },
+  {
+    "path": "support\\tests\\data\\splat_capture\\IMG_0016.png",
+    "sha256": "ABBFC44C9D4CA0A6FD10F9BB43A1745B2FFD797E756B647FE472A7E77AA40EBD"
+  },
+  {
+    "path": "support\\tests\\data\\splat_capture\\IMG_0017.png",
+    "sha256": "BECB212AE5DBD8A0BF9A64D6F8392143DC9F87FAB61CCD685A242083AEB81C83"
+  },
+  {
+    "path": "support\\tests\\data\\splat_capture\\IMG_0018.png",
+    "sha256": "3F30310C6E2AD99447AC4E9005D1E613ABC2C2B35B7A79FDDA055834DC461A68"
+  },
+  {
+    "path": "support\\tests\\data\\splat_capture\\IMG_0019.png",
+    "sha256": "2910D8146C0D1BE3984E797AAE40E2B8221CC15A62AC951CC23BE84B55D367FF"
+  },
+  {
+    "path": "support\\tests\\data\\splat_capture\\LICENSE.txt",
+    "sha256": "4677FA851C1A38E128916A1E08A7CA1B1D2F24BFFAA1BF4B18EED64CE75076FD"
+  },
+  {
+    "path": "support\\tests\\data\\splat_capture\\capture.json",
+    "sha256": "4255BE049CCEA35A74BD4A8E98EBF346F38EAAEC8CDF7BADB9187A9C4BE8012C"
+  },
+  {
+    "path": "support\\tests\\ui\\ai_provider.sfui",
+    "sha256": "032DDCA789B57E4F370CE69CABDDC1CF9764A39675E4EA694798A6C5ACC36450"
+  },
+  {
+    "path": "support\\tests\\ui\\air_strokes.sfui",
+    "sha256": "984317CB5BFC6920829C438F97426DAA3914E6589393E6C2DE6E6FB1763C19FD"
+  },
+  {
+    "path": "support\\tests\\ui\\along_normal.sfui",
+    "sha256": "BB05F61678140B97CFEFB05C75F0194C7DA6E11AF0694858998F083E3177F3CF"
+  },
+  {
+    "path": "support\\tests\\ui\\alternate_smooth.sfui",
+    "sha256": "8C3B305FAAC02C1E50854EB9AB1FF161F855E737E69D92BC888B9BC6652C8B24"
+  },
+  {
+    "path": "support\\tests\\ui\\backface_culling.sfui",
+    "sha256": "EED0D2E6881EED4EEEEBB7FE06C09E39C077C88EB10C72FF38675D05F55D5234"
+  },
+  {
+    "path": "support\\tests\\ui\\background.sfui",
+    "sha256": "8D5A9DA31831E1A590BE1F4F598AA3DC042C5311D56D2AB382A5B5F49D649A9D"
+  },
+  {
+    "path": "support\\tests\\ui\\bake.sfui",
+    "sha256": "AF1BDFE59EB17F4B4118BB5D8D73BE7A407ED7B42219CB22F578E289B6D27479"
+  },
+  {
+    "path": "support\\tests\\ui\\bake_levels.sfui",
+    "sha256": "33B9005EE71B8E82A9CA8AB7C26FB7DA949AD2F297C03DAB0F34EEC369205140"
+  },
+  {
+    "path": "support\\tests\\ui\\blender_bridge.sfui",
+    "sha256": "FB085FD466F4967250596AA6A522D3F1E8B7A60AE0D4C724DDF5291EAF35E56C"
+  },
+  {
+    "path": "support\\tests\\ui\\blender_keys.sfui",
+    "sha256": "FB121CBBB6D302CA3CED1C31FFD7C9A50248A7D7A5757A0655CBFA4D58038244"
+  },
+  {
+    "path": "support\\tests\\ui\\brush_falloff_options.sfui",
+    "sha256": "6A7BF9D98EE990AB45A5D32C14526106B872DF5ED55D0B30D734349144698974"
+  },
+  {
+    "path": "support\\tests\\ui\\brush_gallery.sfui",
+    "sha256": "5A4443AA6F80E22384617BD52E45C2A92EF8AE24344329F386BD7E09AEC4BC58"
+  },
+  {
+    "path": "support\\tests\\ui\\brush_sharing.sfui",
+    "sha256": "2DE217827D0DB440414CB09B7575AB2E2FC5898AD2D598CACC197C35C3FE31D5"
+  },
+  {
+    "path": "support\\tests\\ui\\builtin_presets.sfui",
+    "sha256": "59C8E59EEF590BFB456E8E01FC8EB4A2955F7FFE8D12F9E29731E9363ECA59CA"
+  },
+  {
+    "path": "support\\tests\\ui\\comfyui.sfui",
+    "sha256": "9C24DFBE9A7B1C2AA324E0133FAB9B9303301C884CDC6AF7BD628EC1B4A8E027"
+  },
+  {
+    "path": "support\\tests\\ui\\contextual_shelf.sfui",
+    "sha256": "51A558EF13E9619D9C59B2F938F4FD48F1F1A63B197E4B0F275905EE7B44B343"
+  },
+  {
+    "path": "support\\tests\\ui\\ctrl_brushes.sfui",
+    "sha256": "18518719ADC2CA4BFFEAC4B9AC04CCEC07D022D7B6E69E83EA0DB32198C8B008"
+  },
+  {
+    "path": "support\\tests\\ui\\custom_matcaps.sfui",
+    "sha256": "1BC8321E54A0F74D6F668CCAA9012B94D464744BE0327D6C9F0E426BA1A6F74F"
+  },
+  {
+    "path": "support\\tests\\ui\\cut_topology_mask.sfui",
+    "sha256": "FF8D54F1EBBE4C04384C3D2D5CCB65B74C9C1948A912814AED079B0EE02CF9D9"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\Gold.png",
+    "sha256": "A3763F20CFDFF807B6BC782E52602D0C1B66AEDB00D98E7F50455C03A4BB3BF7"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\Rose.png",
+    "sha256": "4C83CA56CDCD144881F0EA705E8E820C44F805AB0AB7E4C295F144377CC8E0CA"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\blender\\divide\\manifest.json",
+    "sha256": "DB8488D9C5B126DF2C57483BC109568177AFE1737481FC8B9BDB82078BBB9E68"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\blender\\divide\\r1_000.GoZ",
+    "sha256": "D116D583588873D82DD3BEA544BFDCE3A6B8475C5E7CEDFDB7FFBD97B1293192"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\blender\\divide\\r1_001.GoZ",
+    "sha256": "B434B107B6CABAA5D463B5A552C1807EC4D214F563B2D7A45F4B210882BE794B"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\blender\\send1\\manifest.json",
+    "sha256": "C197A1B4D01BAB77C2C7186A2F9E58D4CE45F67216D477F9C7E8C645C54E0B0B"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\blender\\send1\\r1_000.GoZ",
+    "sha256": "C05AB067000751FBAE772464855FA91A5C8B0085D7F7C1093C34FD0D17B194BE"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\blender\\send1\\r1_001.GoZ",
+    "sha256": "94855C96F71ED7434CFC8399C8319A76D2F4197AAC6FB8599D574A7F568C6709"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\blender\\send2\\manifest.json",
+    "sha256": "C2FA51AC21750A99749EC05A7872487832EDE7D6490AEA3F0304DBC8A8BCEA9C"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\blender\\send2\\r2_000.GoZ",
+    "sha256": "812521762313AC33779E0A087A4851AEA2D751B5FC19F397F8FBEFDD1A979372"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\blender\\send2\\r2_001.GoZ",
+    "sha256": "83174CA2F30CC4D9F74D8BFD82A26CEAA9855AD70A21B4F7CF6E9018F7C57CEF"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\face\\take.json",
+    "sha256": "5426A142B344F6E3C2253F18545A1B52854810A2B927014002ACFB6F52B6D865"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\make_test_matcaps.py",
+    "sha256": "6518C48B72266374E268DB0380891425281CDB01B276AE964412624C21A0D8E4"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\maya\\send1\\manifest.json",
+    "sha256": "E4183560357716A5C74E5C0DCF266840F6439E743A13EC06D229A87013FBCB8A"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\maya\\send1\\r1_000.obj",
+    "sha256": "CF2C3E2FAD550C4D15F7454A34C0714DDDBB3041F8186E1AA54A030739ED949C"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\maya\\send2\\manifest.json",
+    "sha256": "6C7C2E5B4D8C9921ACF98360526D44A619D157A0F6EECC40A56E13A0DEE290AB"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\maya\\send2\\r2_000.obj",
+    "sha256": "604854E0E98EA9D1DDB295AD7F62040B360D03318EF2548FA61AC22E9EF4E236"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\maya\\send2\\r2_001.obj",
+    "sha256": "41B8A5F87E48999A11E9C2DBFC7049F90CF8E9E8D596E1DA8FAF1D04938CF6C0"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\packs\\demo\\LICENSE.txt",
+    "sha256": "41771CA6A9D47A8CF241A6081F9C38A59B26724271DDB8F9E2927340514016B5"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\packs\\demo\\alphas\\Grit.png",
+    "sha256": "A43A589E93801A9B260A9916E028860176275916B4B65155B77DCE156399CE6E"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\packs\\demo\\brushes\\Pack Ridge.sfbrush",
+    "sha256": "0A8A4D8FD33A848CAFC598961647594B25C3827BF4E4F621C9705196601DB0BD"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\packs\\demo\\keymaps\\Demo Keys.json",
+    "sha256": "D08082AB42B5752A60A968D285C5238151DCB0E7CB2EB6DE5388781011B650A1"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\packs\\demo\\macros\\Prep.sfmacro",
+    "sha256": "B5A9FF3337D645D7C9FE42F5EC8A2EA7F48F3C4AA05C97590B1B8E5DF4FFD62F"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\packs\\demo\\matcaps\\Chalk.png",
+    "sha256": "20F4F47C195883EA0AED5DE06E27F7B2BD8A38660B979627C15A3336AA6AD196"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\packs\\demo\\materials\\Worn Steel.sfmaterial",
+    "sha256": "1E7D4327F94E70FF553B551F9692483D12D56C70BD5863335E2A536F9530261C"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\packs\\demo\\piemenus\\Demo Pie.json",
+    "sha256": "1FAA3161D3F02415659BD5E78C1A3FDCEDA01176E8D41225B139BA7F503F6FFA"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\packs\\traversal.sfpack",
+    "sha256": "B46A5D8B2106E816F156597A02012E1C354DDBC651601861F9DFA33FE08FEBD4"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\phone\\photo.png",
+    "sha256": "DB8CB6FB4F931F9741961EF87E0035FB1F9D6DBE9C4B7A1983012978DBECC06A"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\phone\\scan_01.png",
+    "sha256": "E96CD1124153E0A74ABA29E5D068B8BA7B9DFCE17DF0FDC222B8553CC8EF42A4"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\phone\\scan_02.png",
+    "sha256": "8BC525CC5BF8790BE73A6F2D2F9147950397384713A3F56BCB5286C7A0C5F005"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\phone\\scan_splat.ply",
+    "sha256": "90C960FFC6F7222B6440974424159C88BA29F4ECB7E7A70AF05FD6BFE7900760"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\radial\\right_button.json",
+    "sha256": "F5A933D520F74342C0348C887A9CB9FCC672337A227D3A8AB3DFB843CA7268E1"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\radial\\sculpting.json",
+    "sha256": "B03A6E59DA626D4C255F1269011CFD483DAD7E360A55AC47F3AE4388B579BA98"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\reference-test.png",
+    "sha256": "6ED966D4DC6CD3A528A30C2328592BB3F543EBFA17FC96E6BE553E434856CEBF"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\rose_matcap.sfproj",
+    "sha256": "B4F2C4E5C7EDCA27E51A0EA510893ADC3D5BD9C551EA593CAF061F4013FCDAA0"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\stud.obj",
+    "sha256": "B512713DC9CF8897188AF87BD7CD0E4A922678D8E1D81F81AAA801E888D46FE6"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\update_newer.json",
+    "sha256": "B476383DD31479F4BA81002F42268D0EC5EB8E496E2504A21640E0AC4F863C13"
+  },
+  {
+    "path": "support\\tests\\ui\\data\\update_older.json",
+    "sha256": "AE8DD95E0CED567035A09A22F1B924B8198C84713A5A628372622894369A0789"
+  },
+  {
+    "path": "support\\tests\\ui\\deformation_ops.sfui",
+    "sha256": "5AD3E51B8504CB9AB2758CAC12E8613FA22BBC896434105FFEE9F69688A7A8EA"
+  },
+  {
+    "path": "support\\tests\\ui\\divide_blender_fans.sfui",
+    "sha256": "92221B65F1C6D5AB963D50F72E3E85C7493A52DA88B06E1116C2C8AE650FFA1F"
+  },
+  {
+    "path": "support\\tests\\ui\\dyntopo.sfui",
+    "sha256": "790D7E386634205F53C24610A63E8A0AD026BBDE51C9C280D4FFA8B77D9D0DE4"
+  },
+  {
+    "path": "support\\tests\\ui\\dyntopo_smooth_remesh.sfui",
+    "sha256": "D76D70E71340BE3EC8CF9BCE9C469BEFCEDAA9D2D6A432D83BB3801A2B6DF753"
+  },
+  {
+    "path": "support\\tests\\ui\\extract_mirror.sfui",
+    "sha256": "4BC8565E85D9E9905A45165BB7F56AFCBC5FE03876B837754CE2484FD512ADC9"
+  },
+  {
+    "path": "support\\tests\\ui\\face_shapes.sfui",
+    "sha256": "E78E72526D5662024C154DB045E5460A575579A6AAE8E8A623CFA9808651F98D"
+  },
+  {
+    "path": "support\\tests\\ui\\fill_layers.sfui",
+    "sha256": "82AD2DF7E6FC824913BA0097BF006DB80B743D4FA612364AFE71546926A03788"
+  },
+  {
+    "path": "support\\tests\\ui\\flat_shading.sfui",
+    "sha256": "6A92989B191A043F917E0A6273B4F5E689908B1B542817687C66EDC5C7BC1029"
+  },
+  {
+    "path": "support\\tests\\ui\\focal_alpha.sfui",
+    "sha256": "8C9674EA8025308F8C16CA8FA278A6ADA677147782C68D2523FA513CDCD6B433"
+  },
+  {
+    "path": "support\\tests\\ui\\forge_spheres_pointer.sfui",
+    "sha256": "70D3111C5910FC64E4CE52DBCC97773E2C2AE4C82E52882EEFDF313AEE081DEB"
+  },
+  {
+    "path": "support\\tests\\ui\\gizmo.sfui",
+    "sha256": "C3D1EA533059E2A2E44C80F86D1C4E78F73B724C6994482E628207784EF3E232"
+  },
+  {
+    "path": "support\\tests\\ui\\gizmo_deformers.sfui",
+    "sha256": "429541E70C59206420F65A8C1E05B73B5C500E2D4DD0F07053F8AE15686A0E1A"
+  },
+  {
+    "path": "support\\tests\\ui\\hardware_profile.sfui",
+    "sha256": "6410B96B47BB7F0489AED1D0FD76120B32127658720E2492E8996174E0DF7E64"
+  },
+  {
+    "path": "support\\tests\\ui\\help_console.sfui",
+    "sha256": "46F036F21A3D859DE21737D7A38CC4B0165F38B9488BC9F73C63DFF4DF5D479B"
+  },
+  {
+    "path": "support\\tests\\ui\\insert_mesh.sfui",
+    "sha256": "E5DBE0F82353EEAC0D4398262F68A638B5AB13738D1B22E96A30EA5E788741F8"
+  },
+  {
+    "path": "support\\tests\\ui\\keep_masked.sfui",
+    "sha256": "E95CD523BF809ED150175B1DCF1C31C078E756F93624D8BD44FF86C32A6DFD48"
+  },
+  {
+    "path": "support\\tests\\ui\\kelvinlet_capture.sfui",
+    "sha256": "7535A9A0DDB6718E8438500B56F9B17F9A78085832B6A9EB507DA9680A3B6F28"
+  },
+  {
+    "path": "support\\tests\\ui\\language.sfui",
+    "sha256": "7576B7E00AD8A95BE1EA0E86178BCD6DA79F195B6F146321CA1D1349BBBEEF0D"
+  },
+  {
+    "path": "support\\tests\\ui\\layers_levels.sfui",
+    "sha256": "4FFF456EE2D440E7266EBD3D80BC214177D50A2D1FD691866F47A7D0DBDEAA6D"
+  },
+  {
+    "path": "support\\tests\\ui\\levels_rebuild.sfui",
+    "sha256": "3CE464A15D76C4EE63860D792BAE9C8D435BA0A779F467FF807D3E8728AE8925"
+  },
+  {
+    "path": "support\\tests\\ui\\lightbox.sfui",
+    "sha256": "9E2A67C38D57B4B8995FBBEF493BD3FE5A015684D2CAE5D3C31B1B1CF39D0E39"
+  },
+  {
+    "path": "support\\tests\\ui\\looks.sfui",
+    "sha256": "F057CCFEE09943B99E211B1717802BD8D2280A57CC138DE261BADF6FD7781C6E"
+  },
+  {
+    "path": "support\\tests\\ui\\make_sculptable.sfui",
+    "sha256": "294F166A6C8098B3C30F9B24255881C29A8C2964DE9A83CF02A296E283A65263"
+  },
+  {
+    "path": "support\\tests\\ui\\mask_border.sfui",
+    "sha256": "F2B06BD48F76E2BB4E969BF541AE217359F4F55536F86BC0B3FB8AB646818D65"
+  },
+  {
+    "path": "support\\tests\\ui\\mask_lasso.sfui",
+    "sha256": "63DBF38F764245FB2332A9EB43BF3677D64A9FFB848306138FC10F8D86D2FE6B"
+  },
+  {
+    "path": "support\\tests\\ui\\maya_bridge.sfui",
+    "sha256": "58D6A82F76FAA31A18DD1E32A065222919E7FEDAA3084CCEB07E37995F91C3B7"
+  },
+  {
+    "path": "support\\tests\\ui\\maya_keys.sfui",
+    "sha256": "1DD51383E419521981334277703A84BDE30CD99771ACA90CC2976DCD0AF7782B"
+  },
+  {
+    "path": "support\\tests\\ui\\micro_levels.sfui",
+    "sha256": "113F5D8A0EE8AF677875C24DD8947AEB2854E8B561511FA6BDB3BD8623C2CEE9"
+  },
+  {
+    "path": "support\\tests\\ui\\multires.sfui",
+    "sha256": "DFB58CEB251C899943EDDD27CC2BD6179EA3D908CE464FC30A237699F97FD2BE"
+  },
+  {
+    "path": "support\\tests\\ui\\navigation.sfui",
+    "sha256": "BA272705E9F0BBEA9AE4DFDA6B480B3377AD019FFF7CB69A0992BAA6FB296B97"
+  },
+  {
+    "path": "support\\tests\\ui\\ortho_shading.sfui",
+    "sha256": "1772B69586586FE229401A48B1222D6EC13733DF56C90659CCDA95E3B0E311DB"
+  },
+  {
+    "path": "support\\tests\\ui\\packs.sfui",
+    "sha256": "D5FF65DAECCC1D8B94FC08B96DE48BA161D31933436C23ED1448417CB6B52F42"
+  },
+  {
+    "path": "support\\tests\\ui\\paint_layers.sfui",
+    "sha256": "7986859BDDE0C322A88DBFD3532058F8EA44A572F89D5DD15F9AE3752C1CC2E4"
+  },
+  {
+    "path": "support\\tests\\ui\\pbr_channels.sfui",
+    "sha256": "10A56A4FA193C018E599623CF52C21491EF7110AC2215B2091A63ABA672750A2"
+  },
+  {
+    "path": "support\\tests\\ui\\pbr_viewport.sfui",
+    "sha256": "4355927D7CA77186B7B867BBB915ED056E94C36B8A20000CB5C6F6738F68092F"
+  },
+  {
+    "path": "support\\tests\\ui\\pen_navigation.sfui",
+    "sha256": "3A03D94846E06EE299A7844E6B11B3C8B48700D445B2142A9C6A1D540E83CB6F"
+  },
+  {
+    "path": "support\\tests\\ui\\pen_windows_ink.sfui",
+    "sha256": "5D34C05EDA95AB0E2AF5F08298D5749634BD208855FAFF08FDFE7DD1CFDEA3B8"
+  },
+  {
+    "path": "support\\tests\\ui\\performance.sfui",
+    "sha256": "133CD244C74A37002DC37E42816AB869417D084011FA0AB07BA196397F1F835E"
+  },
+  {
+    "path": "support\\tests\\ui\\phone_link.sfui",
+    "sha256": "04ABD4E784B5A62FAD3B0FDDBAEF39605C18B50302B386FA5BEB3DE53DCE5D16"
+  },
+  {
+    "path": "support\\tests\\ui\\profile_brushes.sfui",
+    "sha256": "42FE188C35A3CECC15B56A6B9483A3FF4E0C56423D0D82F2A029D3DBE97AA5F9"
+  },
+  {
+    "path": "support\\tests\\ui\\qremesh_guides.sfui",
+    "sha256": "D5EF76B44A4BD7C5ADEB61EF137F2A26F55A8466B45CF755F5BD22C287D84DF3"
+  },
+  {
+    "path": "support\\tests\\ui\\qremesh_symmetry.sfui",
+    "sha256": "6901BF6406C340C535C5D8054C5997EC0D1A76ED253C81F07CBD3281DFC2BF4D"
+  },
+  {
+    "path": "support\\tests\\ui\\quick_tools.sfui",
+    "sha256": "A600D5AEF046D291A42C6051C8337E282E49CA28509C45B95462F7E39E4A0D91"
+  },
+  {
+    "path": "support\\tests\\ui\\radial_buttons.sfui",
+    "sha256": "258F197C6563EA89B472D77B6563511D430264563572C18AFAC6BC4AC9C3407A"
+  },
+  {
+    "path": "support\\tests\\ui\\radial_menu.sfui",
+    "sha256": "46D2F81097356C452CDD54458029F5CC605AC61BD86BAD8B660E3BC3834BA196"
+  },
+  {
+    "path": "support\\tests\\ui\\radial_symmetry.sfui",
+    "sha256": "AF54BB6390D76C866E0BDA8BA6F802E5DC431157B8545840125DF305EAC63F5E"
+  },
+  {
+    "path": "support\\tests\\ui\\release_smoke.sfui",
+    "sha256": "58C8067883A745BBF469AA39561B0CA0337056E836429327BA3578D87A262C78"
+  },
+  {
+    "path": "support\\tests\\ui\\replay_modifiers.sfui",
+    "sha256": "27067CA87F9983AAE6E1DD6C9BDAA9B637CB07C58FDB3529C0E73D835CDB1863"
+  },
+  {
+    "path": "support\\tests\\ui\\retopo.sfui",
+    "sha256": "66E0AAD2972ABDD435CD2EA3EDC18857C64323E93DFB0EF6AABBE83EAFA2FDA7"
+  },
+  {
+    "path": "support\\tests\\ui\\right_click_menu.sfui",
+    "sha256": "E01DB011B850ADD6F81468E925525E937D33D23A1C292D75C5E18CFB99396286"
+  },
+  {
+    "path": "support\\tests\\ui\\sculpt_basics.sfui",
+    "sha256": "71F9F06B0B28485DE640E08456B42C5A9BEB989BBF9BAD6A03373C7929978B36"
+  },
+  {
+    "path": "support\\tests\\ui\\sculpt_refinement.sfui",
+    "sha256": "CD078BC328551533DC4F1E6ACB3562CB7D8418F18226CEA6B16AAE6718640144"
+  },
+  {
+    "path": "support\\tests\\ui\\selection_sets.sfui",
+    "sha256": "56B23A1DC37DA7503356108F6BB8816E5B7237C9D0903807FBA92517BF36725A"
+  },
+  {
+    "path": "support\\tests\\ui\\shell_layout.sfui",
+    "sha256": "D7B5B45C7C3992923DE1D1D13EEA21F61FB277136B48CC71FB7152C2BFE21D77"
+  },
+  {
+    "path": "support\\tests\\ui\\size_popup.sfui",
+    "sha256": "D780640E41AFD3260AD7D397A10FF177EE99DFC6BCBBACDF934683EDA9F24DBE"
+  },
+  {
+    "path": "support\\tests\\ui\\smooth_behavior.sfui",
+    "sha256": "898D3EE8C88E449A09F31E609A560129D6388D139579CE307B72A1F71E3E0DAD"
+  },
+  {
+    "path": "support\\tests\\ui\\space_camera.sfui",
+    "sha256": "0A173CE46DEF4FBB22C1F198693AA626C506CEADABC06F2194F8A4999F1126C2"
+  },
+  {
+    "path": "support\\tests\\ui\\spacemouse.sfui",
+    "sha256": "B8D491280D20F3FE4B7B2ADC111DFD4F674929AEC4B16CE36B89F46CFC5A9BFE"
+  },
+  {
+    "path": "support\\tests\\ui\\splat_train.sfui",
+    "sha256": "85CBA581440636BB5FAD308BC0C588D505531FE42ED9A1E2286FD4D5EADD9CFF"
+  },
+  {
+    "path": "support\\tests\\ui\\stroke_history.sfui",
+    "sha256": "5911612CD1BCDCB99B518C8AB9A81897869C2A8BC54FDDDA470121BB7B4EB34B"
+  },
+  {
+    "path": "support\\tests\\ui\\studio_pose.sfui",
+    "sha256": "4B573022D4D52715B242F94BD9C4A7D30379184BC8F7DC09E7591E3640D598E6"
+  },
+  {
+    "path": "support\\tests\\ui\\studio_tools.sfui",
+    "sha256": "02CDB94FE76EFF03F604DD4A60BA0A626F3FBAE618102385522D6D19CA7B58AE"
+  },
+  {
+    "path": "support\\tests\\ui\\subtools.sfui",
+    "sha256": "2B7F9382B1C30ACD17D3FF97FD642EEB4BC4435398C4E89A6193FFB9F6C7D322"
+  },
+  {
+    "path": "support\\tests\\ui\\subtools_files.sfui",
+    "sha256": "44EF88D3FAE5FD5D6E3FB6EEC403E4CC6C2DCD9D2C64A672B3D57539737EE4F3"
+  },
+  {
+    "path": "support\\tests\\ui\\support.sfui",
+    "sha256": "F3F6D40D7F4C1964C8DAC2CD81F7E902A25609D8331487A66A8CABB5E3A5830E"
+  },
+  {
+    "path": "support\\tests\\ui\\support_card.sfui",
+    "sha256": "2BD64504E1405A36C94E91293442A636F1C1C2A5A8D026FEC4DA3AD3A02CF17E"
+  },
+  {
+    "path": "support\\tests\\ui\\surface_cursor.sfui",
+    "sha256": "B9A38269B79EC2011BEED41832DC7A2B92D052D8F39B784BC6D53C5EE2A3799A"
+  },
+  {
+    "path": "support\\tests\\ui\\tablet.sfui",
+    "sha256": "CB68DAAEECE2758C7DE7B304AD69385C4FBE33D6D8460731EF353B998D730E2F"
+  },
+  {
+    "path": "support\\tests\\ui\\texture_paint.sfui",
+    "sha256": "12171CB0F6D20BAE0079658634FE5200D2A9E19845C87BE8ABECFDECB597C346"
+  },
+  {
+    "path": "support\\tests\\ui\\texture_start.sfui",
+    "sha256": "97BA13F27C22F9C93B40FF2E1F3924888BAABA600B68906749AFC0A53CC34079"
+  },
+  {
+    "path": "support\\tests\\ui\\texture_transfer.sfui",
+    "sha256": "404EF0C65E9E3E594949DD993F8908FAA3D3BAA7EB5BB55297CF1CA02D608ED1"
+  },
+  {
+    "path": "support\\tests\\ui\\timeline.sfui",
+    "sha256": "80B84F0F29CB397F90E5B723E38F0BEF9FEF5B3FD415E507769519E2917715AE"
+  },
+  {
+    "path": "support\\tests\\ui\\timeline_position.sfui",
+    "sha256": "6C917A8752E0D68B407C16E8E65B76546E4CB26B703E0E309B45313F1DCD6ACC"
+  },
+  {
+    "path": "support\\tests\\ui\\triple_click.sfui",
+    "sha256": "367CB0980DB5BDC3A766E9C83BFF594936D1883F8887F9DABCB63D2A600C2050"
+  },
+  {
+    "path": "support\\tests\\ui\\update_check.sfui",
+    "sha256": "0671319546F250EA289339FE4CB8FD4E3F6920878FAF1F92F3A2CDE74076A571"
+  },
+  {
+    "path": "support\\tests\\ui\\user_guide.sfui",
+    "sha256": "2B7CCFEF4FB43363B28CFDD12E63CDD2160BA3638125CEEAB96B5B33B83B83AB"
+  },
+  {
+    "path": "support\\tests\\ui\\uv_editor.sfui",
+    "sha256": "E747ABF8C77836BD25FD3EC9B9913CCED5CFE4F8BADBF94C7AA631DEE48CCA94"
+  },
+  {
+    "path": "support\\tests\\ui\\v05_pipeline.sfui",
+    "sha256": "5A13AD696A92CA5A311E947628620CA5752A3606C916E78447D3CD85102D0578"
+  },
+  {
+    "path": "support\\tests\\ui\\vdm.sfui",
+    "sha256": "12D0DBC965E3114C980786DF5021695104D2005B2240FC66CC1953535C9B9DBC"
+  },
+  {
+    "path": "support\\tests\\ui\\viewport_cursor.sfui",
+    "sha256": "24697BD25DDDBF9B7C15E0051B5D16882ACE1A6B371735F2C503E10DA3EDE42F"
+  },
+  {
+    "path": "support\\tests\\ui\\viewport_reference.sfui",
+    "sha256": "FEB19BD03003C8D936B6C5398C45B8A6EF2BC6B7BD7E7191C1F9F9B60D5E28E8"
+  },
+  {
+    "path": "support\\tests\\ui\\whats_new.sfui",
+    "sha256": "4E1761093A7771783003A96E58FD94A938325B7D96FE2BA2E86FBD7B967863DF"
+  },
+  {
+    "path": "support\\tests\\ui\\zbrush_feel.sfui",
+    "sha256": "924C9B2598B49182B8EEC20010CC6254244717DB20767250C554F2628C7E24FF"
+  },
+  {
+    "path": "support\\tests\\ui\\zspheres.sfui",
+    "sha256": "0B529913FE7DBBEE41FCE156F39FF8BEC2F08DCF15B3DFFD0363D9E3EEFF5C18"
+  }
+]

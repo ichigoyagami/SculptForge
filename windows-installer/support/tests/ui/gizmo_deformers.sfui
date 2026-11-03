@@ -1,0 +1,54 @@
+# Actual gear popup and parameter preview, reset, accept, cancel, undo and recorded action replay.
+run new_sphere subdivisions=3; transform scale=1,2,1 pivot=origin
+key f
+key w
+expect_value gizmo_mode == 1
+click "Gizmo Operators/###customize"
+expect "Twist"
+shot gear-menu
+click "Twist"
+expect_value deformer_active == 1
+snapshot
+drag_item "Deformer handle/Drag" 40 0
+expect_value deformer_amount > 5
+expect_value moved > 10
+click "Gizmo Deformer/Reset"
+expect_value moved == 0
+type "Gizmo Deformer/Angle" 60
+key enter
+expect_value deformer_amount == 60
+expect_value moved > 10
+remember geometry_hash twisted
+shot twist-preview
+click "Gizmo Deformer/Reset"
+expect_value moved == 0
+type "Gizmo Deformer/Angle" 60
+key enter
+expect_value geometry_hash == $twisted
+click "Gizmo Deformer/Accept"
+expect_value deformer_active == 0
+expect_value moved > 10
+key ctrl+z
+expect_value moved == 0
+key ctrl+shift+z
+expect_value geometry_hash == $twisted
+key ctrl+z
+click "Gizmo Operators/###customize"
+click "Taper"
+type "Gizmo Deformer/Amount" 50
+key enter
+expect_value moved > 10
+click "Gizmo Deformer/Cancel"
+expect_value moved == 0
+click "Gizmo Operators/###lock"
+expect_value gizmo_unlocked == 1
+snapshot
+gizmo_drag move_x 55 0
+expect_value moved == 0
+click "Gizmo Operators/###lock"
+expect_value gizmo_unlocked == 0
+click "Gizmo Operators/###sticky"
+expect_value gizmo_sticky == 1
+shot operators
+key q
+expect_value gizmo_mode == 0

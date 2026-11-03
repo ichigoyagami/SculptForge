@@ -1,0 +1,230 @@
+[ RUN] attribute_helpers_default_empty
+[ OK ] attribute_helpers_default_empty (0 ms)
+[ RUN] mask_with_sculpt_layers
+[ OK ] mask_with_sculpt_layers (24 ms)
+[ RUN] bake_errors
+[ OK ] bake_errors (257 ms)
+[ RUN] blender_bridge_names_and_app_info
+[ OK ] blender_bridge_names_and_app_info (1 ms)
+[ RUN] gallery_paths_are_confined
+[ OK ] gallery_paths_are_confined (0 ms)
+[ RUN] brush_library_precedence_user_over_studio_over_builtin
+[ OK ] brush_library_precedence_user_over_studio_over_builtin (1 ms)
+[ RUN] brush_library_file_name_clash
+[ OK ] brush_library_file_name_clash (0 ms)
+[ RUN] clay_buildup_is_square_and_flat_topped
+[ OK ] clay_buildup_is_square_and_flat_topped (14 ms)
+[ RUN] focal_shift_shapes_alpha_dabs
+[ OK ] focal_shift_shapes_alpha_dabs (25 ms)
+[ RUN] camera_turntable_stays_upright
+[ OK ] camera_turntable_stays_upright (0 ms)
+[ RUN] comfy_image_falls_back_to_first_load_image
+[ OK ] comfy_image_falls_back_to_first_load_image (0 ms)
+[ RUN] comfy_prompt_errors
+[ OK ] comfy_prompt_errors (0 ms)
+[ RUN] falloff_view_cylinder
+[ OK ] falloff_view_cylinder (2 ms)
+[ RUN] deform_mask_border_and_undo
+[ OK ] deform_mask_border_and_undo (16 ms)
+[ RUN] smooth_keep_volume_keeps_volume
+  sphere volume change: plain 99.95%, keep volume 0.35%
+[ OK ] smooth_keep_volume_keeps_volume (488 ms)
+[ RUN] glb_export
+[ OK ] glb_export (0 ms)
+[ RUN] ai_request_and_response_parsing
+[ OK ] ai_request_and_response_parsing (0 ms)
+[ RUN] splats_mesh_conversions
+[ OK ] splats_mesh_conversions (303 ms)
+[ RUN] mcp_server_protocol
+[ OK ] mcp_server_protocol (5 ms)
+[ RUN] divide_after_blender_bridge
+[ OK ] divide_after_blender_bridge (173 ms)
+[ RUN] dyntopo_keeps_boundaries_and_masked_areas
+[ OK ] dyntopo_keeps_boundaries_and_masked_areas (75 ms)
+[ RUN] environment_brdf_table_is_the_split_sum
+[ OK ] environment_brdf_table_is_the_split_sum (3 ms)
+[ RUN] mirror_and_weld_keeps_quads_and_layers
+[ OK ] mirror_and_weld_keeps_quads_and_layers (0 ms)
+[ RUN] face_generate_on_the_template_matches_its_shapes
+  jawOpen on the template: max error 0.3% of its peak
+  eyeBlinkLeft on the template: max error 6.4% of its peak
+  mouthSmileRight on the template: max error 0.9% of its peak
+  browInnerUp on the template: max error 4.9% of its peak
+[ OK ] face_generate_on_the_template_matches_its_shapes (4412 ms)
+[ RUN] face_export_round_trips_keep_morph_targets_and_names
+[ OK ] face_export_round_trips_keep_morph_targets_and_names (1661 ms)
+[ RUN] ghost_follows_other_kernels_on_a_plane
+[ OK ] ghost_follows_other_kernels_on_a_plane (45 ms)
+[ RUN] gizmo_deform_axes_anchor_cage_and_curve
+[ OK ] gizmo_deform_axes_anchor_cage_and_curve (0 ms)
+[ RUN] goz_bridge_send_and_receive
+[ OK ] goz_bridge_send_and_receive (6 ms)
+[ RUN] guide_blocks
+[ OK ] guide_blocks (0 ms)
+[ RUN] hw_profile_commands
+[ OK ] hw_profile_commands (3 ms)
+[ RUN] hw_tier_config
+[ OK ] hw_tier_config (0 ms)
+[ RUN] inbox0106_polygon_neighbors_skip_quad_diagonals
+[ OK ] inbox0106_polygon_neighbors_skip_quad_diagonals (0 ms)
+[ RUN] v02_sculpt_and_paint_share_one_stroke
+[ OK ] v02_sculpt_and_paint_share_one_stroke (1 ms)
+[ RUN] keep_masked_qremesh
+[ OK ] keep_masked_qremesh (182 ms)
+[ RUN] detail_clone_stamps_along_the_stroke
+  detail clone: 6 stamps, top 0.030
+[ OK ] detail_clone_stamps_along_the_stroke (43 ms)
+[ RUN] kelvinlet_grab_dense_mesh_timing
+  (kernel 21.0, normals 29.9, BVH 8.0 ms in all)
+  KelvinGrab r=0.3 on 1310720 triangles: 5.9 ms per step (worst 10.5), 29241 vertices a step
+[ OK ] kelvinlet_grab_dense_mesh_timing (1178 ms)
+[ RUN] insert_primitive_on_surface
+[ OK ] insert_primitive_on_surface (2 ms)
+[ RUN] looks_standard_layouts
+[ OK ] looks_standard_layouts (0 ms)
+[ RUN] gltf_well_formed_triangle_still_loads
+[ OK ] gltf_well_formed_triangle_still_loads (0 ms)
+[ RUN] gltf_too_many_morph_targets_are_rejected
+[ OK ] gltf_too_many_morph_targets_are_rejected (1 ms)
+[ RUN] map_export_user_preset_files
+[ OK ] map_export_user_preset_files (3 ms)
+[ RUN] mask_blur_sharpen_grow_shrink
+[ OK ] mask_blur_sharpen_grow_shrink (2 ms)
+[ RUN] mask_border_masks_plane_rim_and_rings_widen_it
+[ OK ] mask_border_masks_plane_rim_and_rings_widen_it (0 ms)
+[ RUN] mesh_maps_thickness_tells_thin_from_thick
+  thickness sphere 0.990 slab 0.379
+[ OK ] mesh_maps_thickness_tells_thin_from_thick (290 ms)
+[ RUN] divided_levels_project_round_trip
+[ OK ] divided_levels_project_round_trip (9 ms)
+[ RUN] micro_mask_brush_protects
+[ OK ] micro_mask_brush_protects (40 ms)
+[ RUN] micro_project_round_trip
+[ OK ] micro_project_round_trip (21 ms)
+[ RUN] multires_divide_keeps_quads_and_counts
+[ OK ] multires_divide_keeps_quads_and_counts (1 ms)
+[ RUN] multires_delete_lower_and_higher
+  (subdiv_higher: Already at the highest level (SDiv 2/2))
+[ OK ] multires_delete_lower_and_higher (2 ms)
+[ RUN] layers_levels_added_or_sculpted_low_show_at_the_top
+  Jaw: 0.164 at SDiv 1, 0.092 at the top
+  Smile after a stroke at SDiv 2: 0.130 where it went, 8.3e-09 far away
+[ OK ] layers_levels_added_or_sculpted_low_show_at_the_top (4 ms)
+[ RUN] multires_bench_select_and_step
+[ OK ] multires_bench_select_and_step (0 ms)
+[ RUN] pack_rejects_traversal_and_odd_names
+[ OK ] pack_rejects_traversal_and_odd_names (3 ms)
+[ RUN] pack_write_round_trip
+[ OK ] pack_write_round_trip (0 ms)
+[ RUN] paint_layers_brush_paints_active_layer_with_undo
+[ OK ] paint_layers_brush_paints_active_layer_with_undo (2 ms)
+[ RUN] upload_runs_of_a_big_brush_match_one_thread
+[ OK ] upload_runs_of_a_big_brush_match_one_thread (657 ms)
+[ RUN] bvh_refit_from_query_matches_refit
+[ OK ] bvh_refit_from_query_matches_refit (147 ms)
+[ RUN] http_parser_handles_split_bodies_and_pipelining
+[ OK ] http_parser_handles_split_bodies_and_pipelining (0 ms)
+[ RUN] face_messages_parse
+[ OK ] face_messages_parse (0 ms)
+[ RUN] ar_export_bakes_corner_colours
+[ OK ] ar_export_bakes_corner_colours (0 ms)
+[ RUN] profile_slice_is_topology_and_knife_rejects_invalid_curves_atomically
+[ OK ] profile_slice_is_topology_and_knife_rejects_invalid_curves_atomically (4 ms)
+[ RUN] visibility_hide_rect
+[ OK ] visibility_hide_rect (0 ms)
+[ RUN] polypaint_with_sculpt_is_one_undo_step
+[ OK ] polypaint_with_sculpt_is_one_undo_step (0 ms)
+[ RUN] matcap_custom_images
+[ OK ] matcap_custom_images (1 ms)
+[ RUN] project_round_trip_every_attribute
+[ OK ] project_round_trip_every_attribute (1 ms)
+[ RUN] project_save_obj_is_an_export
+[ OK ] project_save_obj_is_an_export (2 ms)
+[ RUN] qremesh2_hard_edges_and_groups
+  hard surface: 3016 quads, 24 poles, Hausdorff 0.000%, 0 legacy pieces
+[ OK ] qremesh2_hard_edges_and_groups (1444 ms)
+[ RUN] qremesh_guide_drawing_and_commands
+  Quad Remesh guide added (a loop, mirrored); 2 guides on the Part
+[ OK ] qremesh_guide_drawing_and_commands (10 ms)
+[ RUN] quads_topology_rebuilds_drop_or_remake_pairs
+[ OK ] quads_topology_rebuilds_drop_or_remake_pairs (24 ms)
+[ RUN] radial_json_caps_counts
+[ OK ] radial_json_caps_counts (1521 ms)
+[ RUN] radial_mask_paint_and_grab
+[ OK ] radial_mask_paint_and_grab (4 ms)
+[ RUN] cluster_layout_maps_every_corner
+[ OK ] cluster_layout_maps_every_corner (39 ms)
+[ RUN] qremesh_sphere_is_closed_quads_near_target
+  sphere: 1992 faces, 100.0% quads, 0 boundary / 0 non-manifold edges, 0 non-manifold vertices
+  sphere: 1992 quads (target 2000), Hausdorff 0.058% of the size, 2.70 s
+[ OK ] qremesh_sphere_is_closed_quads_near_target (4644 ms)
+[ RUN] qremesh_cancel_and_errors
+[ OK ] qremesh_cancel_and_errors (5 ms)
+[ RUN] qremesh_symmetry_on_asymmetric_models
+  one-sided bump, X symmetry: used 1, Hausdorff 0.263%
+  L block, X symmetry: used 0, 1596 quads, 0 triangles, Hausdorff 0.000%
+[ OK ] qremesh_symmetry_on_asymmetric_models (1987 ms)
+[ RUN] sculpt_z_intensity_and_pen_pressure_multiply_without_a_second_curve
+[ OK ] sculpt_z_intensity_and_pen_pressure_multiply_without_a_second_curve (30 ms)
+[ RUN] sculptable_surface_watertight
+[ OK ] sculptable_surface_watertight (363 ms)
+[ RUN] sculptable_command_head
+  Made sculptable: 2544 polygons from 126000 splats in 4.3 s (surface 0.7 s), face guides: 6 loops
+[ OK ] sculptable_command_head (4381 ms)
+[ RUN] selection_sets_across_levels
+[ OK ] selection_sets_across_levels (2 ms)
+[ RUN] shell_bottom_shelf_tile_sizes
+[ OK ] shell_bottom_shelf_tile_sizes (0 ms)
+[ RUN] shell_right_shelf_undo_redo
+[ OK ] shell_right_shelf_undo_redo (0 ms)
+[ RUN] spacemouse_dominant_axis_and_turntable
+[ OK ] spacemouse_dominant_axis_and_turntable (0 ms)
+[ RUN] splat_capture_reads_phone_capture_json
+[ OK ] splat_capture_reads_phone_capture_json (0 ms)
+[ RUN] splat_train_job_cancel_and_good_enough
+[ OK ] splat_train_job_cancel_and_good_enough (316 ms)
+[ RUN] stroke_path_hairpin_turn_does_not_loop
+[ OK ] stroke_path_hairpin_turn_does_not_loop (0 ms)
+[ RUN] studio_split_masked_single_undo_restores_both_parts
+[ OK ] studio_split_masked_single_undo_restores_both_parts (15 ms)
+[ RUN] subtool_glb_single_object_unchanged
+[ OK ] subtool_glb_single_object_unchanged (9 ms)
+[ RUN] subtool_thumbnails_changes_wait_to_settle
+[ OK ] subtool_thumbnails_changes_wait_to_settle (0 ms)
+[ RUN] supporters_names_are_sanitised
+[ OK ] supporters_names_are_sanitised (0 ms)
+[ RUN] surface_cursor_cost_is_rays_not_mesh_passes
+  surface cursor on 5242880 triangles: 0.242 ms per update
+[ OK ] surface_cursor_cost_is_rays_not_mesh_passes (2625 ms)
+[ RUN] tablet_settings_mouse_mode_round_trip
+[ OK ] tablet_settings_mouse_mode_round_trip (0 ms)
+[ RUN] texture_commands
+[ OK ] texture_commands (585 ms)
+[ RUN] material_dab_paints_every_enabled_channel_and_undoes_per_channel
+[ OK ] material_dab_paints_every_enabled_channel_and_undoes_per_channel (45 ms)
+[ RUN] texture_memory_readouts_are_safe_while_painting
+[ OK ] texture_memory_readouts_are_safe_while_painting (886 ms)
+[ RUN] texture_io_export_commands_write_textures
+[ OK ] texture_io_export_commands_write_textures (7 ms)
+[ RUN] texture_transfer_auto_uv_of_a_dense_sphere_does_not_fold
+  dense sphere Auto UV: 31 islands, 596481 texels covered, 0 twice
+[ OK ] texture_transfer_auto_uv_of_a_dense_sphere_does_not_fold (16525 ms)
+[ RUN] timeline_follows_the_undo_budget_and_clear
+[ OK ] timeline_follows_the_undo_budget_and_clear (3 ms)
+[ RUN] transform_falloff_is_smooth
+  edge stretch at a 60 degree bend: hard mask 10.06x, falloff 0.15 2.12x
+[ OK ] transform_falloff_is_smooth (15 ms)
+[ RUN] transform_command_errors
+[ OK ] transform_command_errors (0 ms)
+[ RUN] update_feed_on_the_website_parses
+[ OK ] update_feed_on_the_website_parses (0 ms)
+[ RUN] uv_unfold_keeps_pins_and_layout
+[ OK ] uv_unfold_keeps_pins_and_layout (1 ms)
+[ RUN] uv_commands_undo_redo_exactly
+[ OK ] uv_commands_undo_redo_exactly (2 ms)
+[ RUN] vdm_sfvdm_round_trip_and_damaged_files
+[ OK ] vdm_sfvdm_round_trip_and_damaged_files (0 ms)
+[ RUN] vdm_with_subdivision_levels
+[ OK ] vdm_with_subdivision_levels (22 ms)
+
+103 tests, 16725 checks, 0 failures

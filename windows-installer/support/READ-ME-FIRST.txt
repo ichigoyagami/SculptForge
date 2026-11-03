@@ -1,0 +1,20 @@
+SculptForge 0.10.8 - Gizmo deformers and upstream merge
+
+Windows 10/11, 64-bit. Install over the earlier custom package using the same installation folder. Earlier custom tools and the supplied upstream additions are merged into this build.
+
+GIZMO
+Press W for Move, E for Scale or R for Rotate. Click the gear above the Gizmo to open Transform Type. Choose a deformer, then use its orange handle or numeric controls. Reset returns to neutral, Cancel restores the starting mesh, and Accept commits one undo step. Q accepts and returns to Draw. Ctrl+Z cancels an active preview.
+
+The gear is also available through Customize / Deformers in the Gizmo panel and F3 search. Other icons above the Gizmo control sticky pivot, center, mesh to axis, orientation reset, lock/unlock and all-visible transforms.
+
+GIZMO-DEFORMERS.md describes every supported modifier and its limits. Bevel, Crease, Extender, Project Primitive and Remesh By Union are disabled. Primitive buttons append a SubTool. The initial cages have eight corners; this is not a full copy of ZBrush's deformers.
+
+EARLIER TOOLS
+Tool > Visibility contains Knife/Clip/Slice and Delete hidden. Delete Hidden is also in Tool > Geometry > Modify Topology and F3 search. Brush palette > Front faces only protects the back of thin surfaces; the shelf shortcut is Front (BackfaceMask in the reference layout). Key 1 repeats the recorded stroke/action with its captured brush settings. The History strip is per SubTool, with the branching Timeline above the canvas. Reference image controls are in the Spotlight/reference panel. See the included guide and CUT-CLIP-SLICE.md for more.
+
+Upstream brush names: Clay Block is ClayBuildup; Sharp Crease is DamStandard. Classic extended shelves and ZBrush-style input are defaults. Preferences can select optional layouts/input styles; existing saved preferences are retained.
+
+TEST AND SOURCE
+Start menu > SculptForge > SculptForge - Test Installation verifies package checksums, CLI mesh/project round trips and selected GUI flows. It writes results under LocalAppData/SculptForge/InstallationTests without changing your projects. Windows runtime, graphics/tablet behavior and installer interaction need local testing. TEST-REPORT.txt describes checks performed on the build host.
+
+The complete matching application source is at source/SculptForge-main.zip, and in the separate Source ZIP. Installer recipe and rebuild notes are under source/. Features can be extended later.

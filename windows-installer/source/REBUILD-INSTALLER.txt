@@ -1,0 +1,34 @@
+SculptForge 0.10.8 - source and rebuild notes
+
+Extract SculptForge-main.zip. The archive contains the modified application,
+assets, tests, CMake configuration, licenses and the pinned dependency URLs.
+Build on Windows with Visual Studio 2022 Desktop C++ Build Tools and CMake:
+  cmake -S SculptForge-0.10.8 -B build -A x64 -DSCULPTFORGE_USE_SYSTEM_SDL=OFF -DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreaded
+  cmake --build build --config Release --parallel 4
+  ctest --test-dir build -C Release --output-on-failure -LE ui
+  ctest --test-dir build -C Release --output-on-failure -R ui_viewport_reference
+  cmake --install build --config Release --prefix staging
+
+The supplied Windows binary was cross-compiled with LLVM MinGW 20261006,
+Release mode, static linking and SCULPTFORGE_WEBRTC=ON. The CMake WebRTC
+helper contains a missing-header workaround for that toolchain. All original
+phone-streaming dependencies remain enabled. Ordinary MSVC builds require
+the appropriate Microsoft runtime if linked dynamically.
+
+Rebuild installer.nsi with NSIS 3.09+ and absolute path defines:
+SF_PAYLOAD: staging tree with bin, doc and share
+SF_EXTRA: support tree with test runner, tests, licenses and report
+SF_SOURCE: source ZIP, this note, installer.nsi and uninstall-files.nsh
+SF_ICON: assets/branding/sculptforge.ico
+SF_OUTPUT: output setup executable path
+Use /DNAME=value before the script name on Windows, -DNAME=value on Linux.
+
+Regenerate installed-files.json and the exact uninstall-files.nsh list when
+files change. The manifest excludes itself and the generated uninstaller.
+Never replace the explicit list with recursive installation-folder deletion.
+The recipe assumes statically linked C++ runtimes, as in the delivered build.
+For dynamic MSVC builds, bundle the required runtime files or prerequisite.
+
+The registry identity and installation path are kept compatible with the
+previous custom 0.9.4 and 0.9.5 installers so it can be updated in place.
+Retain the application GPL license and all dependency notices.

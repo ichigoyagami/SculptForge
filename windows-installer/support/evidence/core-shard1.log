@@ -1,0 +1,245 @@
+[ RUN] action_registry_keys_and_overrides
+[ OK ] action_registry_keys_and_overrides (0 ms)
+[ RUN] attributes_carried_by_weld_and_snapshot_undo
+[ OK ] attributes_carried_by_weld_and_snapshot_undo (94 ms)
+[ RUN] axis_gizmo_ends_snap_to_the_side_they_point_at
+[ OK ] axis_gizmo_ends_snap_to_the_side_they_point_at (0 ms)
+[ RUN] bake_unreal_normal_map_import
+[ OK ] bake_unreal_normal_map_import (0 ms)
+[ RUN] blender_keymap_rejects_other_text
+[ OK ] blender_keymap_rejects_other_text (0 ms)
+[ RUN] gallery_install_from_local_folder
+[ OK ] gallery_install_from_local_folder (5 ms)
+[ RUN] brush_file_names_are_safe
+[ OK ] brush_file_names_are_safe (0 ms)
+[ RUN] brush_names_cover_new_types
+[ OK ] brush_names_cover_new_types (0 ms)
+[ RUN] nudge_slides_along_the_surface
+[ OK ] nudge_slides_along_the_surface (3 ms)
+[ RUN] restore_stroke_reverts_for_drag_rect
+[ OK ] restore_stroke_reverts_for_drag_rect (8 ms)
+[ RUN] camera_turntable_after_free_rotation_stands_upright
+[ OK ] camera_turntable_after_free_rotation_stands_upright (0 ms)
+[ RUN] comfy_workflow_kind
+[ OK ] comfy_workflow_kind (0 ms)
+[ RUN] comfy_settings_round_trip
+[ OK ] comfy_settings_round_trip (0 ms)
+[ RUN] deform_smooth_and_keep_volume
+[ OK ] deform_smooth_and_keep_volume (4 ms)
+[ RUN] bvh_raycast_and_query
+[ OK ] bvh_raycast_and_query (3 ms)
+[ RUN] commands_and_tool_schema
+[ OK ] commands_and_tool_schema (2 ms)
+[ RUN] json_roundtrip
+[ OK ] json_roundtrip (0 ms)
+[ RUN] image_projection
+[ OK ] image_projection (1 ms)
+[ RUN] usd_roundtrip_mesh_layers_splats
+[ OK ] usd_roundtrip_mesh_layers_splats (4 ms)
+[ RUN] unreal_link_messages_and_script
+[ OK ] unreal_link_messages_and_script (0 ms)
+[ RUN] dyntopo_undo_redo_restore_exactly
+[ OK ] dyntopo_undo_redo_restore_exactly (132 ms)
+[ RUN] dyntopo_smooth_remesh_setting
+[ OK ] dyntopo_smooth_remesh_setting (60 ms)
+[ RUN] pbr_view_packs_the_material_channels
+[ OK ] pbr_view_packs_the_material_channels (0 ms)
+[ RUN] face_arkit_names_are_exact
+[ OK ] face_arkit_names_are_exact (20 ms)
+[ RUN] face_weights_timing_on_a_500k_head
+  head: 714062 vertices
+  generate 10297 ms; face_weights (all 52 changing): 47.06 ms average, 113.45 ms worst, ~91% of the vertices re-uploaded
+[ OK ] face_weights_timing_on_a_500k_head (13516 ms)
+[ RUN] fill_layer_command_undo_and_projects
+  Fill layer 'Worn edges': base_color metallic; mask: edge_wear
+[ OK ] fill_layer_command_undo_and_projects (1093 ms)
+[ RUN] pen_predictor_extrapolates_steady_motion
+[ OK ] pen_predictor_extrapolates_steady_motion (0 ms)
+[ RUN] goz_parses_gob_layout
+[ OK ] goz_parses_gob_layout (0 ms)
+[ RUN] goz_send_refuses_shell_unsafe_launch_paths
+[ OK ] goz_send_refuses_shell_unsafe_launch_paths (2 ms)
+[ RUN] hw_profile_mapping
+[ OK ] hw_profile_mapping (0 ms)
+[ RUN] governor_hysteresis_with_noise
+[ OK ] governor_hysteresis_with_noise (0 ms)
+[ RUN] i18n_keeps_ids_icons_and_tails
+[ OK ] i18n_keeps_ids_icons_and_tails (0 ms)
+[ RUN] inbox0106_keep_masked_tidies_awkward_masks
+  stripes: the mask's edge was tidied to fit the new surface (68 triangles at tight corners or small spots remeshed)
+  close spots: the mask's edge was tidied to fit the new surface (12 triangles in narrow gaps kept)
+[ OK ] inbox0106_keep_masked_tidies_awkward_masks (7750 ms)
+[ RUN] keep_masked_triangles_need_every_corner
+[ OK ] keep_masked_triangles_need_every_corner (0 ms)
+[ RUN] kelvinlet_twist_is_a_rotation_and_scale_never_folds
+[ OK ] kelvinlet_twist_is_a_rotation_and_scale_never_folds (0 ms)
+[ RUN] kelvinlet_lattice_proxy_matches_the_exact_field
+  KelvinGrab lattice proxy: worst error 6.85e-04 = 0.527% of the largest move, 0.171% of the radius
+    = 0.527% of the step
+  KelvinTwist lattice proxy: worst error 8.34e-04 = 2.342% of the largest move, 0.208% of the radius
+    = 0.521% of the step
+  KelvinScale lattice proxy: worst error 6.18e-04 = 2.316% of the largest move, 0.154% of the radius
+    = 0.515% of the step
+[ OK ] kelvinlet_lattice_proxy_matches_the_exact_field (965 ms)
+[ RUN] quicksave_files
+[ OK ] quicksave_files (3 ms)
+[ RUN] looks_omarchy_colors_toml
+[ OK ] looks_omarchy_colors_toml (0 ms)
+[ RUN] non_finite_coordinates_do_not_break_import
+[ OK ] non_finite_coordinates_do_not_break_import (0 ms)
+[ RUN] gltf_negative_fractional_and_huge_numbers_are_rejected
+[ OK ] gltf_negative_fractional_and_huge_numbers_are_rejected (1 ms)
+[ RUN] map_export_builtin_presets
+[ OK ] map_export_builtin_presets (0 ms)
+[ RUN] mask_stroke_soft_strength_and_hidden
+[ OK ] mask_stroke_soft_strength_and_hidden (4 ms)
+[ RUN] mask_rect_and_lasso
+[ OK ] mask_rect_and_lasso (6 ms)
+[ RUN] maya_manifest_parse_and_write
+[ OK ] maya_manifest_parse_and_write (0 ms)
+[ RUN] implicit_adjacency_matches_the_stored_lists
+  quads: 768 triangles, implicit 1
+  quads and triangles: 1824 triangles, implicit 1
+  open: 1440 triangles, implicit 1
+  triangles (Loop): 1280 triangles, implicit 1
+[ OK ] implicit_adjacency_matches_the_stored_lists (6 ms)
+[ RUN] micro_divide_needs_top_level
+[ OK ] micro_divide_needs_top_level (46 ms)
+[ RUN] micro_raycast_hits_the_micro_surface
+[ OK ] micro_raycast_hits_the_micro_surface (262 ms)
+[ RUN] micro_out_of_core_store
+[ OK ] micro_out_of_core_store (276 ms)
+[ RUN] multires_low_edit_carries_the_detail
+[ OK ] multires_low_edit_carries_the_detail (9 ms)
+[ RUN] layers_levels_record_at_top_step_down_and_up
+[ OK ] layers_levels_record_at_top_step_down_and_up (11 ms)
+[ RUN] layers_levels_undo_across_levels
+  low stroke into the layer: 0.1642 at SDiv 1
+  and 0.0918 at the top
+[ OK ] layers_levels_undo_across_levels (5 ms)
+[ RUN] multires_format4_layer_detail_is_converted
+  top level 1.2e-07 from 0.4.2's, layer 7.5e-09
+[ OK ] multires_format4_layer_detail_is_converted (4 ms)
+[ RUN] pack_rejects_bad_manifests
+[ OK ] pack_rejects_bad_manifests (1 ms)
+[ RUN] macro_record_play_round_trip
+[ OK ] macro_record_play_round_trip (3 ms)
+[ RUN] paint_layers_dab_cost_on_big_mesh
+    paint layers: 655362 vertices, full composite 4.7 ms, dab 0.28 ms (2043 vertices per dab)
+[ OK ] paint_layers_dab_cost_on_big_mesh (578 ms)
+[ RUN] bvh_refit_after_big_stroke_finds_everything
+[ OK ] bvh_refit_after_big_stroke_finds_everything (488 ms)
+[ RUN] benchmark_smoke
+[ OK ] benchmark_smoke (57 ms)
+[ RUN] http_server_answers_on_a_socket
+[ OK ] http_server_answers_on_a_socket (203 ms)
+[ RUN] ar_link_uploads_the_model_encrypted_to_the_relay
+[ OK ] ar_link_uploads_the_model_encrypted_to_the_relay (0 ms)
+[ RUN] slice_keeps_both_sides_welded_and_undoes
+[ OK ] slice_keeps_both_sides_welded_and_undoes (6 ms)
+[ RUN] polygroups_by_uvs
+[ OK ] polygroups_by_uvs (1 ms)
+[ RUN] visibility_selection_with_symmetry
+[ OK ] visibility_selection_with_symmetry (1 ms)
+[ RUN] polypaint_sample_color
+[ OK ] polypaint_sample_color (0 ms)
+[ RUN] insert_primitive_on_surface
+[ OK ] insert_primitive_on_surface (3 ms)
+[ RUN] project_attachments
+[ OK ] project_attachments (1 ms)
+[ RUN] qremesh2_sphere_has_eight_poles
+  sphere: 1992 quads, 8 poles (8 x3), corners 4.3 deg, Hausdorff 0.058%
+  legacy: 64 poles, corners 3.8 deg
+[ OK ] qremesh2_sphere_has_eight_poles (1859 ms)
+[ RUN] qremesh_guide_loop_round_an_eye
+  eye 0.42 rad, 3000 quads: without guide 20.3 deg (79 edges, loop 0), with 4.7 deg (77 edges, loop 1)
+  eye 0.30 rad, 4000 quads: without guide 22.8 deg (72 edges, loop 0), with 4.2 deg (54 edges, loop 1)
+  eye 0.55 rad, 2000 quads: without guide 20.5 deg (88 edges, loop 0), with 1.7 deg (70 edges, loop 1)
+  eye 0.35 rad, 5000 quads: without guide 22.4 deg (80 edges, loop 0), with 3.5 deg (92 edges, loop 1)
+  eye 0.60 rad, 1500 quads: without guide 24.5 deg (78 edges, loop 0), with 4.8 deg (89 edges, loop 1)
+  eye 0.25 rad, 3500 quads: without guide 23.5 deg (52 edges, loop 0), with 1.9 deg (34 edges, loop 1)
+  6 of 6 loops closed
+[ OK ] qremesh_guide_loop_round_an_eye (32479 ms)
+[ RUN] quads_obj_round_trip_keeps_quad_count
+[ OK ] quads_obj_round_trip_keeps_quad_count (1 ms)
+[ RUN] radial_slot_dead_zone
+[ OK ] radial_slot_dead_zone (0 ms)
+[ RUN] radial_transform_maths
+[ OK ] radial_transform_maths (0 ms)
+[ RUN] reference_embedded_image_and_settings_roundtrip
+[ OK ] reference_embedded_image_and_settings_roundtrip (0 ms)
+[ RUN] closed_oriented_meshes
+[ OK ] closed_oriented_meshes (45 ms)
+[ RUN] qremesh_open_surface_keeps_its_outline
+  plane: 399 faces, 100.0% quads, 80 boundary / 0 non-manifold edges, 0 non-manifold vertices
+[ OK ] qremesh_open_surface_keeps_its_outline (223 ms)
+[ RUN] retopo_bench_1m_triangles
+[ OK ] retopo_bench_1m_triangles (0 ms)
+[ RUN] sculpt_clay_intensity_is_monotonic_and_low_values_are_gentle
+[ OK ] sculpt_clay_intensity_is_monotonic_and_low_values_are_gentle (14 ms)
+[ RUN] sculpt_smooth_modes_respect_mask_and_brush_boundary
+[ OK ] sculpt_smooth_modes_respect_mask_and_brush_boundary (6 ms)
+[ RUN] sculptable_thin_parts_survive
+  mug: 0 boundary, 0 non-manifold edges, 0 non-manifold vertices, 1 pieces
+[ OK ] sculptable_thin_parts_survive (930 ms)
+[ RUN] selection_sets_store_restore_undo
+[ OK ] selection_sets_store_restore_undo (5 ms)
+[ RUN] selection_sets_old_projects
+[ OK ] selection_sets_old_projects (2 ms)
+[ RUN] shell_narrow_and_left_handed
+[ OK ] shell_narrow_and_left_handed (0 ms)
+[ RUN] spacemouse_device_ids
+[ OK ] spacemouse_device_ids (0 ms)
+[ RUN] splat_capture_selects_sharpest_frame_per_stretch
+[ OK ] splat_capture_selects_sharpest_frame_per_stretch (0 ms)
+[ RUN] splat_train_job_reports_missing_tools
+[ OK ] splat_train_job_reports_missing_tools (2 ms)
+[ RUN] stroke_path_straight_matches_the_old_loop
+[ OK ] stroke_path_straight_matches_the_old_loop (0 ms)
+[ RUN] stroke_backlog_keeps_a_heavy_brush_near_the_pointer
+[ OK ] stroke_backlog_keeps_a_heavy_brush_near_the_pointer (0 ms)
+[ RUN] subtool_project_version1_still_loads
+[ OK ] subtool_project_version1_still_loads (4 ms)
+[ RUN] subtool_merged_exports
+[ OK ] subtool_merged_exports (3 ms)
+[ RUN] subtool_merge_and_split
+[ OK ] subtool_merge_and_split (0 ms)
+[ RUN] studio_offer_matches_the_website
+[ OK ] studio_offer_matches_the_website (0 ms)
+[ RUN] tablet_settings_json_round_trip
+[ OK ] tablet_settings_json_round_trip (0 ms)
+[ RUN] texture_stroke_undo_restores_exactly
+[ OK ] texture_stroke_undo_restores_exactly (62 ms)
+[ RUN] texture_dab_is_deterministic_with_threads
+[ OK ] texture_dab_is_deterministic_with_threads (457 ms)
+[ RUN] texture_channel_commands
+[ OK ] texture_channel_commands (68 ms)
+[ RUN] texture_io_meshes_without_uvs_unchanged
+[ OK ] texture_io_meshes_without_uvs_unchanged (1 ms)
+[ RUN] texture_transfer_remesh_and_qremesh_keep_the_texture
+  remesh keeps the texture: pattern error mean 0.0016 -> 0.0018, p99 0.0039 -> 0.0040 (DynaMesh: 43254 quads, 0 unpaired triangles; texture kept (Auto UV, 31 islands, 20.2 s))
+  qremesh keeps the texture: pattern error mean 0.0016 -> 0.0019, p99 0.0039 -> 0.0042 (Quad Remesh: 1990 quads from 5120 triangles (100% quads) in 1.4 s. Quality: 8 poles (8 x3, 0 x5, 0 other), corners 4.4 deg off square, distance to the sculpt 0.028% mean / 0.08% max of its size; texture kept (Auto UV, 8 islands, 0.8 s))
+[ OK ] texture_transfer_remesh_and_qremesh_keep_the_texture (27539 ms)
+[ RUN] timeline_walks_steps_that_are_not_strokes
+[ OK ] timeline_walks_steps_that_are_not_strokes (2 ms)
+[ RUN] transform_rotate_and_scale_about_centre
+[ OK ] transform_rotate_and_scale_about_centre (1 ms)
+[ RUN] transform_symmetry_mirrors_a_masked_pose
+[ OK ] transform_symmetry_mirrors_a_masked_pose (5 ms)
+[ RUN] update_versions_compare_numerically
+[ OK ] update_versions_compare_numerically (0 ms)
+[ RUN] uv_least_stretch_beats_conformal_on_a_curved_piece
+  dome: conformal stretch 0.1075, least stretch 0.0949
+[ OK ] uv_least_stretch_beats_conformal_on_a_curved_piece (16 ms)
+[ RUN] uv_density_and_stretch_measures
+[ OK ] uv_density_and_stretch_measures (0 ms)
+[ RUN] uv_editor_million_triangles_stay_interactive
+  1310720 triangles
+  unwrap 17.14 s, topology 0.231 s, stretch 0.276 s, move 0.0107 s, pack 0.772 s; stretch 0.039
+[ OK ] uv_editor_million_triangles_stay_interactive (19424 ms)
+[ RUN] vdm_symmetry_mirrors_exactly
+[ OK ] vdm_symmetry_mirrors_exactly (5 ms)
+[ RUN] zspheres_display_mesh_groups
+[ OK ] zspheres_display_mesh_groups (2 ms)
+
+104 tests, 27087 checks, 0 failures

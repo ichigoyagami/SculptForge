@@ -1,0 +1,17 @@
+SculptForge 0.10.8 - validation report, 2 November 2026
+
+SOURCE AND BUILDS
+The supplied upstream 0.10.7 source was merged with the prior custom 0.10.5 work against common upstream 0.10.1. Windows GUI and CLI were cross-compiled for x64 with LLVM MinGW 20261006 UCRT, Release, static C++ runtimes and WebRTC enabled. Imported DLLs are Windows/UCRT components. Installer payload and PE sections are checked separately during packaging.
+
+CORE
+828 selected native core cases, 247,473 checks. Functional checks passed. One 4K texture-transfer timing assertion exceeded its 20-second threshold during concurrent builds/UI tests; the unchanged test passed alone with 5 checks. The Linux SDL X11/Wayland-driver availability probe was excluded because this host uses an intentionally offscreen validation build. The delivery target is Windows. No test threshold was relaxed.
+
+GUI AND INTEGRATION
+120 enabled groups verified across the broad run and targeted reruns. Coverage includes brushes/smoothing, focal settings, radial/local symmetry and masking, reference images/opacity, recorded modifier replay, per-SubTool history/timeline, Knife/Clip/Slice, Delete Hidden, studio tools, Gizmo and new deformers, UV/PBR tools, packs, layouts, add-on exchange and guide checks. The upstream predictive stroke-resize test remains disabled; it is not counted as passed.
+
+The broad run used a frozen native executable while final text/layout adjustments were linked. The final native build was checked for actual deformer handle dragging, numeric preview, reset, accept, cancel, undo/redo, unlocked pivot and sticky placement. Final calibration, idle/stroke timing, hardware profile, crash logging, gallery and shortcut checks passed. The gallery fixture now expects 22 merged recipes rather than 21, preserving the earlier clay recipe and the newer upstream one. A crash-log launch initially failed because the validation target lost execute permission after linking; its rerun through an executable copy passed. Raw logs and the final rerun results are in evidence/.
+
+Guide validation: 54 pages and 69 images, links/anchors/font characters checked. Generated shortcuts and the 22-brush gallery index match the application. Menu and preview screenshots were reviewed; long gear labels were widened to fit.
+
+LIMITS
+Windows installer interaction, launching on Windows, GPU/driver behavior, phone connectivity and pen/tablet feel were not executed on this Linux build host. Use the Start menu Test Installation shortcut on your Windows machine, then try your own meshes and tablet. CPU/UI checks do not establish identical ZBrush behavior. GIZMO-DEFORMERS.md and CUT-CLIP-SLICE.md describe supported operations and limitations.

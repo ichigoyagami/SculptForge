@@ -1,0 +1,230 @@
+[ RUN] action_registry_commands
+[ OK ] action_registry_commands (1 ms)
+[ RUN] mask_and_color_stroke_undo
+[ OK ] mask_and_color_stroke_undo (18 ms)
+[ RUN] bake_mikktspace_plane
+[ OK ] bake_mikktspace_plane (0 ms)
+[ RUN] blender_manifest_parse_and_write
+[ OK ] blender_manifest_parse_and_write (0 ms)
+[ RUN] sha256_known_vectors
+[ OK ] sha256_known_vectors (12 ms)
+[ RUN] gallery_index_cached_for_offline_use
+[ OK ] gallery_index_cached_for_offline_use (1 ms)
+[ RUN] brush_install_update_and_delete
+[ OK ] brush_install_update_and_delete (2 ms)
+[ RUN] round_alpha_leaves_existing_brushes_unchanged
+[ OK ] round_alpha_leaves_existing_brushes_unchanged (26 ms)
+[ RUN] new_brushes_respect_mask_and_symmetry
+[ OK ] new_brushes_respect_mask_and_symmetry (42 ms)
+[ RUN] lazy_mouse_smooths_jitter
+[ OK ] lazy_mouse_smooths_jitter (0 ms)
+[ RUN] camera_orthographic_matches_perspective_at_the_target
+[ OK ] camera_orthographic_matches_perspective_at_the_target (0 ms)
+[ RUN] comfy_history_output_shapes
+[ OK ] comfy_history_output_shapes (0 ms)
+[ RUN] multipart_body_layout
+[ OK ] multipart_body_layout (0 ms)
+[ RUN] deform_relax_evens_spacing_keeps_shape
+relax: edge length spread 0.2612 -> 0.0537
+[ OK ] deform_relax_evens_spacing_keeps_shape (5 ms)
+[ RUN] standard_brush_raises_surface_with_symmetry
+[ OK ] standard_brush_raises_surface_with_symmetry (2 ms)
+[ RUN] sculpt_layers_blend_and_undo
+[ OK ] sculpt_layers_blend_and_undo (0 ms)
+[ RUN] brush_recipe_roundtrip_and_clamp
+[ OK ] brush_recipe_roundtrip_and_clamp (0 ms)
+[ RUN] gltf_roundtrip_with_layers
+[ OK ] gltf_roundtrip_with_layers (3 ms)
+[ RUN] usd_reader_handles_foreign_files
+[ OK ] usd_reader_handles_foreign_files (0 ms)
+[ RUN] free_huggingface_models
+[ OK ] free_huggingface_models (0 ms)
+[ RUN] dyntopo_x_symmetry_makes_mirrored_topology
+[ OK ] dyntopo_x_symmetry_makes_mirrored_topology (1863 ms)
+[ RUN] dyntopo_stress_random_sessions
+[ OK ] dyntopo_stress_random_sessions (0 ms)
+[ RUN] extract_shell_preview_accept_undo
+[ OK ] extract_shell_preview_accept_undo (16 ms)
+[ RUN] face_template_shapes_look_right
+[ OK ] face_template_shapes_look_right (21 ms)
+[ RUN] face_generation_is_deterministic_with_threads
+[ OK ] face_generation_is_deterministic_with_threads (7552 ms)
+[ RUN] material_recipes_are_data_and_wear_the_model
+  Material Recipe Worn Metal: 4 Fill layers
+  rim 158 flat 122
+[ OK ] material_recipes_are_data_and_wear_the_model (3671 ms)
+[ RUN] pen_predictor_tracks_a_circle_better_than_holding_still
+[ OK ] pen_predictor_tracks_a_circle_better_than_holding_still (0 ms)
+[ RUN] goz_skips_unknown_sections_and_rejects_garbage
+[ OK ] goz_skips_unknown_sections_and_rejects_garbage (0 ms)
+[ RUN] guide_inline_formatting
+[ OK ] guide_inline_formatting (0 ms)
+[ RUN] hw_profile_overrides
+[ OK ] hw_profile_overrides (0 ms)
+[ RUN] governor_motion_proxy_no_flapping
+[ OK ] governor_motion_proxy_no_flapping (0 ms)
+[ RUN] i18n_language_codes
+[ OK ] i18n_language_codes (0 ms)
+[ RUN] inbox0106_keep_masked_says_what_to_change
+  Two masked areas are too close together, one is too small for this resolution, or the mask runs inside another part of the model; grow the mask by 2-3 passes (Tool > Masking > Grow) to join them, unmask the small spots, or unmask where the parts overlap
+[ OK ] inbox0106_keep_masked_says_what_to_change (894 ms)
+[ RUN] keep_masked_voxel_remesh_cap
+[ OK ] keep_masked_voxel_remesh_cap (170 ms)
+[ RUN] kelvinlet_grab_on_a_sphere_symmetry_mask_undo
+[ OK ] kelvinlet_grab_on_a_sphere_symmetry_mask_undo (30 ms)
+[ RUN] kelvinlet_tightens_its_cutoff_over_the_vertex_budget
+  vertices a move: 20813 without a budget, 11977 with a 10k budget
+[ OK ] kelvinlet_tightens_its_cutoff_over_the_vertex_budget (261 ms)
+[ RUN] brush_popup_letter_keys
+[ OK ] brush_popup_letter_keys (0 ms)
+[ RUN] looks_omarchy_alacritty_fallback
+[ OK ] looks_omarchy_alacritty_fallback (0 ms)
+[ RUN] weld_handles_far_off_and_non_finite_positions
+[ OK ] weld_handles_far_off_and_non_finite_positions (0 ms)
+[ RUN] gltf_index_accessor_without_buffer_view_reads_zeros
+[ OK ] gltf_index_accessor_without_buffer_view_reads_zeros (0 ms)
+[ RUN] map_export_unreal_packs_bc_n_orm
+[ OK ] map_export_unreal_packs_bc_n_orm (4 ms)
+[ RUN] painted_mask_protects_from_brushes
+[ OK ] painted_mask_protects_from_brushes (4 ms)
+[ RUN] mask_shape_all_axes_union_strength_and_undo
+[ OK ] mask_shape_all_axes_union_strength_and_undo (1 ms)
+[ RUN] maya_bridge_round_trip
+[ OK ] maya_bridge_round_trip (4 ms)
+[ RUN] implicit_adjacency_falls_back_to_stored_lists
+[ OK ] implicit_adjacency_falls_back_to_stored_lists (0 ms)
+[ RUN] micro_standard_brush_raises_and_undoes
+[ OK ] micro_standard_brush_raises_and_undoes (344 ms)
+[ RUN] micro_shading_partial_matches_full
+[ OK ] micro_shading_partial_matches_full (54 ms)
+[ RUN] micro_adaptive_brush_matches_full
+[ OK ] micro_adaptive_brush_matches_full (405 ms)
+[ RUN] multires_undo_steps_across_levels
+[ OK ] multires_undo_steps_across_levels (3 ms)
+[ RUN] layers_levels_low_level_shows_the_layer_as_the_base_would
+  SDiv 2: layer 0.0451, base change 0.0451, differ by 1.1e-07; base untouched 0
+  SDiv 1: layer 0.0159, base change 0.0159, differ by 5.7e-08; base untouched 0
+[ OK ] layers_levels_low_level_shows_the_layer_as_the_base_would (8 ms)
+[ RUN] layers_levels_project_round_trip
+  saved at SDiv 1: levels and layers within 0 after loading
+  saved at SDiv 4: levels and layers within 0 after loading
+[ OK ] layers_levels_project_round_trip (28 ms)
+[ RUN] multires_inactive_subtools_free_their_level_cache
+  cache 353600 bytes, stack 362736 bytes
+[ OK ] multires_inactive_subtools_free_their_level_cache (70 ms)
+[ RUN] pack_rejects_wrong_file_types
+[ OK ] pack_rejects_wrong_file_types (2 ms)
+[ RUN] macro_library_and_confirmation
+[ OK ] macro_library_and_confirmation (2 ms)
+[ RUN] thread_pool_runs_every_job_once
+[ OK ] thread_pool_runs_every_job_once (1 ms)
+[ RUN] index_bits_list_members_in_order
+[ OK ] index_bits_list_members_in_order (0 ms)
+[ RUN] zip_round_trip_and_zip64
+[ OK ] zip_round_trip_and_zip64 (2 ms)
+[ RUN] phone_upload_names_are_safe
+[ OK ] phone_upload_names_are_safe (0 ms)
+[ RUN] face_link_answer_through_the_relays
+[ OK ] face_link_answer_through_the_relays (0 ms)
+[ RUN] slice_interpolates_attributes_and_leaves_hidden_groups
+[ OK ] slice_interpolates_attributes_and_leaves_hidden_groups (0 ms)
+[ RUN] polygroups_by_connectivity_and_merge
+[ OK ] polygroups_by_connectivity_and_merge (1 ms)
+[ RUN] polypaint_parse_color
+[ OK ] polypaint_parse_color (0 ms)
+[ RUN] polypaint_export_ply_and_usd
+[ OK ] polypaint_export_ply_and_usd (15 ms)
+[ RUN] insert_primitive_mirrors_with_symmetry
+[ OK ] insert_primitive_mirrors_with_symmetry (4 ms)
+[ RUN] project_version_handling
+[ OK ] project_version_handling (4 ms)
+[ RUN] qremesh2_is_deterministic
+[ OK ] qremesh2_is_deterministic (6568 ms)
+[ RUN] qremesh_guide_open_curve_turns_the_flow
+  arc: without 30.6 deg (45 edges), with 3.0 deg (56 edges)
+[ OK ] qremesh_guide_open_curve_turns_the_flow (12092 ms)
+[ RUN] quads_invalid_pairs_are_dropped
+[ OK ] quads_invalid_pairs_are_dropped (8 ms)
+[ RUN] radial_slot_from_angle
+[ OK ] radial_slot_from_angle (0 ms)
+[ RUN] radial_mirror_plus_radial
+[ OK ] radial_mirror_plus_radial (0 ms)
+[ RUN] reference_invalid_embedded_data_is_rejected_without_replacing_image
+[ OK ] reference_invalid_embedded_data_is_rejected_without_replacing_image (0 ms)
+[ RUN] cluster_culling_is_conservative
+  culled 679 of 2400 cluster views
+[ OK ] cluster_culling_is_conservative (396 ms)
+[ RUN] qremesh_transfers_mask_and_polypaint
+[ OK ] qremesh_transfers_mask_and_polypaint (1063 ms)
+[ RUN] qremesh_keeps_small_pieces
+  multi-part (10 pieces)       2031 faces 100.0% quads  mean 0.045%  Hausdorff 0.30%  pieces 10/10  irregular 83 (4.0%)  non-manifold 0  open edges 0  2.02 s
+  multi-part, X symmetry       1946 faces 100.0% quads  mean 0.051%  Hausdorff 0.34%  pieces 10/10  irregular 86 (4.4%)  non-manifold 0  open edges 0  1.03 s
+[ OK ] qremesh_keeps_small_pieces (3249 ms)
+[ RUN] sculpt_clay_buildup_tip_follows_stroke_and_can_be_locked
+[ OK ] sculpt_clay_buildup_tip_follows_stroke_and_can_be_locked (14 ms)
+[ RUN] sculpt_smooth_volume_alternative_reduces_sphere_shrinkage
+[ OK ] sculpt_smooth_volume_alternative_reduces_sphere_shrinkage (11 ms)
+[ RUN] sculptable_color_transfer
+[ OK ] sculptable_color_transfer (455 ms)
+[ RUN] selection_sets_unlimited_and_list
+[ OK ] selection_sets_unlimited_and_list (15 ms)
+[ RUN] selection_sets_file_export_import
+[ OK ] selection_sets_file_export_import (2 ms)
+[ RUN] shell_tray_width_and_layout_json
+[ OK ] shell_tray_width_and_layout_json (0 ms)
+[ RUN] spacemouse_dead_zone
+[ OK ] spacemouse_dead_zone (0 ms)
+[ RUN] splat_capture_transforms_json_round_trip
+[ OK ] splat_capture_transforms_json_round_trip (0 ms)
+[ RUN] splat_train_job_photos_to_splat_with_live_previews
+[ OK ] splat_train_job_photos_to_splat_with_live_previews (414 ms)
+[ RUN] stroke_path_dabs_are_evenly_spaced
+[ OK ] stroke_path_dabs_are_evenly_spaced (0 ms)
+[ RUN] studio_morph_target_switch_layers_undo_and_project
+[ OK ] studio_morph_target_switch_layers_undo_and_project (3 ms)
+[ RUN] subtool_obj_export_import
+[ OK ] subtool_obj_export_import (6 ms)
+[ RUN] subtool_export_lods_per_subtool
+[ OK ] subtool_export_lods_per_subtool (3 ms)
+[ RUN] subtool_merge_split_commands
+[ OK ] subtool_merge_split_commands (84 ms)
+[ RUN] support_card_timing
+[ OK ] support_card_timing (0 ms)
+[ RUN] pen_pressure_tracker_guards_stroke_start
+[ OK ] pen_pressure_tracker_guards_stroke_start (0 ms)
+[ RUN] texture_layers_composite_merge_and_round_trip
+[ OK ] texture_layers_composite_merge_and_round_trip (14 ms)
+[ RUN] texture_dab_sharpness_does_not_depend_on_mesh_density
+  square alpha at 1K: 0 edge texels across the row (2 edges)
+[ OK ] texture_dab_sharpness_does_not_depend_on_mesh_density (32 ms)
+[ RUN] material_dab_cost_against_base_colour_dab
+  4K big dab: base colour 42.50 ms, 5 channels 47.93 ms (1.13x); channel memory 3.4 MB
+[ OK ] material_dab_cost_against_base_colour_dab (1320 ms)
+[ RUN] texture_io_obj_writes_mtl_and_png
+[ OK ] texture_io_obj_writes_mtl_and_png (3 ms)
+[ RUN] texture_transfer_decimate_keeps_the_texture
+  decimate keeps the texture: 5120 -> 1536 tris, pattern error mean 0.0022 p99 0.0064 max 0.0103
+[ OK ] texture_transfer_decimate_keeps_the_texture (845 ms)
+[ RUN] timeline_branches_keep_the_old_continuation
+[ OK ] timeline_branches_keep_the_old_continuation (7 ms)
+[ RUN] transform_undo_restores_bit_for_bit
+[ OK ] transform_undo_restores_bit_for_bit (3 ms)
+[ RUN] transform_all_subtools
+[ OK ] transform_all_subtools (0 ms)
+[ RUN] update_feed_parses
+[ OK ] update_feed_parses (0 ms)
+[ RUN] uv_unwrap_closed_sphere_gets_cut_automatically
+  Unwrapped (Least Stretch): 2 islands, 96 edges cut automatically to flatten closed pieces; stretch 0.247
+[ OK ] uv_unwrap_closed_sphere_gets_cut_automatically (85 ms)
+[ RUN] uv_trim_sheet_strips
+[ OK ] uv_trim_sheet_strips (3 ms)
+[ RUN] uv_unwrap_lion_head_by_sharp_edges
+  lion isometric: Unwrapped (Least Stretch): 465 islands, 5573 edges cut automatically to flatten closed pieces; stretch 0.023; 465 islands, 0 folded, stretch 0.023, boxes disjoint 1
+  lion conformal: Unwrapped (Conformal (LSCM)): 465 islands, 5573 edges cut automatically to flatten closed pieces; stretch 0.053; 465 islands, 0 folded, stretch 0.053, boxes disjoint 1
+[ OK ] uv_unwrap_lion_head_by_sharp_edges (40875 ms)
+[ RUN] vdm_respects_mask_invert_and_undo
+[ OK ] vdm_respects_mask_invert_and_undo (10 ms)
+[ RUN] zspheres_skin
+[ OK ] zspheres_skin (52 ms)
+
+104 tests, 16148 checks, 0 failures

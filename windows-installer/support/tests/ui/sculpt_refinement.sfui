@@ -1,0 +1,60 @@
+# New quad default and always-visible sculpt controls.
+expect_value quad_percent == 100
+expect "##focal_shift_shelf"
+expect "##smooth_strength_shelf"
+expect "##smooth_passes_shelf"
+expect "Clay follows stroke"
+expect "DynaMesh"
+shot sculpt-controls
+run new_sphere subdivisions=4 quads=true
+expect_value quad_percent == 100
+click "ClayBuildup##brush.claybuildup"
+key u
+key 0
+key enter
+expect_value z_intensity == 0
+snapshot
+stroke 0.35 0.4 0.65 0.6
+expect_value moved == 0
+key u
+key 5
+key 0
+key enter
+snapshot
+stroke 0.35 0.4 0.65 0.6
+expect_value moved > 10
+expect_value quad_percent == 100
+shot clay-sculpt
+key ctrl+z
+key o
+key minus
+key 6
+key 0
+key enter
+expect_value focal_shift == -60
+shot focal-shift-visible
+hold shift
+key u
+key 8
+key 0
+key enter
+hold none
+expect_value smooth_intensity == 80
+expect_value z_intensity == 50
+# Use a low DynaMesh resolution so this remains a small test.
+drag_item "##dynamesh_resolution_shelf" -1000 0 0.3
+expect_value dynamesh_resolution == 32
+click "DynaMesh"
+wait_idle 30
+expect_value dynamesh_running == 0
+expect_value quad_percent == 100
+expect_value quads > 100
+expect_value dynamic == 0
+shot dynamesh-quads
+run save_obj path=sculpt_refinement_quad.obj
+click "Render##palette.render"
+expect "Focal length (mm)"
+remember focal_length lens_before
+drag_item "Focal length (mm)" 50 0 0.3
+expect_value focal_length > $lens_before
+shot camera-lens

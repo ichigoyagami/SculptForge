@@ -1,0 +1,263 @@
+Internal ctest changing into directory: /workspace/scratch/5ad01a9b8127/validation0108/ctest
+Test project /workspace/scratch/5ad01a9b8127/validation0108/ctest
+        Start  15: ui_bake
+        Start  49: ui_make_sculptable
+  1/117 Test  #15: ui_bake ..........................   Passed   66.79 sec
+        Start  97: ui_texture_transfer
+  2/117 Test  #49: ui_make_sculptable ...............   Passed  110.12 sec
+        Start   1: brush_gallery_index
+  3/117 Test   #1: brush_gallery_index ..............   Passed    9.14 sec
+        Start   2: blender_exchange
+  4/117 Test   #2: blender_exchange .................   Passed    2.99 sec
+        Start   3: blender_addon_package
+  5/117 Test   #3: blender_addon_package ............   Passed    0.20 sec
+        Start   4: maya_shelf_script
+  6/117 Test   #4: maya_shelf_script ................   Passed    0.37 sec
+        Start   5: release_smoke
+  7/117 Test   #5: release_smoke ....................   Passed    0.62 sec
+        Start   6: benchmark_submit
+  8/117 Test   #6: benchmark_submit .................   Passed    0.08 sec
+        Start   7: guide_site
+  9/117 Test   #7: guide_site .......................   Passed    1.68 sec
+        Start   8: link_worker
+ 10/117 Test   #8: link_worker ......................   Passed    0.99 sec
+        Start   9: ui_ai_provider
+ 11/117 Test   #9: ui_ai_provider ...................   Passed    4.03 sec
+        Start  10: ui_air_strokes
+ 12/117 Test  #10: ui_air_strokes ...................   Passed    3.33 sec
+        Start  11: ui_along_normal
+ 13/117 Test  #11: ui_along_normal ..................   Passed    5.03 sec
+        Start  12: ui_alternate_smooth
+ 14/117 Test  #97: ui_texture_transfer ..............   Passed   73.29 sec
+        Start  13: ui_backface_culling
+ 15/117 Test  #12: ui_alternate_smooth ..............   Passed    3.55 sec
+        Start  14: ui_background
+ 16/117 Test  #13: ui_backface_culling ..............   Passed    7.29 sec
+        Start  16: ui_bake_levels
+ 17/117 Test  #14: ui_background ....................   Passed   10.51 sec
+        Start  17: ui_blender_bridge
+ 18/117 Test  #17: ui_blender_bridge ................   Passed  196.17 sec
+        Start  18: ui_blender_keys
+ 19/117 Test  #18: ui_blender_keys ..................   Passed    6.99 sec
+        Start  19: ui_brush_falloff_options
+ 20/117 Test  #19: ui_brush_falloff_options .........   Passed    5.66 sec
+        Start  20: ui_brush_gallery
+ 21/117 Test  #16: ui_bake_levels ...................   Passed  214.24 sec
+        Start  22: ui_builtin_presets
+ 22/117 Test  #20: ui_brush_gallery .................***Failed    4.18 sec
+OpenGL 4.5 (Core Profile) Mesa 25.2.8-0ubuntu0.24.04.2 on llvmpipe (LLVM 20.1.2, 256 bits)
+FAIL brush_gallery.sfui:10: no text "21 brushes" on screen
+Screenshot /workspace/scratch/5ad01a9b8127/build-native/ui-shots/brush_gallery/FAIL-line-10.png
+FAIL brush_gallery.sfui:10: no text "21 brushes" on screen
+
+        Start  23: ui_comfyui
+ 23/117 Test  #22: ui_builtin_presets ...............   Passed    4.56 sec
+        Start  24: ui_contextual_shelf
+ 24/117 Test  #23: ui_comfyui .......................   Passed    4.65 sec
+        Start  25: ui_ctrl_brushes
+ 25/117 Test  #24: ui_contextual_shelf ..............   Passed    5.39 sec
+        Start  26: ui_custom_matcaps
+ 26/117 Test  #26: ui_custom_matcaps ................   Passed    5.08 sec
+        Start  27: ui_cut_topology_mask
+ 27/117 Test  #27: ui_cut_topology_mask .............   Passed    4.65 sec
+        Start  28: ui_deformation_ops
+ 28/117 Test  #25: ui_ctrl_brushes ..................   Passed   12.43 sec
+        Start  29: ui_divide_blender_fans
+ 29/117 Test  #28: ui_deformation_ops ...............   Passed    2.25 sec
+        Start  30: ui_dyntopo
+ 30/117 Test  #29: ui_divide_blender_fans ...........   Passed    3.00 sec
+        Start  31: ui_dyntopo_smooth_remesh
+ 31/117 Test  #31: ui_dyntopo_smooth_remesh .........   Passed    2.05 sec
+        Start  32: ui_extract_mirror
+ 32/117 Test  #30: ui_dyntopo .......................   Passed    5.17 sec
+        Start  33: ui_face_shapes
+ 33/117 Test  #32: ui_extract_mirror ................   Passed    4.71 sec
+        Start  34: ui_fill_layers
+ 34/117 Test  #33: ui_face_shapes ...................   Passed   11.27 sec
+        Start  35: ui_flat_shading
+ 35/117 Test  #35: ui_flat_shading ..................   Passed    4.30 sec
+        Start  36: ui_focal_alpha
+ 36/117 Test  #36: ui_focal_alpha ...................   Passed    2.31 sec
+        Start  37: ui_forge_spheres_pointer
+ 37/117 Test  #37: ui_forge_spheres_pointer .........   Passed    3.31 sec
+        Start  38: ui_gizmo
+ 38/117 Test  #38: ui_gizmo .........................   Passed   41.48 sec
+        Start  39: ui_gizmo_deformers
+ 39/117 Test  #39: ui_gizmo_deformers ...............   Passed    3.92 sec
+        Start  41: ui_insert_mesh
+ 40/117 Test  #41: ui_insert_mesh ...................   Passed    4.35 sec
+        Start  42: ui_keep_masked
+ 41/117 Test  #34: ui_fill_layers ...................   Passed   73.34 sec
+        Start  43: ui_kelvinlet_capture
+ 42/117 Test  #43: ui_kelvinlet_capture .............   Passed    7.57 sec
+        Start  44: ui_language
+ 43/117 Test  #44: ui_language ......................   Passed    3.00 sec
+        Start  45: ui_layers_levels
+ 44/117 Test  #42: ui_keep_masked ...................   Passed   18.36 sec
+        Start  46: ui_levels_rebuild
+ 45/117 Test  #45: ui_layers_levels .................   Passed    4.87 sec
+        Start  47: ui_lightbox
+ 46/117 Test  #46: ui_levels_rebuild ................   Passed    5.17 sec
+        Start  48: ui_looks
+ 47/117 Test  #48: ui_looks .........................   Passed    9.40 sec
+        Start  50: ui_mask_border
+ 48/117 Test  #47: ui_lightbox ......................   Passed   11.64 sec
+        Start  51: ui_mask_lasso
+ 49/117 Test  #50: ui_mask_border ...................   Passed    3.82 sec
+        Start  52: ui_maya_bridge
+ 50/117 Test  #52: ui_maya_bridge ...................   Passed    4.20 sec
+        Start  53: ui_maya_keys
+ 51/117 Test  #51: ui_mask_lasso ....................   Passed   10.10 sec
+        Start  54: ui_micro_levels
+ 52/117 Test  #53: ui_maya_keys .....................   Passed    3.36 sec
+        Start  55: ui_multires
+ 53/117 Test  #54: ui_micro_levels ..................   Passed   10.52 sec
+        Start  56: ui_navigation
+ 54/117 Test  #55: ui_multires ......................   Passed   11.89 sec
+        Start  57: ui_ortho_shading
+ 55/117 Test  #56: ui_navigation ....................   Passed    3.46 sec
+        Start  58: ui_packs
+ 56/117 Test  #57: ui_ortho_shading .................   Passed    5.42 sec
+        Start  59: ui_paint_layers
+ 57/117 Test  #58: ui_packs .........................   Passed    5.32 sec
+        Start  60: ui_pbr_channels
+ 58/117 Test  #59: ui_paint_layers ..................   Passed    6.02 sec
+        Start  61: ui_pbr_viewport
+ 59/117 Test  #60: ui_pbr_channels ..................   Passed    7.21 sec
+        Start  62: ui_pen_navigation
+ 60/117 Test  #62: ui_pen_navigation ................   Passed    3.70 sec
+        Start  63: ui_pen_windows_ink
+ 61/117 Test  #63: ui_pen_windows_ink ...............   Passed    3.50 sec
+        Start  64: ui_performance
+ 62/117 Test  #64: ui_performance ...................   Passed   11.49 sec
+        Start  65: ui_phone_link
+ 63/117 Test  #61: ui_pbr_viewport ..................   Passed   22.94 sec
+        Start  66: ui_profile_brushes
+ 64/117 Test  #65: ui_phone_link ....................   Passed    5.82 sec
+        Start  67: ui_qremesh_guides
+ 65/117 Test  #66: ui_profile_brushes ...............   Passed    7.62 sec
+        Start  68: ui_qremesh_symmetry
+ 66/117 Test  #67: ui_qremesh_guides ................   Passed    6.04 sec
+        Start  69: ui_quick_tools
+ 67/117 Test  #68: ui_qremesh_symmetry ..............   Passed   11.07 sec
+        Start  70: ui_radial_buttons
+ 68/117 Test  #69: ui_quick_tools ...................   Passed    9.97 sec
+        Start  71: ui_radial_menu
+ 69/117 Test  #70: ui_radial_buttons ................   Passed    2.00 sec
+        Start  72: ui_radial_symmetry
+ 70/117 Test  #71: ui_radial_menu ...................   Passed    4.48 sec
+        Start  73: ui_release_smoke
+ 71/117 Test  #72: ui_radial_symmetry ...............   Passed    3.81 sec
+        Start  74: ui_replay_modifiers
+ 72/117 Test  #73: ui_release_smoke .................   Passed    2.05 sec
+        Start  75: ui_retopo
+ 73/117 Test  #75: ui_retopo ........................   Passed   17.07 sec
+        Start  76: ui_right_click_menu
+ 74/117 Test  #74: ui_replay_modifiers ..............   Passed   20.16 sec
+        Start  77: ui_sculpt_basics
+ 75/117 Test  #76: ui_right_click_menu ..............   Passed    1.74 sec
+        Start  78: ui_sculpt_refinement
+ 76/117 Test  #77: ui_sculpt_basics .................   Passed    2.56 sec
+        Start  79: ui_selection_sets
+ 77/117 Test  #78: ui_sculpt_refinement .............   Passed    3.30 sec
+        Start  80: ui_shell_layout
+ 78/117 Test  #79: ui_selection_sets ................   Passed    2.89 sec
+        Start  81: ui_size_popup
+ 79/117 Test  #81: ui_size_popup ....................   Passed    2.50 sec
+        Start  82: ui_smooth_behavior
+ 80/117 Test  #80: ui_shell_layout ..................   Passed    5.46 sec
+        Start  83: ui_space_camera
+ 81/117 Test  #83: ui_space_camera ..................   Passed    2.27 sec
+        Start  84: ui_spacemouse
+ 82/117 Test  #82: ui_smooth_behavior ...............   Passed    3.69 sec
+        Start  85: ui_splat_train
+ 83/117 Test  #84: ui_spacemouse ....................   Passed    2.51 sec
+        Start  86: ui_stroke_history
+ 84/117 Test  #86: ui_stroke_history ................   Passed    3.74 sec
+        Start  87: ui_studio_pose
+ 85/117 Test  #87: ui_studio_pose ...................   Passed    4.14 sec
+        Start  88: ui_studio_tools
+ 86/117 Test  #85: ui_splat_train ...................   Passed   10.28 sec
+        Start  89: ui_subtools
+ 87/117 Test  #88: ui_studio_tools ..................   Passed    7.28 sec
+        Start  90: ui_subtools_files
+ 88/117 Test  #90: ui_subtools_files ................   Passed    5.23 sec
+        Start  91: ui_support
+ 89/117 Test  #91: ui_support .......................   Passed    2.25 sec
+        Start  92: ui_support_card
+ 90/117 Test  #89: ui_subtools ......................   Passed   16.45 sec
+        Start  93: ui_surface_cursor
+ 91/117 Test  #92: ui_support_card ..................   Passed    3.89 sec
+        Start  94: ui_tablet
+ 92/117 Test  #93: ui_surface_cursor ................   Passed    4.97 sec
+        Start  95: ui_texture_paint
+ 93/117 Test  #94: ui_tablet ........................   Passed    5.11 sec
+        Start  96: ui_texture_start
+ 94/117 Test  #96: ui_texture_start .................   Passed    4.03 sec
+        Start  98: ui_timeline
+ 95/117 Test  #95: ui_texture_paint .................   Passed    9.15 sec
+        Start  99: ui_timeline_position
+ 96/117 Test  #98: ui_timeline ......................   Passed    2.84 sec
+        Start 100: ui_triple_click
+ 97/117 Test #100: ui_triple_click ..................   Passed    1.62 sec
+        Start 101: ui_update_check
+ 98/117 Test  #99: ui_timeline_position .............   Passed    4.69 sec
+        Start 102: ui_user_guide
+ 99/117 Test #101: ui_update_check ..................   Passed    3.12 sec
+        Start 103: ui_uv_editor
+100/117 Test #102: ui_user_guide ....................   Passed    4.22 sec
+        Start 104: ui_v05_pipeline
+101/117 Test #104: ui_v05_pipeline ..................   Passed    6.99 sec
+        Start 105: ui_vdm
+102/117 Test #105: ui_vdm ...........................   Passed    8.00 sec
+        Start 106: ui_viewport_cursor
+103/117 Test #106: ui_viewport_cursor ...............   Passed    1.68 sec
+        Start 107: ui_viewport_reference
+104/117 Test #107: ui_viewport_reference ............   Passed    4.07 sec
+        Start 108: ui_whats_new
+105/117 Test #108: ui_whats_new .....................   Passed    4.28 sec
+        Start 109: ui_zbrush_feel
+106/117 Test #109: ui_zbrush_feel ...................   Passed    8.72 sec
+        Start 110: ui_zspheres
+107/117 Test #110: ui_zspheres ......................   Passed    5.15 sec
+        Start 111: ui_shell_layout_1080
+108/117 Test #111: ui_shell_layout_1080 .............   Passed    6.07 sec
+        Start 113: ui_size_popup_scaled
+109/117 Test #103: ui_uv_editor .....................   Passed   50.72 sec
+        Start 114: ui_user_guide_1080
+110/117 Test #113: ui_size_popup_scaled .............   Passed    3.42 sec
+        Start 115: crash_log
+111/117 Test #115: crash_log ........................***Failed    0.03 sec
+CMake Error at /workspace/scratch/5ad01a9b8127/sculptforge/tests/crash_log.cmake:12 (file):
+  file failed to open for reading (No such file or directory):
+
+    /workspace/scratch/5ad01a9b8127/build-native/crash-log-test/sculptforge.log
+
+
+
+        Start 116: ui_stroke_resize
+112/117 Test #116: ui_stroke_resize .................***Not Run (Disabled)   0.00 sec
+        Start 117: ui_guide_shortcuts
+113/117 Test #117: ui_guide_shortcuts ...............   Passed    1.21 sec
+114/117 Test #114: ui_user_guide_1080 ...............   Passed    4.29 sec
+        Start  21: ui_brush_sharing
+115/117 Test  #21: ui_brush_sharing .................   Passed    5.72 sec
+        Start  40: ui_help_console
+116/117 Test  #40: ui_help_console ..................   Passed   10.80 sec
+        Start 112: ui_help_console_1080
+117/117 Test #112: ui_help_console_1080 .............   Passed    4.79 sec
+
+98% tests passed, 2 tests failed out of 116
+
+Label Time Summary:
+ui    = 1418.31 sec*proc (108 tests)
+
+Total Test time (real) = 728.57 sec
+
+The following tests did not run:
+	116 - ui_stroke_resize (Disabled)
+
+The following tests FAILED:
+	 20 - ui_brush_gallery (Failed)
+	115 - crash_log (Failed)
+Errors while running CTest

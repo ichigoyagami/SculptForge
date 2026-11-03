@@ -1,0 +1,81 @@
+run new_sphere subdivisions=5 quads=true
+expect "SubTool History/##history_position"
+expect_value history_steps == 0
+click "Clay##brush.clay"
+key u
+key 2
+key 0
+key enter
+stroke 0.35 0.45 0.65 0.45
+expect_value history_position == 1
+expect_value replay_points > 2
+snapshot
+key 1
+expect_status Replayed last stroke
+expect_value moved > 50
+expect_value history_position == 2
+key ctrl+z
+expect_value moved == 0
+expect_value history_position == 1
+expect_value history_steps == 2
+click "SubTool History/Redo"
+expect_value history_position == 2
+shot replay-and-history
+drag_item "SubTool History/##history_position" -1000 0
+expect_value history_position == 0
+expect_value history_redo == 2
+drag_item "SubTool History/##history_position" 1000 0
+expect_value history_position == 2
+# Built-in brushes remember their own intensity when selected from the shelf.
+click "DamStandard##brush.damstandard"
+expect_value z_intensity == 50
+key u
+key 1
+key 5
+key enter
+stroke 0.35 0.6 0.65 0.6
+expect_value history_position == 3
+click "Clay##brush.clay"
+expect_value z_intensity == 20
+click "DamStandard##brush.damstandard"
+expect_value z_intensity == 15
+run subtool_append type=sphere name=Second
+key f
+expect_value history_steps == 0
+stroke 0.35 0.45 0.65 0.45
+expect_value history_position == 1
+run subtool_select index=0
+expect_value history_position == 3
+expect_value history_steps == 3
+key f
+key ctrl+z
+expect_value history_position == 2
+stroke 0.35 0.65 0.65 0.65
+expect_value history_position == 3
+expect_value history_redo == 0
+run subtool_select index=1
+expect_value history_position == 1
+expect_value history_steps == 1
+shot per-subtool-history
+run save_project path=brush_intensities.sfproj
+run open path=brush_intensities.sfproj
+click "Clay##brush.clay"
+expect_value z_intensity == 20
+click "DamStandard##brush.damstandard"
+expect_value z_intensity == 15
+# Replay retains recorded pen pressure after the pen leaves proximity.
+run new_sphere subdivisions=5 quads=true
+click "Standard##brush.standard"
+snapshot
+pen_stroke 0.35 0.5 0.65 0.5 0.2 0.2
+remember moved_sum light_pen
+expect_value moved_sum > 0.01
+pen_out
+key ctrl+z
+expect_value moved == 0
+key 1
+expect_value moved_sum > $light_pen*0.95
+expect_value moved_sum < $light_pen*1.05
+expect_value history_position == 1
+key ctrl+z
+expect_value moved == 0

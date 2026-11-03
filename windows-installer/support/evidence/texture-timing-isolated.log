@@ -1,0 +1,5 @@
+[ RUN] texture_transfer_speed_at_4k_on_a_million_triangles
+  texture transfer at 4K: new UVs on 1048352 tris 610 ms (2 planes); from the surface of 1048352 tris onto 250632 tris 4687 ms (16777216 texels)
+[ OK ] texture_transfer_speed_at_4k_on_a_million_triangles (7888 ms)
+
+1 tests, 5 checks, 0 failures

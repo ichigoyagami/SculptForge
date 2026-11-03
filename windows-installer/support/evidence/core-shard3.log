@@ -1,0 +1,230 @@
+[ RUN] zbrush_names_find_renamed_features
+[ OK ] zbrush_names_find_renamed_features (0 ms)
+[ RUN] brushes_respect_mask
+[ OK ] brushes_respect_mask (69 ms)
+[ RUN] bake_png16_and_exr_round_trip
+[ OK ] bake_png16_and_exr_round_trip (0 ms)
+[ RUN] blender_axes
+[ OK ] blender_axes (0 ms)
+[ RUN] gallery_index_parses_and_skips_bad_entries
+[ OK ] gallery_index_parses_and_skips_bad_entries (0 ms)
+[ RUN] stroke_path_sampling
+[ OK ] stroke_path_sampling (0 ms)
+[ RUN] brush_library_overrides_and_restores
+[ OK ] brush_library_overrides_and_restores (2 ms)
+[ RUN] focal_shift_shapes_the_falloff
+[ OK ] focal_shift_shapes_the_falloff (40 ms)
+[ RUN] alpha_sampling
+[ OK ] alpha_sampling (235 ms)
+[ RUN] spray_and_spacing_are_deterministic
+[ OK ] spray_and_spacing_are_deterministic (0 ms)
+[ RUN] comfy_url_normalised
+[ OK ] comfy_url_normalised (0 ms)
+[ RUN] comfy_history_without_mesh_lists_outputs
+[ OK ] comfy_history_without_mesh_lists_outputs (0 ms)
+[ RUN] falloff_keep_connected_flood_fill
+[ OK ] falloff_keep_connected_flood_fill (252 ms)
+[ RUN] deform_polish_keeps_planes_and_edges
+polish noise 0.0056 -> 0.0015
+corner polish 0.0020 smooth 0.3374
+[ OK ] deform_polish_keeps_planes_and_edges (41 ms)
+[ RUN] undo_redo_restores_positions
+[ OK ] undo_redo_restores_positions (1 ms)
+[ RUN] layers_survive_subdivision
+[ OK ] layers_survive_subdivision (0 ms)
+[ RUN] recipe_brushes_sculpt
+[ OK ] recipe_brushes_sculpt (305 ms)
+[ RUN] image_commands
+[ OK ] image_commands (243 ms)
+[ RUN] gltf_gaussian_splatting_roundtrip
+[ OK ] gltf_gaussian_splatting_roundtrip (2 ms)
+[ RUN] divide_cylinder_triangle_fan_caps
+[ OK ] divide_cylinder_triangle_fan_caps (794 ms)
+[ RUN] dyntopo_symmetry_remeshes_both_sides_of_an_asymmetric_mesh
+  brush side 2198 triangles (longest edge 0.028), mirrored side 2260 (0.030), target 0.021
+[ OK ] dyntopo_symmetry_remeshes_both_sides_of_an_asymmetric_mesh (7884 ms)
+[ RUN] environment_directions_round_trip
+[ OK ] environment_directions_round_trip (0 ms)
+[ RUN] extract_preview_goes_when_the_scene_changes
+[ OK ] extract_preview_goes_when_the_scene_changes (14 ms)
+[ RUN] face_transfer_on_the_template_is_near_identity
+  transfer on the template: worst error 0.00e+00 of the shape's peak
+[ OK ] face_transfer_on_the_template_is_near_identity (330 ms)
+[ RUN] face_shapes_on_subdivision_levels
+[ OK ] face_shapes_on_subdivision_levels (3753 ms)
+[ RUN] mesh_maps_live_rebake_on_a_worker_while_fill_layers_evaluate
+  6 of 6 updates landed; 0 sampled texels differ from a full bake
+[ OK ] mesh_maps_live_rebake_on_a_worker_while_fill_layers_evaluate (12149 ms)
+[ RUN] gizmo_deform_identity_and_repeat_preview
+[ OK ] gizmo_deform_identity_and_repeat_preview (0 ms)
+[ RUN] goz_commands_and_open
+[ OK ] goz_commands_and_open (2 ms)
+[ RUN] guide_links
+[ OK ] guide_links (0 ms)
+[ RUN] hw_profile_cache_invalidation
+[ OK ] hw_profile_cache_invalidation (1 ms)
+[ RUN] governor_ignores_still_frames_and_hitches
+[ OK ] governor_ignores_still_frames_and_hitches (0 ms)
+[ RUN] i18n_spanish_table_is_well_formed
+[ OK ] i18n_spanish_table_is_well_formed (0 ms)
+[ RUN] v02_every_brush_and_alpha_respects_painted_mask
+[ OK ] v02_every_brush_and_alpha_respects_painted_mask (211 ms)
+[ RUN] keep_masked_voxel_remesh_band
+[ OK ] keep_masked_voxel_remesh_band (189 ms)
+[ RUN] kelvinlet_brushes_write_into_sculpt_layers
+[ OK ] kelvinlet_brushes_write_into_sculpt_layers (8 ms)
+[ RUN] kelvinlet_deferred_far_field_matches_the_immediate_one
+  (worst at 0.625 from the first centre, moved 0.0752 / 0.0674)
+  KelvinGrab deferred far field: worst 7.79e-03 = 2.47% of the largest move (2.227% of the radius); vertex moves 125887 deferred vs 184174 at once
+  (worst at 0.542 from the first centre, moved 0.0276 / 0.0255)
+  KelvinTwist deferred far field: worst 2.15e-03 = 3.47% of the largest move (0.614% of the radius); vertex moves 141343 deferred vs 264836 at once
+[ OK ] kelvinlet_deferred_far_field_matches_the_immediate_one (1086 ms)
+[ RUN] live_api_round_trip
+[ OK ] live_api_round_trip (1 ms)
+[ RUN] looks_tiled_geometry_has_gaps
+[ OK ] looks_tiled_geometry_has_gaps (0 ms)
+[ RUN] malformed_material_channel_blobs_are_rejected
+[ OK ] malformed_material_channel_blobs_are_rejected (0 ms)
+[ RUN] gltf_long_data_uri_decodes_exactly
+[ OK ] gltf_long_data_uri_decodes_exactly (21 ms)
+[ RUN] map_export_unity_godot_blender_usd
+[ OK ] map_export_unity_godot_blender_usd (26 ms)
+[ RUN] mask_commands_registered
+[ OK ] mask_commands_registered (1 ms)
+[ RUN] mask_topology_reflects_free_regions
+[ OK ] mask_topology_reflects_free_regions (21 ms)
+[ RUN] mesh_maps_mean_curvature_is_one_over_radius
+[ OK ] mesh_maps_mean_curvature_is_one_over_radius (13 ms)
+[ RUN] implicit_adjacency_sculpts_like_stored_lists
+[ OK ] implicit_adjacency_sculpts_like_stored_lists (7 ms)
+[ RUN] micro_brushes_each_change_the_surface_and_stay_closed
+[ OK ] micro_brushes_each_change_the_surface_and_stay_closed (2269 ms)
+[ RUN] micro_bake_mesh_is_closed_and_matches
+[ OK ] micro_bake_mesh_is_closed_and_matches (35 ms)
+[ RUN] micro_undo_journal_is_small
+  micro undo journal: 278 tiles, 30.8 KB (whole tiles 85.1 KB)
+[ OK ] micro_undo_journal_is_small (223 ms)
+[ RUN] multires_attributes_follow_levels
+[ OK ] multires_attributes_follow_levels (1 ms)
+[ RUN] layers_levels_weights_blend_at_every_level
+[ OK ] layers_levels_weights_blend_at_every_level (3 ms)
+[ RUN] layers_levels_export_blend_shapes
+  SDiv 3: 866 vertices, morph target total 0.6637 vs layer 0.6637
+  SDiv 1: 56 vertices, morph target total 0.0259 vs layer 0.0259
+[ OK ] layers_levels_export_blend_shapes (3 ms)
+[ RUN] pack_good_archive_reviews
+[ OK ] pack_good_archive_reviews (0 ms)
+[ RUN] pack_install_list_toggle_remove
+[ OK ] pack_install_list_toggle_remove (1 ms)
+[ RUN] paint_layers_blend_maths
+[ OK ] paint_layers_blend_maths (0 ms)
+[ RUN] parallel_brushes_match_serial
+[ OK ] parallel_brushes_match_serial (1248 ms)
+[ RUN] bvh_refit_of_many_leaves_in_parallel
+[ OK ] bvh_refit_of_many_leaves_in_parallel (134 ms)
+[ RUN] benchmark_standard_head
+[ OK ] benchmark_standard_head (849 ms)
+[ RUN] phone_pairing_and_tokens
+[ OK ] phone_pairing_and_tokens (1704 ms)
+[ RUN] qr_code_encodes_the_pairing_url
+[ OK ] qr_code_encodes_the_pairing_url (1 ms)
+[ RUN] knife_caps_have_quads_and_untouched_parts_remain
+[ OK ] knife_caps_have_quads_and_untouched_parts_remain (1 ms)
+[ RUN] polygroup_from_mask
+[ OK ] polygroup_from_mask (1 ms)
+[ RUN] polypaint_brush_falloff_symmetry_mask_undo
+[ OK ] polypaint_brush_falloff_symmetry_mask_undo (2 ms)
+[ RUN] polypaint_commands_in_schema
+[ OK ] polypaint_commands_in_schema (1 ms)
+[ RUN] insert_mesh_from_subtool
+[ OK ] insert_mesh_from_subtool (62 ms)
+[ RUN] project_dirty_tracking
+[ OK ] project_dirty_tracking (13 ms)
+[ RUN] qremesh2_sculpt_beats_legacy
+  sculpt 4000: v2 8 poles, 4.3 deg, mean 0.018% | legacy 152 poles, 4.4 deg, mean 0.019%
+[ OK ] qremesh2_sculpt_beats_legacy (5306 ms)
+[ RUN] qremesh_guide_with_symmetry_loops_both_sides
+  symmetric: right 6.2 deg loop 1, left 6.2 deg loop 1
+[ OK ] qremesh_guide_with_symmetry_loops_both_sides (793 ms)
+[ RUN] quads_survive_sculpting_layers_and_undo
+[ OK ] quads_survive_sculpting_layers_and_undo (5 ms)
+[ RUN] radial_json_round_trip
+[ OK ] radial_json_round_trip (0 ms)
+[ RUN] radial_local_pivot
+[ OK ] radial_local_pivot (0 ms)
+[ RUN] reference_settings_clamp_and_reset
+[ OK ] reference_settings_clamp_and_reset (0 ms)
+[ RUN] cluster_frustum_culling
+[ OK ] cluster_frustum_culling (0 ms)
+[ RUN] qremesh_polypaint_density
+  sphere, polypaint density: 2021 faces, 100.0% quads, 0 boundary / 0 non-manifold edges, 0 non-manifold vertices
+  red top half: 1550 quads, white bottom half: 471
+[ OK ] qremesh_polypaint_density (7794 ms)
+[ RUN] qremesh_thin_hard_edged_parts
+  block with thin fin          1494 faces 100.0% quads  mean 0.000%  Hausdorff 0.00%  pieces 2/2  irregular 16 (1.1%)  non-manifold 0  open edges 0  2.12 s
+  thin slab                     830 faces 100.0% quads  mean 0.000%  Hausdorff 0.00%  pieces 1/1  irregular 8 (1.0%)  non-manifold 0  open edges 0  0.71 s
+[ OK ] qremesh_thin_hard_edged_parts (2975 ms)
+[ RUN] sculpt_clay_settles_within_stroke_but_buildup_keeps_accumulating
+[ OK ] sculpt_clay_settles_within_stroke_but_buildup_keeps_accumulating (21 ms)
+[ RUN] sculpt_quad_smoothing_and_normals_ignore_render_diagonal
+[ OK ] sculpt_quad_smoothing_and_normals_ignore_render_diagonal (1 ms)
+[ RUN] sculptable_face_landmarks
+[ OK ] sculptable_face_landmarks (206 ms)
+[ RUN] selection_sets_pack_roundtrip_and_damage
+[ OK ] selection_sets_pack_roundtrip_and_damage (0 ms)
+[ RUN] selection_sets_usd_roundtrip
+[ OK ] selection_sets_usd_roundtrip (10 ms)
+[ RUN] shell_camera_notch_inset
+[ OK ] shell_camera_notch_inset (0 ms)
+[ RUN] spacemouse_directions_and_rates
+[ OK ] spacemouse_directions_and_rates (0 ms)
+[ RUN] splat_capture_reads_colmap_poses
+[ OK ] splat_capture_reads_colmap_poses (2 ms)
+[ RUN] splat_train_job_video_drops_blurred_frames
+[ OK ] splat_train_job_video_drops_blurred_frames (195 ms)
+[ RUN] stroke_path_curve_stays_a_curve_when_samples_are_far_apart
+[ OK ] stroke_path_curve_stays_a_curve_when_samples_are_far_apart (0 ms)
+[ RUN] studio_close_holes_preserves_surface_and_is_undoable
+[ OK ] studio_close_holes_preserves_surface_and_is_undoable (2 ms)
+[ RUN] subtool_obj_single_object_unchanged
+[ OK ] subtool_obj_single_object_unchanged (4 ms)
+[ RUN] subtool_loaders_survive_malformed_objects
+[ OK ] subtool_loaders_survive_malformed_objects (5 ms)
+[ RUN] subtool_append_file
+[ OK ] subtool_append_file (2 ms)
+[ RUN] surface_cursor_ring_lies_on_sphere
+[ OK ] surface_cursor_ring_lies_on_sphere (12 ms)
+[ RUN] pen_cursor_mouse_mode_moves_relatively
+[ OK ] pen_cursor_mouse_mode_moves_relatively (0 ms)
+[ RUN] texture_layer_undo_stores_only_what_changed
+[ OK ] texture_layer_undo_stores_only_what_changed (23445 ms)
+[ RUN] tile_image_is_sparse_and_copy_on_write
+[ OK ] tile_image_is_sparse_and_copy_on_write (0 ms)
+[ RUN] material_dense_mesh_benchmark
+  (set SF_BENCH_DENSE=1 to run the dense-mesh material benchmark)
+[ OK ] material_dense_mesh_benchmark (0 ms)
+[ RUN] texture_io_sidecar_names_without_spaces
+[ OK ] texture_io_sidecar_names_without_spaces (4 ms)
+[ RUN] texture_transfer_merge_keeps_both_textures
+  merged textures: pattern error mean 0.0020 p99 0.0039, plain part 0.0000
+[ OK ] texture_transfer_merge_keeps_both_textures (3697 ms)
+[ RUN] timeline_retune_scales_one_stroke
+[ OK ] timeline_retune_scales_one_stroke (109 ms)
+[ RUN] transform_masked_part_only
+[ OK ] transform_masked_part_only (8 ms)
+[ RUN] transform_session_never_accumulates
+[ OK ] transform_session_never_accumulates (10 ms)
+[ RUN] update_feed_rejects_bad_feeds
+[ OK ] update_feed_rejects_bad_feeds (0 ms)
+[ RUN] uv_unwrap_by_polygroups_gives_one_flat_island_per_side
+[ OK ] uv_unwrap_by_polygroups_gives_one_flat_island_per_side (6 ms)
+[ RUN] uv_seams_path_polygroups_and_angle
+[ OK ] uv_seams_path_polygroups_and_angle (0 ms)
+[ RUN] vdm_builtins_are_bounded_and_overhang
+[ OK ] vdm_builtins_are_bounded_and_overhang (26 ms)
+[ RUN] vdm_is_deterministic_with_and_without_threads
+[ OK ] vdm_is_deterministic_with_and_without_threads (139 ms)
+[ RUN] zspheres_commands_and_undo
+[ OK ] zspheres_commands_and_undo (106 ms)
+
+104 tests, 10784 checks, 0 failures

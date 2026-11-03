@@ -1,0 +1,80 @@
+# Direction buttons, viewport reference, opacity, placement and project persistence.
+run new_sphere subdivisions=3
+expect "View Cube/Front"
+click "View Cube/Back"
+expect_value camera_yaw > 179
+click "View Cube/Top"
+expect_value camera_pitch < -89
+click "View Cube/Bottom"
+expect_value camera_pitch > 89
+click "View Cube/Left"
+expect_value camera_yaw < -89
+click "View Cube/Right"
+expect_value camera_yaw > 89
+click "View Cube/Front"
+expect_value camera_yaw == 0
+expect_value camera_pitch == 0
+expect_value camera_roll == 0
+camera 20 10
+click "View Cube/Orientation cube"
+expect_value camera_yaw == 0
+expect_value camera_pitch == 0
+shot cube-front
+
+drop data/reference-test.png
+expect "Spotlight Reference/Image opacity"
+expect_value reference_loaded == 1
+expect_value reference_edit == 0
+click "View Cube/Reference..."
+run reference_settings opacity=1 mesh_opacity=1
+shot reference-behind-solid
+run reference_settings mesh_opacity=0.4
+shot reference-behind-faded-mesh
+run reference_settings mesh_opacity=0
+shot reference-without-mesh
+run reference_settings mesh_opacity=0.65 opacity=0.35 front=true scale=1.2 rotation=15 x=0.1 y=-0.1
+expect_value reference_front == 1
+expect_value mesh_opacity > 0.64
+expect_value reference_opacity < 0.36
+shot reference-overlay
+run save_project path=sf_reference.sfproj
+click "View Cube/Reference..."
+click "Spotlight Reference/Remove reference"
+expect_value reference_loaded == 0
+click "Spotlight Reference/Restore solid mesh"
+expect_value mesh_opacity == 1
+run open path=sf_reference.sfproj
+expect_value reference_loaded == 1
+expect_value reference_front == 1
+expect_value reference_rotation == 15
+expect_value reference_scale > 1.19
+expect_value reference_scale < 1.21
+expect_value mesh_opacity > 0.64
+expect_value mesh_opacity < 0.66
+shot reference-restored
+key shift+z
+expect_value reference_visible == 0
+key shift+z
+expect_value reference_visible == 1
+click "Spotlight Reference/Reset image placement"
+expect_value reference_rotation == 0
+expect_value reference_scale == 1
+expect_value reference_x == 0
+expect_value reference_y == 0
+click "Spotlight Reference/Edit placement"
+expect_value reference_edit == 1
+snapshot
+drag 0.46 0.79 0.56 0.81 0.4
+expect_value reference_x > 0.05
+expect_value moved == 0
+hold shift
+drag 0.59 0.79 0.66 0.79 0.4
+hold none
+expect_value reference_rotation > 1
+expect_value moved == 0
+click "Spotlight Reference/Edit placement"
+expect_value reference_edit == 0
+drag_item "Spotlight Reference/Image opacity" -130 0 0.4
+expect_value reference_opacity < 0.3
+drag_item "Spotlight Reference/Mesh opacity" -130 0 0.4
+expect_value mesh_opacity < 0.5

@@ -1,0 +1,228 @@
+[ RUN] action_chords
+[ OK ] action_chords (0 ms)
+[ RUN] attributes_transfer_through_remesh
+[ OK ] attributes_transfer_through_remesh (77 ms)
+[ RUN] axis_gizmo_hit_prefers_the_near_end
+[ OK ] axis_gizmo_hit_prefers_the_near_end (0 ms)
+[ RUN] bake_perf_4k_from_1m_triangles
+  4K normal + displacement, 2x2 samples, from 1310720 triangles: 10.11 s (BVH 1.03 s), 9853485 island texels
+[ OK ] bake_perf_4k_from_1m_triangles (10524 ms)
+[ RUN] blender_keymap_export_is_read_as_text
+[ OK ] blender_keymap_export_is_read_as_text (0 ms)
+[ RUN] gallery_search_and_tags
+[ OK ] gallery_search_and_tags (0 ms)
+[ RUN] brush_codes_reject_garbage
+[ OK ] brush_codes_reject_garbage (0 ms)
+[ RUN] brush_search_path_split
+[ OK ] brush_search_path_split (0 ms)
+[ RUN] layer_brush_raises_constant_height_without_stacking
+[ OK ] layer_brush_raises_constant_height_without_stacking (18 ms)
+[ RUN] brush_set_alpha_command
+[ OK ] brush_set_alpha_command (24 ms)
+[ RUN] camera_snaps_to_axis_views
+[ OK ] camera_snaps_to_axis_views (0 ms)
+[ RUN] comfy_detects_ui_format
+[ OK ] comfy_detects_ui_format (0 ms)
+[ RUN] comfy_unreachable_server_is_explained
+[ OK ] comfy_unreachable_server_is_explained (3 ms)
+[ RUN] along_normal_move_extrudes
+[ OK ] along_normal_move_extrudes (0 ms)
+[ RUN] icosphere_counts
+[ OK ] icosphere_counts (0 ms)
+[ RUN] obj_roundtrip
+[ OK ] obj_roundtrip (1 ms)
+[ RUN] script_parser_and_pipeline
+[ OK ] script_parser_and_pipeline (13 ms)
+[ RUN] image_inflate_silhouette
+[ OK ] image_inflate_silhouette (8 ms)
+[ RUN] zip_and_usdz_alignment
+[ OK ] zip_and_usdz_alignment (0 ms)
+[ RUN] unreal_export_preset
+[ OK ] unreal_export_preset (9 ms)
+[ RUN] dyntopo_random_strokes_stay_valid
+[ OK ] dyntopo_random_strokes_stay_valid (11390 ms)
+[ RUN] dyntopo_smooth_simplifies
+[ OK ] dyntopo_smooth_simplifies (33 ms)
+[ RUN] environment_builtins_load_and_light
+  environment lighting built in 190 ms
+[ OK ] environment_builtins_load_and_light (753 ms)
+[ RUN] extract_tcorne_tborder
+[ OK ] extract_tcorne_tborder (0 ms)
+[ RUN] face_weights_fast_path_is_exact_and_not_undoable
+[ OK ] face_weights_fast_path_is_exact_and_not_undoable (1328 ms)
+[ RUN] fill_layer_painted_mask_and_partial_updates
+[ OK ] fill_layer_painted_mask_and_partial_updates (104 ms)
+[ RUN] curvature_from_triangles_matches_the_ring_average
+[ OK ] curvature_from_triangles_matches_the_ring_average (1 ms)
+[ RUN] goz_round_trip_keeps_everything
+[ OK ] goz_round_trip_keeps_everything (1 ms)
+[ RUN] goz_large_polygroup_ids_stay_distinct
+[ OK ] goz_large_polygroup_ids_stay_distinct (0 ms)
+[ RUN] hw_sysfs_vram
+[ OK ] hw_sysfs_vram (1 ms)
+[ RUN] governor_converges_from_below
+[ OK ] governor_converges_from_below (0 ms)
+[ RUN] i18n_spanish_lookup_and_fallback
+[ OK ] i18n_spanish_lookup_and_fallback (0 ms)
+[ RUN] inbox0106_keep_masked_voxel_on_a_real_model
+[ OK ] inbox0106_keep_masked_voxel_on_a_real_model (81439 ms)
+[ RUN] v02_commands_registered_together
+[ OK ] v02_commands_registered_together (0 ms)
+[ RUN] kelvinlet_squash_is_poissons_ratio
+[ OK ] kelvinlet_squash_is_poissons_ratio (36 ms)
+[ RUN] capture_vdm_on_a_curved_surface_keeps_only_the_detail
+  horn on a sphere: centre 0.328, outer band 0.0342 (radii)
+[ OK ] capture_vdm_on_a_curved_surface_keeps_only_the_detail (146 ms)
+[ RUN] library_folders_and_listing
+[ OK ] library_folders_and_listing (1 ms)
+[ RUN] looks_parse_hex
+[ OK ] looks_parse_hex (0 ms)
+[ RUN] ply_negative_or_huge_face_values_are_rejected
+[ OK ] ply_negative_or_huge_face_values_are_rejected (0 ms)
+[ RUN] gltf_stride_that_wraps_around_is_rejected
+[ OK ] gltf_stride_that_wraps_around_is_rejected (0 ms)
+[ RUN] map_export_sources_parse
+[ OK ] map_export_sources_parse (0 ms)
+[ RUN] mask_stroke_paints_with_symmetry_and_undoes
+[ OK ] mask_stroke_paints_with_symmetry_and_undoes (2 ms)
+[ RUN] screen_polygon_inside_test
+[ OK ] screen_polygon_inside_test (0 ms)
+[ RUN] maya_names_and_files
+[ OK ] maya_names_and_files (0 ms)
+[ RUN] bake_new_maps_udim_tiles_and_levels
+  level bake: 1097 of 16384 texels lean
+[ OK ] bake_new_maps_udim_tiles_and_levels (152 ms)
+[ RUN] micro_divide_counts_and_memory
+[ OK ] micro_divide_counts_and_memory (188 ms)
+[ RUN] micro_range_widens_for_big_strokes
+[ OK ] micro_range_widens_for_big_strokes (528 ms)
+[ RUN] micro_tile_codec_round_trip
+[ OK ] micro_tile_codec_round_trip (0 ms)
+[ RUN] multires_high_edit_shows_at_lower_levels
+[ OK ] multires_high_edit_shows_at_lower_levels (3 ms)
+[ RUN] multires_subtools_exports_and_info
+[ OK ] multires_subtools_exports_and_info (8 ms)
+[ RUN] layers_levels_delete_lower_and_higher
+[ OK ] layers_levels_delete_lower_and_higher (16 ms)
+[ RUN] multires_layer_detail_turns_with_a_rotated_low_level
+  top level 1.9e-07 from the turned shape, layer offsets 2.9e-08 from the turned ones (largest offset 0.12)
+[ OK ] multires_layer_detail_turns_with_a_rotated_low_level (6 ms)
+[ RUN] pack_rejects_overlapping_entries
+[ OK ] pack_rejects_overlapping_entries (0 ms)
+[ RUN] macro_path_confinement
+[ OK ] macro_path_confinement (0 ms)
+[ RUN] paint_layers_topology_changes
+[ OK ] paint_layers_topology_changes (3 ms)
+[ RUN] parallel_bvh_build_answers_like_serial
+[ OK ] parallel_bvh_build_answers_like_serial (302 ms)
+[ RUN] mesh_memory_has_no_face_normal_cache
+[ OK ] mesh_memory_has_no_face_normal_cache (24 ms)
+[ RUN] http_helpers
+[ OK ] http_helpers (0 ms)
+[ RUN] ar_link_sends_the_model_over_webrtc
+[ OK ] ar_link_sends_the_model_over_webrtc (0 ms)
+[ RUN] topology_mask_soft_joint_and_polygroup
+[ OK ] topology_mask_soft_joint_and_polygroup (4 ms)
+[ RUN] polygroups_by_normals
+[ OK ] polygroups_by_normals (2 ms)
+[ RUN] hidden_geometry_skipped_by_pick_and_brushes
+[ OK ] hidden_geometry_skipped_by_pick_and_brushes (2 ms)
+[ RUN] polypaint_from_cavity
+[ OK ] polypaint_from_cavity (5 ms)
+[ RUN] primitives_closed_and_outward
+[ OK ] primitives_closed_and_outward (3 ms)
+[ RUN] project_subtool_shading
+[ OK ] project_subtool_shading (62 ms)
+[ RUN] project_material_channels_round_trip_as_format_7
+[ OK ] project_material_channels_round_trip_as_format_7 (218 ms)
+[ RUN] qremesh2_large_inputs
+[ OK ] qremesh2_large_inputs (0 ms)
+[ RUN] quads_obj_import_pairs_quads_and_fans_ngons
+[ OK ] quads_obj_import_pairs_quads_and_fans_ngons (1 ms)
+[ RUN] quads_round_trip_through_fbx_ply_usd_goz
+[ OK ] quads_round_trip_through_fbx_ply_usd_goz (3 ms)
+[ RUN] radial_copies_count_and_order
+[ OK ] radial_copies_count_and_order (0 ms)
+[ RUN] radial_sixteen_copies_on_a_dense_mesh_stays_interactive
+  radial 16 on 1298892 triangles, radius 0.08: 6.95 ms per dab (all copies)
+[ OK ] radial_sixteen_copies_on_a_dense_mesh_stays_interactive (1310 ms)
+[ RUN] packed_vertex_round_trip
+  worst position error 0.933 steps, normal 0.1170 deg, curvature 0.00194
+[ OK ] packed_vertex_round_trip (7 ms)
+[ RUN] qremesh_symmetry_mirrors_the_topology
+  sphere, X symmetry: 1568 faces, 100.0% quads, 0 boundary / 0 non-manifold edges, 0 non-manifold vertices
+[ OK ] qremesh_symmetry_mirrors_the_topology (670 ms)
+[ RUN] project_all_respects_mask_and_options
+[ OK ] project_all_respects_mask_and_options (1444 ms)
+[ RUN] sculpt_zero_intensity_and_zero_pressure_do_not_change_clay
+[ OK ] sculpt_zero_intensity_and_zero_pressure_do_not_change_clay (18 ms)
+[ RUN] sculpt_smooth_intensity_and_pressure_give_progressive_results
+[ OK ] sculpt_smooth_intensity_and_pressure_give_progressive_results (49 ms)
+[ RUN] sculptable_fills_open_bottom
+[ OK ] sculptable_fills_open_bottom (613 ms)
+[ RUN] sculptable_deterministic
+[ OK ] sculptable_deterministic (2988 ms)
+[ RUN] selection_sets_project_roundtrip
+[ OK ] selection_sets_project_roundtrip (3 ms)
+[ RUN] shell_hidden_shelves_console_and_trays
+[ OK ] shell_hidden_shelves_console_and_trays (0 ms)
+[ RUN] space_camera_key
+[ OK ] space_camera_key (0 ms)
+[ RUN] splat_capture_sharpness_prefers_sharp_frames
+[ OK ] splat_capture_sharpness_prefers_sharp_frames (1 ms)
+[ RUN] splat_capture_brush_arguments
+[ OK ] splat_capture_brush_arguments (0 ms)
+[ RUN] splat_capture_test_capture_poses_look_at_the_object
+[ OK ] splat_capture_test_capture_poses_look_at_the_object (0 ms)
+[ RUN] dab_queue_under_the_limit_is_untouched
+[ OK ] dab_queue_under_the_limit_is_untouched (0 ms)
+[ RUN] subtool_project_v2_round_trip
+[ OK ] subtool_project_v2_round_trip (4 ms)
+[ RUN] subtool_goz_send_receive_and_export
+[ OK ] subtool_goz_send_receive_and_export (4 ms)
+[ RUN] subtool_cube_primitive
+[ OK ] subtool_cube_primitive (0 ms)
+[ RUN] support_card_links_match_the_website
+[ OK ] support_card_links_match_the_website (0 ms)
+[ RUN] pressure_curve_min_max_threshold
+[ OK ] pressure_curve_min_max_threshold (0 ms)
+[ RUN] texture_dab_pads_uv_island_borders
+[ OK ] texture_dab_pads_uv_island_borders (2 ms)
+[ RUN] texture_stroke_benchmark
+  texture stroke (X symmetry, 12 dabs): size / tris / radius -> ms per dab, Mtexels uploaded per dab
+    2K /    1280 / 0.03:   0.18 ms,  0.02 Mtexels
+    2K /    1280 / 0.35:  11.04 ms,  0.16 Mtexels
+    4K /    1280 / 0.03:   0.61 ms,  0.03 Mtexels
+    4K /    1280 / 0.35:  36.58 ms,  0.53 Mtexels
+    2K /  327680 / 0.03:   1.22 ms,  0.02 Mtexels
+    2K /  327680 / 0.35:  20.35 ms,  0.16 Mtexels
+    4K /  327680 / 0.03:   2.14 ms,  0.02 Mtexels
+    4K /  327680 / 0.35:  39.49 ms,  0.53 Mtexels
+[ OK ] texture_stroke_benchmark (2168 ms)
+[ RUN] material_picking_samples_every_channel
+[ OK ] material_picking_samples_every_channel (12 ms)
+[ RUN] texture_io_quads_keep_their_uvs_in_files
+[ OK ] texture_io_quads_keep_their_uvs_in_files (1 ms)
+[ RUN] texture_transfer_auto_uv_keeps_layers
+  auto uv transfer with a layer: mean 0.0010 p99 0.0030
+[ OK ] texture_transfer_auto_uv_keeps_layers (580 ms)
+[ RUN] timeline_seek_matches_undo_history
+[ OK ] timeline_seek_matches_undo_history (11 ms)
+[ RUN] transform_matches_the_formula
+[ OK ] transform_matches_the_formula (1 ms)
+[ RUN] transform_leaves_topology_and_attributes
+[ OK ] transform_leaves_topology_and_attributes (0 ms)
+[ RUN] transform_saved_in_projects
+[ OK ] transform_saved_in_projects (1 ms)
+[ RUN] uv_lscm_flattens_a_plane_exactly
+[ OK ] uv_lscm_flattens_a_plane_exactly (0 ms)
+[ RUN] uv_texel_density_set_and_match
+[ OK ] uv_texel_density_set_and_match (2 ms)
+[ RUN] uv_project_round_trip_keeps_seams_and_pins
+[ OK ] uv_project_round_trip_keeps_seams_and_pins (2 ms)
+[ RUN] vdm_tangent_frame_rotation_and_normal
+[ OK ] vdm_tangent_frame_rotation_and_normal (30 ms)
+[ RUN] zspheres_validate_and_json
+[ OK ] zspheres_validate_and_json (0 ms)
+
+104 tests, 61988 checks, 0 failures

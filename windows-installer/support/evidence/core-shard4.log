@@ -1,0 +1,241 @@
+[ RUN] air_stroke_starts
+[ OK ] air_stroke_starts (0 ms)
+[ RUN] hidden_triangles_skip_picking_and_brushes
+[ OK ] hidden_triangles_skip_picking_and_brushes (20 ms)
+[ RUN] bake_bumpy_sphere_maps
+  Baked normal, object_normal, displacement, ao, cavity at 256x256 from 81920 triangles in 0.8 s; rays 0.1811 in front, 0.1191 behind; displacement -0.0999 to 0.1510, PNG mid-grey = 0, white = +0.1510, black = -0.1510
+  normal map: mean error 0.18 deg, worst 0.52 deg over 31288 texels
+  displacement: bump 0.1510 (expect ~0.150), dent -0.0976 (expect ~-0.100), scale 0.1510
+  AO: groove 0.693, open surface 1.000
+  cavity: groove 0.135, open surface 0.499
+  padding: 17349 texels, 2870 next to an island, 2870 of those continue it
+[ OK ] bake_bumpy_sphere_maps (2758 ms)
+[ RUN] blender_bridge_round_trip
+[ OK ] blender_bridge_round_trip (8 ms)
+[ RUN] gallery_index_rejects_wrong_documents
+[ OK ] gallery_index_rejects_wrong_documents (0 ms)
+[ RUN] stroke_command_sculpts_along_path
+[ OK ] stroke_command_sculpts_along_path (11 ms)
+[ RUN] brush_rename
+[ OK ] brush_rename (3 ms)
+[ RUN] dam_standard_carves_sharp_pinched_groove
+[ OK ] dam_standard_carves_sharp_pinched_groove (8 ms)
+[ RUN] alpha_shapes_and_orients_dabs
+[ OK ] alpha_shapes_and_orients_dabs (30 ms)
+[ RUN] alpha_generated_builtins
+[ OK ] alpha_generated_builtins (43 ms)
+[ RUN] comfy_image_goes_to_titled_nodes_only
+[ OK ] comfy_image_goes_to_titled_nodes_only (0 ms)
+[ RUN] comfy_history_errors
+[ OK ] comfy_history_errors (0 ms)
+[ RUN] falloff_connected_brush_leaves_the_other_piece
+[ OK ] falloff_connected_brush_leaves_the_other_piece (3 ms)
+[ RUN] deform_balloon_rounds_out
+[ OK ] deform_balloon_rounds_out (3 ms)
+[ RUN] smooth_reduces_noise
+[ OK ] smooth_reduces_noise (4 ms)
+[ RUN] decimation_and_lods
+[ OK ] decimation_and_lods (774 ms)
+[ RUN] brush_commands
+[ OK ] brush_commands (2 ms)
+[ RUN] voxel_remesh
+[ OK ] voxel_remesh (774 ms)
+[ RUN] splat_commands
+[ OK ] splat_commands (1793 ms)
+[ RUN] divide_uv_sphere
+[ OK ] divide_uv_sphere (788 ms)
+[ RUN] dyntopo_carries_attributes_and_drops_uvs
+[ OK ] dyntopo_carries_attributes_and_drops_uvs (140 ms)
+[ RUN] environment_sh9_matches_brute_force_irradiance
+[ OK ] environment_sh9_matches_brute_force_irradiance (1 ms)
+[ RUN] mirror_and_weld_sphere
+[ OK ] mirror_and_weld_sphere (61 ms)
+[ RUN] face_fit_finds_the_landmarks_on_a_known_head
+  automatic fit: worst landmark 0.71% of the head, rms 0.03%, coverage 99%
+  guided fit: worst landmark 0.19% of the head
+[ OK ] face_fit_finds_the_landmarks_on_a_known_head (6243 ms)
+[ RUN] face_takes_parse_bake_and_export
+[ OK ] face_takes_parse_bake_and_export (1707 ms)
+[ RUN] ghost_matches_standard_dab_on_a_plane
+[ OK ] ghost_matches_standard_dab_on_a_plane (30 ms)
+[ RUN] gizmo_deform_mask_hidden_layers_attributes
+[ OK ] gizmo_deform_mask_hidden_layers_attributes (0 ms)
+[ RUN] goz_converted_ztool_opens_as_subtools
+[ OK ] goz_converted_ztool_opens_as_subtools (13 ms)
+[ RUN] guide_slugs
+[ OK ] guide_slugs (0 ms)
+[ RUN] hw_calibration_json_schema
+[ OK ] hw_calibration_json_schema (0 ms)
+[ RUN] governor_target_120
+[ OK ] governor_target_120 (0 ms)
+[ RUN] i18n_spanish_table_fits_the_font
+[ OK ] i18n_spanish_table_fits_the_font (0 ms)
+[ RUN] v02_hidden_polygroup_is_untouched_by_brushes_paint_and_mask
+[ OK ] v02_hidden_polygroup_is_untouched_by_brushes_paint_and_mask (9 ms)
+[ RUN] keep_masked_decimate
+[ OK ] keep_masked_decimate (38 ms)
+[ RUN] kelvinlet_twist_and_snake_strokes
+  scale -1: 0.1118 -> 0.0906
+  scale +1: 0.1118 -> 0.1349
+  snake: tip at 1.590
+[ OK ] kelvinlet_twist_and_snake_strokes (145 ms)
+[ RUN] kelvinlet_is_deterministic_with_threads
+[ OK ] kelvinlet_is_deterministic_with_threads (347 ms)
+[ RUN] primitives_closed_and_outward
+[ OK ] primitives_closed_and_outward (3 ms)
+[ RUN] looks_tiled_geometry_left_handed
+[ OK ] looks_tiled_geometry_left_handed (0 ms)
+[ RUN] malformed_material_channels_in_a_project_fail_cleanly
+[ OK ] malformed_material_channels_in_a_project_fail_cleanly (846 ms)
+[ RUN] gltf_node_graph_cannot_multiply_work
+[ OK ] gltf_node_graph_cannot_multiply_work (0 ms)
+[ RUN] map_export_opacity_goes_into_alpha_only_when_painted
+[ OK ] map_export_opacity_goes_into_alpha_only_when_painted (1 ms)
+[ RUN] mask_all_invert_clear_undo
+[ OK ] mask_all_invert_clear_undo (2 ms)
+[ RUN] mask_rect_and_lasso_symmetry_and_clear_outside
+[ OK ] mask_rect_and_lasso_symmetry_and_clear_outside (2 ms)
+[ RUN] mesh_maps_ao_curvature_and_normal_on_a_trench
+  trench AO 0.831, flat AO 1.000
+  curvature floor 0.221 rim 0.607 flat 0.502
+[ OK ] mesh_maps_ao_curvature_and_normal_on_a_trench (343 ms)
+[ RUN] divided_levels_store_little
+  stack 29.4 B/triangle, mesh 36.6 B/triangle
+[ OK ] divided_levels_store_little (472 ms)
+[ RUN] micro_smooth_flattens_noise
+[ OK ] micro_smooth_flattens_noise (395 ms)
+[ RUN] micro_displacement_maps
+[ OK ] micro_displacement_maps (25 ms)
+[ RUN] micro_tier_config_and_page_table
+[ OK ] micro_tier_config_and_page_table (37 ms)
+[ RUN] multires_sculpt_layers_work_at_every_level
+[ OK ] multires_sculpt_layers_work_at_every_level (4 ms)
+[ RUN] layers_levels_divide_with_layers
+  layer after Divide: 0.0886
+[ OK ] layers_levels_divide_with_layers (45 ms)
+[ RUN] layers_levels_subdiv_export_other_levels
+  from SDiv 1, SDiv 3: morph target total 0.6959, layer 0.6959 (as recorded 0.6637)
+  from SDiv 3, SDiv 1: morph target total 0.0259, layer 0.0259 (as recorded 0.0259)
+[ OK ] layers_levels_subdiv_export_other_levels (12 ms)
+[ RUN] pack_deflated_entries_read
+[ OK ] pack_deflated_entries_read (1 ms)
+[ RUN] pack_never_replaces_builtin_brushes
+[ OK ] pack_never_replaces_builtin_brushes (3 ms)
+[ RUN] paint_layers_compositing
+[ OK ] paint_layers_compositing (0 ms)
+[ RUN] parallel_normals_match_full_recompute
+[ OK ] parallel_normals_match_full_recompute (23 ms)
+[ RUN] bvh_query_lists_inside_vertices_in_order
+[ OK ] bvh_query_lists_inside_vertices_in_order (197 ms)
+[ RUN] http_parser_reads_a_request
+[ OK ] http_parser_reads_a_request (0 ms)
+[ RUN] phone_upload_resumes_and_lands_in_the_inbox
+[ OK ] phone_upload_resumes_and_lands_in_the_inbox (3 ms)
+[ RUN] ar_export_writes_valid_glb_and_usdz
+[ OK ] ar_export_writes_valid_glb_and_usdz (1407 ms)
+[ RUN] clip_profiles_preserve_topology_masks_and_layers
+[ OK ] clip_profiles_preserve_topology_masks_and_layers (0 ms)
+[ RUN] visibility_isolate_hide_invert_show
+[ OK ] visibility_isolate_hide_invert_show (0 ms)
+[ RUN] polypaint_invert_hidden_front_faces
+[ OK ] polypaint_invert_hidden_front_faces (0 ms)
+[ RUN] matcap_builtin_materials
+[ OK ] matcap_builtin_materials (3 ms)
+[ RUN] insert_mesh_from_file
+[ OK ] insert_mesh_from_file (5 ms)
+[ RUN] project_recent_files_logic
+[ OK ] project_recent_files_logic (0 ms)
+[ RUN] qremesh2_symmetry_is_exact
+  symmetric creature: 2968 quads, worst mirror mismatch 0.00e+00 of the size
+[ OK ] qremesh2_symmetry_is_exact (2770 ms)
+[ RUN] qremesh_guide_loop_across_the_symmetry_plane
+  mouth 0.28 rad, 2100 quads: 6.8 deg, loop 1
+  mouth 0.36 rad, 2700 quads: 4.3 deg, loop 1
+  mouth 0.44 rad, 3300 quads: 2.9 deg, loop 1
+  mouth 0.28 rad, 4200 quads: 4.8 deg, loop 1
+[ OK ] qremesh_guide_loop_across_the_symmetry_plane (8035 ms)
+[ RUN] quads_subdivision_makes_quads_and_keeps_triangles
+[ OK ] quads_subdivision_makes_quads_and_keeps_triangles (2 ms)
+[ RUN] radial_json_drops_unknown_and_wrong_types
+[ OK ] radial_json_drops_unknown_and_wrong_types (0 ms)
+[ RUN] radial_stroke_moves_every_copy
+[ OK ] radial_stroke_moves_every_copy (12 ms)
+[ RUN] camera_six_named_views_preserve_frame_and_clear_roll
+[ OK ] camera_six_named_views_preserve_frame_and_clear_roll (0 ms)
+[ RUN] motion_proxy_is_closed_and_light
+  motion proxy: 62524 of 307200 triangles
+[ OK ] motion_proxy_is_closed_and_light (331 ms)
+[ RUN] qremesh_adaptive_size_varies_quads
+  edge length variation: 0.17 even, 0.22 adaptive
+[ OK ] qremesh_adaptive_size_varies_quads (5669 ms)
+[ RUN] qremesh_symmetry_off_origin
+  sphere at x=3, X symmetry    1624 faces 100.0% quads  mean 0.038%  Hausdorff 0.29%  pieces 1/1  irregular 8 (0.5%)  non-manifold 0  open edges 0  0.56 s
+  mirror error about the model's plane x=3.0: 0.000000
+[ OK ] qremesh_symmetry_off_origin (1944 ms)
+[ RUN] sculpt_damstandard_cuts_and_raises_narrow_crease_without_lengthwise_pinch
+[ OK ] sculpt_damstandard_cuts_and_raises_narrow_crease_without_lengthwise_pinch (22 ms)
+[ RUN] sculpt_quad_sphere_and_dynamesh_export_real_quads_and_undo
+[ OK ] sculpt_quad_sphere_and_dynamesh_export_real_quads_and_undo (48 ms)
+[ RUN] sculptable_face_guides
+[ OK ] sculptable_face_guides (116 ms)
+[ RUN] selection_sets_combine_and_visible
+[ OK ] selection_sets_combine_and_visible (1 ms)
+[ RUN] shell_standard_layout_1600x960
+[ OK ] shell_standard_layout_1600x960 (0 ms)
+[ RUN] shell_reference_workspace_is_optional_and_saved
+[ OK ] shell_reference_workspace_is_optional_and_saved (0 ms)
+[ RUN] spacemouse_invert_each_axis
+[ OK ] spacemouse_invert_each_axis (0 ms)
+[ RUN] splat_capture_orbit_framing_centres_and_levels
+[ OK ] splat_capture_orbit_framing_centres_and_levels (0 ms)
+[ RUN] splat_train_job_posed_capture_skips_colmap
+[ OK ] splat_train_job_posed_capture_skips_colmap (68 ms)
+[ RUN] stroke_path_curve_ends_on_the_sample_and_keeps_the_spacing
+[ OK ] stroke_path_curve_ends_on_the_sample_and_keeps_the_spacing (0 ms)
+[ RUN] studio_group_loops_and_panel_shells
+[ OK ] studio_group_loops_and_panel_shells (6 ms)
+[ RUN] subtool_glb_export_import
+[ OK ] subtool_glb_export_import (2 ms)
+[ RUN] subtool_thumbnails_new_ones_render_at_once
+[ OK ] subtool_thumbnails_new_ones_render_at_once (0 ms)
+[ RUN] supporters_parse_skips_comments_and_blanks
+[ OK ] supporters_parse_skips_comments_and_blanks (0 ms)
+[ RUN] surface_cursor_ring_flat_off_edge
+[ OK ] surface_cursor_ring_flat_off_edge (0 ms)
+[ RUN] pen_cursor_mouse_mode_follows_the_system_cursor
+[ OK ] pen_cursor_mouse_mode_follows_the_system_cursor (0 ms)
+[ RUN] texture_copies_are_independent
+[ OK ] texture_copies_are_independent (0 ms)
+[ RUN] texture_channels_enable_and_cost_nothing_until_painted
+[ OK ] texture_channels_enable_and_cost_nothing_until_painted (0 ms)
+[ RUN] texture_dab_tile_path_matches_triangle_path
+  tile vs triangle dab: 55982 island texels painted, worst difference 1/255, 0 gutter texels differ
+[ OK ] texture_dab_tile_path_matches_triangle_path (464 ms)
+[ RUN] texture_io_fbx_usd_glb_goz_reference_texture
+[ OK ] texture_io_fbx_usd_glb_goz_reference_texture (6 ms)
+[ RUN] texture_transfer_pads_the_new_islands
+[ OK ] texture_transfer_pads_the_new_islands (536 ms)
+[ RUN] timeline_history_sidecar_round_trip
+[ OK ] timeline_history_sidecar_round_trip (18 ms)
+[ RUN] transform_partial_mask_moves_partly
+[ OK ] transform_partial_mask_moves_partly (0 ms)
+[ RUN] transform_bvh_follows
+[ OK ] transform_bvh_follows (0 ms)
+[ RUN] update_check_once_a_day
+[ OK ] update_check_once_a_day (0 ms)
+[ RUN] uv_unwrap_planar_and_conformal_methods
+[ OK ] uv_unwrap_planar_and_conformal_methods (217 ms)
+[ RUN] uv_weld_split_straighten
+[ OK ] uv_weld_split_straighten (1 ms)
+[ RUN] vdm_exr_round_trip
+[ OK ] vdm_exr_round_trip (6 ms)
+[ RUN] vdm_library_commands
+  vdm_set: No VDM called nothing (vdm_list shows them)
+  vdm_delete: Horn is built in
+  vdm_delete: Studio Lump isn't in your brush library
+  vdm_delete: Spike isn't in your brush library
+[ OK ] vdm_library_commands (15 ms)
+[ RUN] zspheres_project_roundtrip
+[ OK ] zspheres_project_roundtrip (31 ms)
+
+104 tests, 42330 checks, 0 failures
