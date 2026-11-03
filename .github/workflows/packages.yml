@@ -71,7 +71,7 @@ jobs:
           sudo apt-get install -y --no-install-recommends ccache xvfb libgl1-mesa-dri
           echo "CCACHE_DIR=$GITHUB_WORKSPACE/.ccache" >> "$GITHUB_ENV"
           echo "CCACHE_BASEDIR=$GITHUB_WORKSPACE" >> "$GITHUB_ENV"
-      - uses: actions/cache/restore@v5
+      - uses: actions/cache/restore@v6
         with:
           path: .ccache
           key: ccache-pkg-linux-${{ matrix.arch }}.${{ github.sha }}
@@ -83,7 +83,7 @@ jobs:
           cmake --build build --parallel 4
           ccache -s
       - if: env.SAVE_CACHE == 'true'
-        uses: actions/cache/save@v5
+        uses: actions/cache/save@v6
         with:
           path: .ccache
           key: ccache-pkg-linux-${{ matrix.arch }}.${{ github.sha }}
@@ -124,7 +124,7 @@ jobs:
         with: { ref: '${{ env.REF }}' }
       - name: flatpak and flatpak-builder
         run: sudo apt-get update && sudo apt-get install -y flatpak flatpak-builder xvfb
-      - uses: actions/cache/restore@v5
+      - uses: actions/cache/restore@v6
         with:
           path: build-flatpak/state/ccache
           key: ccache-pkg-flatpak-${{ matrix.arch }}.${{ github.sha }}
@@ -132,7 +132,7 @@ jobs:
       - name: Build the bundle (packaging/flatpak/org.sculptforge.SculptForge.yml; the SDK's ccache)
         run: SF_FLATPAK_CCACHE=1 packaging/flatpak/build.sh dist
       - if: env.SAVE_CACHE == 'true'
-        uses: actions/cache/save@v5
+        uses: actions/cache/save@v6
         with:
           path: build-flatpak/state/ccache
           key: ccache-pkg-flatpak-${{ matrix.arch }}.${{ github.sha }}
@@ -183,7 +183,7 @@ jobs:
           echo "/opt/${f%.tar.gz}" >> "$GITHUB_PATH"
           echo "CCACHE_DIR=$GITHUB_WORKSPACE/.ccache" >> "$GITHUB_ENV"
           echo "CCACHE_BASEDIR=$GITHUB_WORKSPACE" >> "$GITHUB_ENV"
-      - uses: actions/cache/restore@v5
+      - uses: actions/cache/restore@v6
         with:
           path: .ccache
           key: ccache-pkg-${{ matrix.suffix }}-${{ matrix.arch }}.${{ github.sha }}
@@ -206,7 +206,7 @@ jobs:
           cmake --build build --parallel 4
           ccache -s
       - if: env.SAVE_CACHE == 'true'
-        uses: actions/cache/save@v5
+        uses: actions/cache/save@v6
         with:
           path: .ccache
           key: ccache-pkg-${{ matrix.suffix }}-${{ matrix.arch }}.${{ github.sha }}
@@ -238,7 +238,7 @@ jobs:
           echo "$RUNNER_TEMP/ccache-4.14.2-darwin" >> "$GITHUB_PATH"
           echo "CCACHE_DIR=$GITHUB_WORKSPACE/.ccache" >> "$GITHUB_ENV"
           echo "CCACHE_BASEDIR=$GITHUB_WORKSPACE" >> "$GITHUB_ENV"
-      - uses: actions/cache/restore@v5
+      - uses: actions/cache/restore@v6
         with:
           path: .ccache
           key: ccache-pkg-macos.${{ github.sha }}
@@ -251,7 +251,7 @@ jobs:
           cmake --build build --parallel 4
           ccache -s
       - if: env.SAVE_CACHE == 'true'
-        uses: actions/cache/save@v5
+        uses: actions/cache/save@v6
         with:
           path: .ccache
           key: ccache-pkg-macos.${{ github.sha }}
@@ -288,7 +288,7 @@ jobs:
           "SF_CCACHE_CL=$($cl -replace '\\', '/')" >> $env:GITHUB_ENV
           "CCACHE_DIR=$env:GITHUB_WORKSPACE\.ccache" >> $env:GITHUB_ENV
           "CCACHE_BASEDIR=$env:GITHUB_WORKSPACE" >> $env:GITHUB_ENV
-      - uses: actions/cache/restore@v5
+      - uses: actions/cache/restore@v6
         with:
           path: .ccache
           key: ccache-pkg-windows.${{ github.sha }}
@@ -303,7 +303,7 @@ jobs:
           cmake --build build --config Release --parallel 4
           ccache -s
       - if: env.SAVE_CACHE == 'true'
-        uses: actions/cache/save@v5
+        uses: actions/cache/save@v6
         with:
           path: .ccache
           key: ccache-pkg-windows.${{ github.sha }}
