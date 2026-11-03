@@ -125,7 +125,7 @@ jobs:
           Copy-Item "$dir\ccache.exe" "$cl\cl.exe"
           "SF_CCACHE_CL=$($cl -replace '\\', '/')" >> $env:GITHUB_ENV
       - name: Compiler cache (restore)
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           path: .ccache
           key: ccache-ci-${{ matrix.key }}.${{ github.sha }}
@@ -151,7 +151,7 @@ jobs:
           ccache -s -v
       - name: Compiler cache (save; not from pull requests; one shard saves)
         if: github.event_name != 'pull_request' && matrix.shard == 1
-        uses: actions/cache/save@v5
+        uses: actions/cache/save@v6
         with:
           path: .ccache
           key: ccache-ci-${{ matrix.key }}.${{ github.sha }}
@@ -214,7 +214,7 @@ jobs:
           sudo ./packaging/linux/install-build-deps.sh
           sudo apt-get install -y --no-install-recommends ccache
       - name: Compiler cache (restore)
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           path: .ccache
           key: ccache-ci-blender-${{ matrix.bpy }}.${{ github.sha }}
@@ -229,7 +229,7 @@ jobs:
           ccache -s -v
       - name: Compiler cache (save; not from pull requests)
         if: github.event_name != 'pull_request'
-        uses: actions/cache/save@v5
+        uses: actions/cache/save@v6
         with:
           path: .ccache
           key: ccache-ci-blender-${{ matrix.bpy }}.${{ github.sha }}
@@ -270,7 +270,7 @@ jobs:
           echo "CCACHE_MAXSIZE=500M" >> "$GITHUB_ENV"
           echo "CCACHE_DEPEND=true" >> "$GITHUB_ENV"
       - name: Compiler cache (restore)
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           path: .ccache
           key: ccache-ci-${{ matrix.cy }}.${{ github.sha }}
@@ -293,7 +293,7 @@ jobs:
           ccache -s -v
       - name: Compiler cache (save; not from pull requests)
         if: github.event_name != 'pull_request'
-        uses: actions/cache/save@v5
+        uses: actions/cache/save@v6
         with:
           path: .ccache
           key: ccache-ci-${{ matrix.cy }}.${{ github.sha }}
